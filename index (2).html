@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivre en Christ — Formation & Édification Biblique</title>
+<meta name="description" content="Ministère de formation et de restauration doctrinale. Enseignements, ebooks, accompagnement spirituel pour vivre pleinement la vie de Dieu en Christ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#B8965A;--gold-l:#D4AE7A;--gold-p:#F5EDD8;--gold-d:#8B6E3A;
+  --deep:#1A1410;--ink:#2C2318;--charcoal:#3D3328;--warm:#8C7E6E;
+  --cream:#FAF7F0;--linen:#F0EAD8;--white:#FFFFFF;
+  --green:#2D6A4F;--green-l:#52B788;--green-p:#D8F3DC;
+  --border:rgba(184,150,90,0.2);--border-s:rgba(184,150,90,0.45);
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',sans-serif;
+  --nav-h:72px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:16px;line-height:1.7;font-weight:300;overflow-x:hidden}
+
+/* ══ NAV ══ */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 52px;background:rgba(250,247,240,.96);backdrop-filter:blur(16px);border-bottom:.5px solid var(--border);transition:box-shadow .3s}
+.nav-logo{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--deep);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-logo-cross{display:flex;flex-direction:column;align-items:center;gap:0}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:12px;font-weight:400;letter-spacing:.07em;color:var(--charcoal);transition:color .2s;text-transform:uppercase}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold)!important;color:var(--white)!important;padding:9px 20px;border-radius:2px;font-weight:500!important}
+.nav-cta:hover{background:var(--deep)!important}
+.hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--ink)}
+.mob-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--cream);border-bottom:.5px solid var(--border);padding:28px 32px;z-index:299;flex-direction:column;gap:22px}
+.mob-menu.open{display:flex}
+.mob-menu a{text-decoration:none;font-size:14px;letter-spacing:.07em;text-transform:uppercase;color:var(--charcoal);font-weight:400}
+
+/* ══ HERO ══ */
+.hero{min-height:100vh;padding-top:var(--nav-h);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:
+  radial-gradient(ellipse 70% 60% at 90% 20%,rgba(184,150,90,.07) 0%,transparent 55%),
+  radial-gradient(ellipse 50% 70% at 10% 80%,rgba(184,150,90,.05) 0%,transparent 50%),
+  var(--cream)}
+.hero-grain{position:absolute;inset:0;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");pointer-events:none}
+.hero-vline{position:absolute;right:42%;top:0;bottom:0;width:.5px;background:linear-gradient(to bottom,transparent,rgba(184,150,90,.2) 20%,rgba(184,150,90,.2) 80%,transparent);pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:80px 52px;display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
+.hero-eyebrow{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:22px;display:flex;align-items:center;gap:14px}
+.hero-eyebrow::before{content:'';width:36px;height:.5px;background:var(--gold);display:block}
+.hero h1{font-family:var(--serif);font-size:clamp(48px,5.5vw,80px);font-weight:300;line-height:1.05;color:var(--deep);margin-bottom:12px;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-family:var(--serif);font-size:clamp(18px,2vw,24px);font-weight:300;font-style:italic;color:var(--warm);margin-bottom:28px;line-height:1.45}
+.hero-ref{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:36px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.btn-gold{background:var(--gold);color:var(--white);padding:15px 34px;border-radius:2px;text-decoration:none;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,transform .15s;border:none;cursor:pointer;font-family:var(--sans);display:inline-block}
+.btn-gold:hover{background:var(--deep);transform:translateY(-1px)}
+.btn-outline{color:var(--charcoal);padding:14px 32px;border-radius:2px;text-decoration:none;font-size:12px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;border:.5px solid var(--border-s);transition:background .2s;background:transparent;cursor:pointer;font-family:var(--sans);display:inline-block}
+.btn-outline:hover{background:var(--gold-p);border-color:var(--gold)}
+.hero-stats{display:flex;gap:32px}
+.stat{border-left:2px solid var(--gold);padding-left:16px}
+.stat-num{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--deep);line-height:1}
+.stat-label{font-size:11px;color:var(--warm);letter-spacing:.06em;margin-top:3px}
+
+.hero-right{animation:fadeUp .9s .3s both}
+.hero-card{background:var(--white);border:.5px solid var(--border);border-top:3px solid var(--gold);padding:36px;border-radius:2px;margin-bottom:20px}
+.hero-card blockquote{font-family:var(--serif);font-size:20px;font-style:italic;font-weight:300;color:var(--deep);line-height:1.55;margin-bottom:14px}
+.hero-card cite{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-style:normal;font-weight:500}
+.hero-conviction{background:var(--deep);padding:24px 28px;border-radius:2px}
+.hero-conviction p{font-family:var(--serif);font-size:15px;font-style:italic;color:rgba(250,247,240,.85);line-height:1.7}
+.hero-conviction strong{font-style:normal;color:var(--gold-l)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-left{animation:fadeUp .9s .1s both}
+
+/* ══ SECTIONS ══ */
+section{padding:100px 52px}
+.si{max-width:1240px;margin:0 auto}
+.eyebrow{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.eyebrow::before{content:'';width:28px;height:.5px;background:var(--gold);display:block}
+.h2{font-family:var(--serif);font-size:clamp(36px,4vw,58px);font-weight:300;color:var(--deep);line-height:1.1;margin-bottom:20px}
+.h2 em{font-style:italic;color:var(--gold)}
+.lead{font-size:17px;color:var(--warm);max-width:580px;line-height:1.75}
+
+/* ══ REVEAL ══ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.vis{opacity:1;transform:translateY(0)}
+
+/* ══ PROBLÈME ══ */
+.sec-prob{background:var(--deep)}
+.sec-prob .eyebrow{color:var(--gold-l)}
+.sec-prob .eyebrow::before{background:var(--gold-l)}
+.sec-prob .h2{color:var(--cream)}
+.sec-prob .lead{color:rgba(250,247,240,.55)}
+.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:60px;background:rgba(184,150,90,.12);border-radius:4px;overflow:hidden}
+.prob-card{padding:40px;background:var(--deep);transition:background .3s}
+.prob-card:hover{background:rgba(184,150,90,.07)}
+.prob-icon{font-size:30px;margin-bottom:18px;display:block;opacity:.75}
+.prob-card h3{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--cream);margin-bottom:10px}
+.prob-card p{font-size:14px;color:rgba(250,247,240,.48);line-height:1.75}
+
+/* ══ CHAPITRES / RÉPONSE ══ */
+.chap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px}
+.chap-card{background:var(--white);border:.5px solid var(--border);border-top:2px solid var(--gold);padding:36px 32px;border-radius:2px;transition:transform .2s,box-shadow .2s}
+.chap-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(26,20,16,.08)}
+.chap-num{font-family:var(--serif);font-size:52px;font-weight:300;color:var(--gold-p);line-height:1;margin-bottom:14px}
+.chap-card h3{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--deep);margin-bottom:12px;line-height:1.2}
+.chap-card p{font-size:14px;color:var(--warm);line-height:1.75}
+.chap-verse{margin-top:16px;padding:12px 16px;background:var(--gold-p);border-left:2px solid var(--gold);border-radius:0 3px 3px 0}
+.chap-verse p{font-family:var(--serif);font-size:13px;font-style:italic;color:var(--charcoal);line-height:1.5}
+.chap-verse cite{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-style:normal;display:block;margin-top:4px}
+
+/* ══ VISION BAND ══ */
+.vision-band{background:var(--gold);padding:80px 52px;text-align:center}
+.vision-band p{font-family:var(--serif);font-size:clamp(22px,3vw,38px);font-weight:300;font-style:italic;color:var(--white);max-width:860px;margin:0 auto 16px;line-height:1.5}
+.vision-band strong{font-weight:600;font-style:normal}
+.vision-band span{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:16px}
+
+/* ══ RESSOURCES GRATUITES ══ */
+.sec-free{background:var(--linen)}
+.free-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.free-card{background:var(--white);border:.5px solid var(--border);border-radius:2px;overflow:hidden;transition:transform .2s,box-shadow .2s;position:relative}
+.free-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,20,16,.08)}
+.free-badge{position:absolute;top:16px;right:16px;background:var(--green);color:white;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;font-weight:500;font-family:var(--sans)}
+.free-thumb{height:130px;display:flex;align-items:center;justify-content:center;font-size:40px;position:relative;overflow:hidden}
+.free-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(184,150,90,.15) 0%,transparent 60%)}
+.free-body{padding:24px}
+.free-tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:8px;display:block}
+.free-card h3{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--deep);margin-bottom:8px;line-height:1.25}
+.free-card p{font-size:13px;color:var(--warm);line-height:1.65;margin-bottom:16px}
+.free-footer{padding:14px 24px;border-top:.5px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.free-price{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--green)}
+.btn-dl{font-size:12px;font-weight:500;color:var(--gold);text-decoration:none;letter-spacing:.05em;background:none;border:none;cursor:pointer;font-family:var(--sans);transition:color .2s}
+.btn-dl:hover{color:var(--deep)}
+
+/* ══ BOUTIQUE ══ */
+.sec-shop{background:var(--cream)}
+.shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.shop-card{background:var(--white);border:.5px solid var(--border);border-radius:2px;overflow:hidden;transition:transform .2s,box-shadow .2s;position:relative}
+.shop-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(26,20,16,.1)}
+.shop-card.featured{border-top:3px solid var(--gold)}
+.shop-thumb{height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.shop-thumb::before{content:'';position:absolute;inset:0;opacity:.9}
+.shop-thumb-inner{position:relative;z-index:1;text-align:center;padding:20px}
+.shop-thumb-inner h4{font-family:var(--serif);font-weight:600;line-height:1.2;margin-bottom:6px}
+.shop-thumb-inner p{font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.shop-badge{position:absolute;top:12px;left:12px;z-index:2;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:20px;font-weight:500;font-family:var(--sans)}
+.badge-new{background:var(--gold);color:white}
+.badge-pop{background:var(--deep);color:var(--gold-l)}
+.badge-pack{background:var(--charcoal);color:var(--cream)}
+.shop-body{padding:20px 24px}
+.shop-tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:6px;display:block}
+.shop-card h3{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--deep);margin-bottom:8px;line-height:1.25}
+.shop-card p{font-size:13px;color:var(--warm);line-height:1.6;margin-bottom:4px}
+.shop-includes{margin-top:10px;display:flex;flex-direction:column;gap:4px}
+.shop-inc-item{font-size:12px;color:var(--charcoal);display:flex;align-items:center;gap:7px}
+.shop-inc-item::before{content:'✓';color:var(--green);font-weight:600;font-size:11px}
+.shop-footer{padding:16px 24px;border-top:.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.shop-price{display:flex;flex-direction:column}
+.shop-price-main{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--deep);line-height:1}
+.shop-price-old{font-size:12px;color:var(--warm);text-decoration:line-through}
+.btn-buy{background:var(--gold);color:white;border:none;padding:10px 20px;border-radius:2px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:background .2s;white-space:nowrap}
+.btn-buy:hover{background:var(--deep)}
+
+/* ══ ACCOMPAGNEMENT ══ */
+.sec-accomp{background:var(--deep)}
+.sec-accomp .eyebrow{color:var(--gold-l)}
+.sec-accomp .eyebrow::before{background:var(--gold-l)}
+.sec-accomp .h2{color:var(--cream)}
+.sec-accomp .lead{color:rgba(250,247,240,.55)}
+.accomp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px}
+.accomp-card{border:.5px solid rgba(184,150,90,.2);border-radius:2px;padding:32px 28px;transition:border-color .3s,background .3s;position:relative;overflow:hidden}
+.accomp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.accomp-card:hover{border-color:rgba(184,150,90,.5);background:rgba(184,150,90,.04)}
+.accomp-card:hover::before{transform:scaleX(1)}
+.accomp-card.featured{border-color:rgba(184,150,90,.5);background:rgba(184,150,90,.06)}
+.accomp-card.featured::before{transform:scaleX(1)}
+.accomp-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;display:block}
+.accomp-card h3{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--cream);margin-bottom:10px;line-height:1.2}
+.accomp-card .price{font-family:var(--serif);font-size:32px;font-weight:600;color:var(--gold-l);line-height:1;margin-bottom:6px}
+.accomp-card .price-note{font-size:12px;color:rgba(250,247,240,.35);margin-bottom:20px}
+.accomp-features{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.accomp-feat{font-size:13px;color:rgba(250,247,240,.7);display:flex;align-items:flex-start;gap:9px;line-height:1.5}
+.accomp-feat::before{content:'✦';color:var(--gold);font-size:9px;margin-top:4px;flex-shrink:0}
+.btn-accomp{width:100%;background:var(--gold);color:white;border:none;padding:13px;border-radius:2px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.btn-accomp:hover{background:rgba(184,150,90,.7)}
+.btn-accomp-free{background:transparent;color:var(--gold-l);border:.5px solid rgba(184,150,90,.4)}
+.btn-accomp-free:hover{background:rgba(184,150,90,.1)}
+
+/* ══ TÉMOIGNAGES ══ */
+.sec-testi{background:var(--linen)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.testi-card{background:var(--white);border:.5px solid var(--border);border-radius:2px;padding:32px;transition:transform .2s}
+.testi-card:hover{transform:translateY(-3px)}
+.testi-stars{color:var(--gold);font-size:14px;margin-bottom:16px;letter-spacing:3px}
+.testi-text{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--charcoal);line-height:1.65;margin-bottom:20px}
+.testi-author{display:flex;align-items:center;gap:12px;border-top:.5px solid var(--border);padding-top:16px}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:var(--gold-p);border:.5px solid var(--border-s);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:600;color:var(--gold-d);flex-shrink:0}
+.testi-name{font-size:14px;font-weight:500;color:var(--deep);line-height:1}
+.testi-loc{font-size:12px;color:var(--warm);margin-top:2px}
+
+/* ══ SÉMINAIRES ══ */
+.sec-sem{background:var(--white)}
+.sem-list{margin-top:56px}
+.sem-item{display:grid;grid-template-columns:88px 1fr auto;gap:28px;align-items:center;padding:28px 0;border-bottom:.5px solid var(--border)}
+.sem-item:first-child{border-top:.5px solid var(--border)}
+.sem-date{text-align:center;background:var(--gold-p);border-radius:2px;padding:14px 10px;border:.5px solid var(--border-s)}
+.sem-day{font-family:var(--serif);font-size:34px;font-weight:600;color:var(--gold);line-height:1;display:block}
+.sem-month{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--warm)}
+.sem-info h3{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--deep);margin-bottom:4px}
+.sem-info p{font-size:14px;color:var(--warm)}
+.sem-price{font-family:var(--serif);font-size:13px;color:var(--gold);margin-top:4px;font-weight:500}
+.sem-btn{font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;font-weight:500;cursor:pointer;border:none;font-family:var(--sans);transition:background .2s,color .2s;white-space:nowrap}
+.sem-btn.open{background:var(--gold-p);color:var(--gold-d);border:.5px solid var(--border-s)}
+.sem-btn.open:hover{background:var(--gold);color:white}
+.sem-btn.soon{background:var(--linen);color:var(--warm);border:.5px solid var(--border)}
+
+/* ══ NEWSLETTER ══ */
+.sec-nl{background:var(--gold)}
+.nl-inner{max-width:680px;margin:0 auto;text-align:center}
+.nl-eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:500;margin-bottom:16px;display:block}
+.nl-h2{font-family:var(--serif);font-size:clamp(30px,3.5vw,48px);font-weight:300;color:var(--white);line-height:1.15;margin-bottom:12px}
+.nl-h2 em{font-style:italic}
+.nl-sub{font-size:15px;color:rgba(255,255,255,.75);margin-bottom:32px;line-height:1.65}
+.nl-form{display:flex;gap:12px;flex-wrap:wrap}
+.nl-input{flex:1;min-width:200px;font-family:var(--sans);font-size:15px;font-weight:300;color:var(--ink);background:var(--white);border:none;border-radius:2px;padding:14px 18px;outline:none}
+.btn-nl{background:var(--deep);color:var(--cream);border:none;padding:14px 28px;border-radius:2px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s;white-space:nowrap}
+.btn-nl:hover{background:var(--ink)}
+.nl-note{font-size:12px;color:rgba(255,255,255,.5);margin-top:14px}
+.nl-ok{display:none;margin-top:16px;background:rgba(255,255,255,.15);border-radius:2px;padding:14px;font-size:14px;color:white}
+
+/* ══ CONTACT ══ */
+.sec-contact{background:var(--cream)}
+.contact-split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:56px}
+.contact-info p{font-size:16px;color:var(--warm);line-height:1.8;margin-bottom:32px}
+.cinfo-item{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.cinfo-icon{width:44px;height:44px;background:var(--gold-p);border:.5px solid var(--border-s);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.cinfo-item span{font-size:14px;color:var(--charcoal)}
+.contact-form{display:flex;flex-direction:column;gap:14px}
+.fg{display:flex;flex-direction:column;gap:6px}
+.fg label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);font-weight:500}
+.fg input,.fg select,.fg textarea{font-family:var(--sans);font-size:15px;font-weight:300;color:var(--ink);background:var(--white);border:.5px solid var(--border-s);border-radius:2px;padding:12px 16px;outline:none;transition:border-color .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg textarea{min-height:110px;resize:vertical}
+
+/* ══ FOOTER ══ */
+footer{background:var(--ink);padding:60px 52px 36px}
+.footer-inner{max-width:1240px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand h3{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--cream);margin-bottom:12px}
+.footer-brand h3 span{color:var(--gold)}
+.footer-brand p{font-size:13px;line-height:1.75;color:rgba(250,247,240,.4);max-width:260px;margin-bottom:20px}
+.footer-verse{padding:16px 18px;border-left:2px solid rgba(184,150,90,.3);margin-top:4px}
+.footer-verse p{font-family:var(--serif);font-size:13px;font-style:italic;color:rgba(250,247,240,.45);line-height:1.55}
+.footer-verse cite{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(184,150,90,.5);font-style:normal;display:block;margin-top:4px}
+.footer-col h4{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream);font-weight:500;margin-bottom:18px}
+.footer-col a{display:block;font-size:13px;color:rgba(250,247,240,.38);text-decoration:none;margin-bottom:10px;transition:color .2s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{border-top:.5px solid rgba(250,247,240,.07);padding-top:28px;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:rgba(250,247,240,.25)}
+.footer-socials{display:flex;gap:10px}
+.footer-socials a{width:36px;height:36px;border:.5px solid rgba(250,247,240,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:13px;color:rgba(250,247,240,.35);transition:border-color .2s,color .2s}
+.footer-socials a:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ══ MODALS ══ */
+.overlay{display:none;position:fixed;inset:0;background:rgba(26,20,16,.8);z-index:500;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px)}
+.overlay.open{display:flex}
+.modal{background:var(--cream);border-radius:4px;max-width:640px;width:100%;max-height:90vh;overflow-y:auto;position:relative;animation:fadeUp .3s both}
+.modal-hd{padding:32px 40px;display:flex;justify-content:space-between;align-items:flex-start}
+.modal-hd h2{font-family:var(--serif);font-size:26px;font-weight:300;color:var(--deep);line-height:1.2}
+.modal-hd h2 em{font-style:italic;color:var(--gold)}
+.modal-close{background:none;border:none;font-size:22px;cursor:pointer;color:var(--warm);padding:0;line-height:1;transition:color .2s}
+.modal-close:hover{color:var(--deep)}
+.modal-body{padding:0 40px 40px}
+.modal-form{display:flex;flex-direction:column;gap:14px}
+.modal-submit{background:var(--gold);color:white;border:none;padding:15px;border-radius:2px;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s;margin-top:6px}
+.modal-submit:hover{background:var(--deep)}
+.modal-success{display:none;text-align:center;padding:20px 0 10px}
+.modal-success .big-icon{font-size:44px;margin-bottom:16px}
+.modal-success h3{font-family:var(--serif);font-size:26px;font-weight:300;color:var(--deep);margin-bottom:12px}
+.modal-success p{font-size:14px;color:var(--warm);line-height:1.7;margin-bottom:20px}
+.modal-success .verse-box{background:var(--gold-p);border:.5px solid var(--border);border-radius:2px;padding:18px 20px;text-align:left}
+.modal-success .verse-box p{font-family:var(--serif);font-size:15px;font-style:italic;color:var(--deep);line-height:1.55;margin-bottom:6px}
+.modal-success .verse-box cite{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-style:normal}
+
+/* Whatsapp payment modal */
+.pay-info{background:var(--green-p);border:.5px solid rgba(45,106,79,.3);border-radius:3px;padding:16px 18px;margin-bottom:16px;display:flex;gap:12px;align-items:flex-start}
+.pay-info-icon{font-size:20px;flex-shrink:0}
+.pay-info p{font-size:13px;color:var(--green);line-height:1.6}
+.pay-steps{margin:16px 0;display:flex;flex-direction:column;gap:10px}
+.pay-step{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:var(--white);border:.5px solid var(--border);border-radius:3px}
+.pay-step-num{width:24px;height:24px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:white;flex-shrink:0}
+.pay-step p{font-size:13px;color:var(--charcoal);line-height:1.55}
+.pay-step strong{font-weight:500;color:var(--deep)}
+.btn-whatsapp{width:100%;background:#25D366;color:white;border:none;padding:15px;border-radius:2px;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.06em;cursor:pointer;transition:background .2s;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;margin-top:8px}
+.btn-whatsapp:hover{background:#128C7E}
+
+/* ══ CHATBOT ══ */
+.chat-float{position:fixed;bottom:28px;right:28px;z-index:400}
+.chat-btn{width:54px;height:54px;background:var(--gold);border:none;border-radius:50%;cursor:pointer;box-shadow:0 8px 24px rgba(184,150,90,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s}
+.chat-btn:hover{transform:scale(1.08)}
+.chat-tooltip{position:absolute;bottom:62px;right:0;background:var(--deep);color:var(--cream);font-size:12px;padding:8px 14px;border-radius:6px 6px 2px 6px;white-space:nowrap;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;pointer-events:none}
+.chat-float:hover .chat-tooltip{opacity:1;transform:translateY(0)}
+.chat-panel{position:fixed;bottom:92px;right:28px;width:370px;max-height:540px;background:var(--deep);border-radius:10px;box-shadow:0 24px 64px rgba(0,0,0,.35);display:none;flex-direction:column;z-index:400;overflow:hidden;border:.5px solid rgba(184,150,90,.2)}
+.chat-panel.open{display:flex;animation:fadeUp .3s both}
+.chat-hd{padding:16px 18px;border-bottom:.5px solid rgba(184,150,90,.15);display:flex;align-items:center;gap:12px;background:rgba(0,0,0,.2)}
+.chat-av{width:34px;height:34px;border-radius:50%;background:rgba(184,150,90,.12);border:.5px solid rgba(184,150,90,.35);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.chat-hd-info h3{font-family:var(--serif);font-size:15px;font-weight:400;color:var(--cream);line-height:1}
+.chat-hd-info p{font-size:10px;color:rgba(250,247,240,.4);margin-top:2px;display:flex;align-items:center;gap:5px}
+.chat-hd-info p::before{content:'';width:5px;height:5px;border-radius:50%;background:#4ade80;display:inline-block}
+.chat-x{margin-left:auto;background:none;border:none;color:rgba(250,247,240,.3);cursor:pointer;font-size:17px}
+.chat-x:hover{color:rgba(250,247,240,.7)}
+.chat-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;min-height:280px;max-height:360px;scrollbar-width:thin;scrollbar-color:rgba(184,150,90,.15) transparent}
+.cmsg{display:flex;gap:7px;align-items:flex-end;animation:fadeUp .3s both}
+.cmsg.bot{align-items:flex-start}
+.cmsg.usr{flex-direction:row-reverse}
+.cmsg-av{width:24px;height:24px;border-radius:50%;background:rgba(184,150,90,.1);border:.5px solid rgba(184,150,90,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px}
+.cmsg-bub{max-width:85%;padding:9px 13px;border-radius:9px;font-size:13px;line-height:1.6;font-weight:300}
+.cmsg.bot .cmsg-bub{background:rgba(255,255,255,.055);border:.5px solid rgba(184,150,90,.13);color:rgba(250,247,240,.82);border-bottom-left-radius:3px}
+.cmsg.usr .cmsg-bub{background:var(--gold);color:white;border-bottom-right-radius:3px}
+.cmsg-verse{margin-top:7px;padding:8px 11px;background:rgba(184,150,90,.08);border-left:2px solid rgba(184,150,90,.4);border-radius:0 3px 3px 0}
+.cmsg-verse p{font-family:var(--serif);font-size:12px;font-style:italic;color:rgba(250,247,240,.65);line-height:1.45}
+.cmsg-verse cite{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-l);font-style:normal;display:block;margin-top:3px}
+.qr-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:3px;padding-left:31px}
+.qr{font-family:var(--sans);font-size:11px;color:rgba(250,247,240,.55);background:rgba(184,150,90,.07);border:.5px solid rgba(184,150,90,.22);border-radius:14px;padding:5px 10px;cursor:pointer;transition:background .2s,color .2s}
+.qr:hover{background:rgba(184,150,90,.18);color:var(--gold-l)}
+.tdots{display:none;gap:4px;padding:9px 12px;background:rgba(255,255,255,.055);border:.5px solid rgba(184,150,90,.13);border-radius:9px;border-bottom-left-radius:3px;width:fit-content}
+.tdots span{width:5px;height:5px;border-radius:50%;background:rgba(184,150,90,.45);animation:dot 1.2s infinite}
+.tdots span:nth-child(2){animation-delay:.2s}
+.tdots span:nth-child(3){animation-delay:.4s}
+@keyframes dot{0%,60%,100%{transform:translateY(0);opacity:.45}30%{transform:translateY(-4px);opacity:1}}
+.chat-inp{padding:10px 14px;border-top:.5px solid rgba(184,150,90,.1);background:rgba(0,0,0,.12);display:flex;gap:8px;align-items:flex-end}
+.chat-ta{flex:1;background:rgba(255,255,255,.055);border:.5px solid rgba(184,150,90,.18);border-radius:7px;padding:9px 11px;font-family:var(--sans);font-size:13px;font-weight:300;color:rgba(250,247,240,.82);resize:none;min-height:36px;max-height:90px;outline:none;transition:border-color .2s;line-height:1.5}
+.chat-ta::placeholder{color:rgba(250,247,240,.22)}
+.chat-ta:focus{border-color:rgba(184,150,90,.45)}
+.chat-send{width:34px;height:34px;background:var(--gold);border:none;border-radius:7px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+.chat-send:hover{background:var(--gold-d)}
+.chat-foot{padding:7px 14px;text-align:center;font-size:9px;letter-spacing:.07em;color:rgba(250,247,240,.15)}
+
+/* ══ LOGO IMAGE ══ */
+.nav-logo-img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:1.5px solid var(--gold)}
+
+/* ══ SECTION PASTEUR ══ */
+.pasteur-section{background:var(--white);padding:100px 52px}
+.pasteur-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:center}
+.pasteur-img-wrap{position:relative}
+.pasteur-img{width:100%;max-width:420px;border-radius:4px;object-fit:cover;display:block;box-shadow:0 24px 64px rgba(26,20,16,.15)}
+.pasteur-img-deco{position:absolute;bottom:-16px;right:-16px;width:100%;max-width:420px;height:100%;border:2px solid var(--gold);border-radius:4px;z-index:-1}
+.pasteur-content .eyebrow{margin-bottom:16px}
+.pasteur-content h2{font-family:var(--serif);font-size:clamp(32px,3.5vw,48px);font-weight:300;color:var(--deep);line-height:1.15;margin-bottom:20px}
+.pasteur-content h2 em{font-style:italic;color:var(--gold)}
+.pasteur-content p{font-size:15px;color:var(--warm);line-height:1.85;margin-bottom:16px}
+.pasteur-verse{margin-top:24px;padding:18px 22px;background:var(--gold-p);border-left:3px solid var(--gold);border-radius:0 3px 3px 0}
+.pasteur-verse p{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--deep);line-height:1.55}
+.pasteur-verse cite{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-style:normal;display:block;margin-top:6px}
+
+/* ══ GALERIE SÉMINAIRES ══ */
+.galerie-section{background:var(--linen);padding:80px 52px}
+.galerie-inner{max-width:1240px;margin:0 auto}
+.galerie-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:48px}
+.galerie-item{border-radius:3px;overflow:hidden;aspect-ratio:3/4;position:relative;cursor:pointer}
+.galerie-item.wide{grid-column:span 2;aspect-ratio:16/9}
+.galerie-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.galerie-item:hover img{transform:scale(1.05)}
+.galerie-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,20,16,.6) 0%,transparent 60%);opacity:0;transition:opacity .3s}
+.galerie-item:hover .galerie-overlay{opacity:1}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:960px){
+  nav{padding:0 24px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  section{padding:72px 24px}
+  .hero-inner{grid-template-columns:1fr;gap:48px;padding:60px 24px}
+  .prob-grid,.chap-grid,.free-grid,.shop-grid,.accomp-grid,.testi-grid{grid-template-columns:1fr}
+  .contact-split{grid-template-columns:1fr;gap:48px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .sem-item{grid-template-columns:70px 1fr}
+  .sem-btn{display:none}
+  .footer-bottom{flex-direction:column;gap:14px;text-align:center}
+  .chat-panel{width:calc(100vw - 32px);right:16px;bottom:76px}
+  .modal-hd,.modal-body{padding:24px}
+  .pasteur-inner{grid-template-columns:1fr;gap:40px}
+  .pasteur-img{max-width:100%}
+  .pasteur-img-deco{display:none}
+  .galerie-grid{grid-template-columns:1fr 1fr}
+  .galerie-item.wide{grid-column:span 2}
+  .pasteur-section{padding:72px 24px}
+  .galerie-section{padding:72px 24px}
+}
+@media(max-width:600px){
+  .footer-grid{grid-template-columns:1fr}
+  .hero h1{font-size:42px}
+  .hero-stats{gap:20px}
+  .nl-form{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <svg width="18" height="22" viewBox="0 0 18 22"><rect x="7.5" y="0" width="3" height="22" rx="1.5" fill="#B8965A"/><rect x="0" y="8" width="18" height="3" rx="1.5" fill="#B8965A"/></svg>
+    Vivre <span>en Christ</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#ressources">Ressources</a></li>
+    <li><a href="#boutique">Boutique</a></li>
+    <li><a href="#accompagnement">Accompagnement</a></li>
+    <li><a href="#seminaires">Séminaires</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#accompagnement" class="nav-cta">Être bâti</a></li>
+  </ul>
+  <button class="hamburger" id="ham"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-menu" id="mob">
+  <a href="#vision" onclick="cm()">Vision</a>
+  <a href="#ressources" onclick="cm()">Ressources gratuites</a>
+  <a href="#boutique" onclick="cm()">Boutique</a>
+  <a href="#accompagnement" onclick="cm()">Accompagnement</a>
+  <a href="#seminaires" onclick="cm()">Séminaires</a>
+  <a href="#newsletter" onclick="cm()">Newsletter</a>
+  <a href="#contact" onclick="cm()">Contact</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="accueil">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-vline"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Ministère Vivre en Christ · Formation & Édification</p>
+      <h1>Pourquoi un enfant<br>de Dieu doit-il se<br>laisser <em>bâtir ?</em></h1>
+      <p class="hero-sub">« Élevez-vous, bâtissez… »</p>
+      <p class="hero-ref">Néhémie 2 : 18</p>
+      <p style="font-size:16px;color:var(--warm);max-width:440px;line-height:1.8;margin-bottom:36px">Vous avez reçu la vie de Christ. Mais avez-vous été conduit à comprendre ce que cela implique vraiment pour la suite ? Nous sommes là pour vous bâtir.</p>
+      <div class="hero-actions">
+        <a href="#ressources" class="btn-gold">Ressources gratuites</a>
+        <a href="#accompagnement" class="btn-outline">Être accompagné</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">21</div><div class="stat-label">Années de formation</div></div>
+        <div class="stat"><div class="stat-num">5</div><div class="stat-label">Chapitres fondateurs</div></div>
+        <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Grâce de Dieu</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <blockquote>« Car nous sommes ouvriers avec Dieu. Vous êtes le champ de Dieu, l'édifice de Dieu. »</blockquote>
+        <cite>1 Corinthiens 3 : 9</cite>
+      </div>
+      <div class="hero-conviction">
+        <p>La vie chrétienne n'est pas une discipline religieuse à perfectionner, mais <strong>une vie divine à manifester.</strong> Dieu n'a pas réformé votre ancienne vie — Il l'a crucifiée pour vous donner la sienne.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROBLÈME ══ -->
+<section class="sec-prob" id="vision">
+  <div class="si">
+    <p class="eyebrow">Le constat biblique</p>
+    <h2 class="h2" style="color:var(--cream)">Pourquoi tant de croyants<br><em>tournent-ils en rond ?</em></h2>
+    <p class="lead">Des années de cultes, de prières — et pourtant quelque chose ne progresse pas. La joie est intermittente. La victoire éphémère. Voici pourquoi.</p>
+    <div class="prob-grid">
+      <div class="prob-card reveal"><span class="prob-icon">👶</span><h3>Des nouveau-nés sans soins</h3><p>Beaucoup d'enfants de Dieu naissent mais ne sont jamais pris en charge. Ils restent des nourrissons spirituels pendant des années, faute d'un encadrement adéquat. « Comme des enfants nouveau-nés, désirez le lait spirituel pur. » — 1 Pierre 2.2</p></div>
+      <div class="prob-card reveal"><span class="prob-icon">🔄</span><h3>La quantité au lieu de la qualité</h3><p>On court après les conversions sans accompagner les croyants dans leur croissance réelle. Résultat : des assemblées nombreuses et des membres spirituellement anémiés.</p></div>
+      <div class="prob-card reveal"><span class="prob-icon">💪</span><h3>Servir Dieu avec la vie de la chair</h3><p>Ils essaient d'obéir à Dieu avec leurs propres forces naturelles. C'est épuisant, décourageant et voué à l'échec. « Ceux qui vivent selon la chair s'occupent des choses de la chair. » — Romains 8.5</p></div>
+      <div class="prob-card reveal"><span class="prob-icon">🙈</span><h3>Ignorer son ministère personnel</h3><p>La plupart pensent que le ministère, c'est pour le pasteur. Pas pour eux. Ils se considèrent comme des spectateurs passifs, alors que « vous êtes le corps de Christ, et vous êtes ses membres, chacun pour sa part. » — 1 Corinthiens 12.27</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RÉPONSE EN 5 CHAPITRES ══ -->
+<section style="background:var(--cream)">
+  <div class="si">
+    <p class="eyebrow">La réponse biblique</p>
+    <h2 class="h2">Cinq vérités qui <em>libèrent</em></h2>
+    <p class="lead">Chaque affirmation repose sur les Saintes Écritures. Lisez avec votre Bible ouverte. Vérifiez par vous-même.</p>
+    <div class="chap-grid">
+      <div class="chap-card reveal">
+        <div class="chap-num">01</div>
+        <h3>Vous êtes un nouveau-né — et les nouveau-nés ont besoin de soins</h3>
+        <p>La nouvelle naissance remet tout à zéro. L'ancienneté charnelle ne compte pas. Ce qui compte désormais, c'est la croissance spirituelle.</p>
+        <div class="chap-verse"><p>« Comme des enfants nouveau-nés, désirez le lait spirituel pur, afin que par lui vous croissiez pour le salut. »</p><cite>1 Pierre 2 : 2</cite></div>
+      </div>
+      <div class="chap-card reveal">
+        <div class="chap-num">02</div>
+        <h3>Vous êtes régénérés pour un but précis</h3>
+        <p>Vous n'avez pas été améliorés ou reformés. Vous avez reçu une vie nouvelle avec un but précis : une espérance vivante et un héritage éternel.</p>
+        <div class="chap-verse"><p>« C'est en espérance que nous sommes sauvés. »</p><cite>Romains 8 : 24</cite></div>
+      </div>
+      <div class="chap-card reveal">
+        <div class="chap-num">03</div>
+        <h3>Vous êtes un édifice de Dieu</h3>
+        <p>Vous n'êtes pas un bâtiment achevé. Vous êtes un chantier ouvert. Sur tout chantier, il faut un bâtisseur qualifié avec les bons matériaux.</p>
+        <div class="chap-verse"><p>« Vous êtes le champ de Dieu, l'édifice de Dieu. »</p><cite>1 Corinthiens 3 : 9</cite></div>
+      </div>
+      <div class="chap-card reveal">
+        <div class="chap-num">04</div>
+        <h3>Le perfectionnement des saints est une nécessité vitale</h3>
+        <p>Dieu a donné des apôtres et pasteurs pour une tâche précise : le perfectionnement des saints. Un croyant non bâti ne peut pas exercer son ministère.</p>
+        <div class="chap-verse"><p>« Pour le perfectionnement des saints en vue de l'œuvre du ministère. »</p><cite>Éphésiens 4 : 12</cite></div>
+      </div>
+      <div class="chap-card reveal">
+        <div class="chap-num">05</div>
+        <h3>L'objectif final : la stature parfaite de Christ</h3>
+        <p>Dieu ne veut pas simplement que vous « alliez mieux ». Il veut que la personne même de Christ soit formée en vous jusqu'à la pleine maturité.</p>
+        <div class="chap-verse"><p>« À la mesure de la stature parfaite de Christ. »</p><cite>Éphésiens 4 : 13</cite></div>
+      </div>
+      <div class="chap-card reveal" style="background:var(--deep);border-top-color:var(--gold-l)">
+        <div class="chap-num" style="color:rgba(184,150,90,.2)">✦</div>
+        <h3 style="color:var(--cream)">Vous êtes vraiment en croissance réelle ?</h3>
+        <p style="color:rgba(250,247,240,.55)">Ou tournez-vous en rond depuis des années ? Si cette question vous a touché, c'est l'Esprit de Dieu qui vous parle. Il vous invite à quelque chose de plus grand.</p>
+        <button onclick="openModal('contact-modal')" class="btn-gold" style="margin-top:20px;width:100%;text-align:center">Être accompagné →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VISION BAND ══ -->
+<div class="vision-band">
+  <p>« Élever un peuple de croyants qui vivent <strong>réellement la vie de Dieu</strong> en Christ, par l'Esprit, dans la <strong>simplicité et la vérité biblique.</strong> »</p>
+  <span>La vision du Ministère Vivre en Christ · vivreenchrist.org</span>
+</div>
+
+<!-- ══ RESSOURCES GRATUITES ══ -->
+<section class="sec-free" id="ressources">
+  <div class="si">
+    <p class="eyebrow">Collection gratuite</p>
+    <h2 class="h2">Ressources <em>offertes</em><br>pour votre édification</h2>
+    <p class="lead">Des documents de formation spirituelle accessibles immédiatement, sans frais, pour tout croyant qui désire être bâti.</p>
+    <div class="free-grid">
+      <div class="free-card reveal">
+        <span class="free-badge">Gratuit</span>
+        <div class="free-thumb" style="background:#1A1410">📖</div>
+        <div class="free-body">
+          <span class="free-tag">Document fondateur</span>
+          <h3>Pourquoi un enfant de Dieu doit-il se laisser bâtir ?</h3>
+          <p>Le document complet du Ministère Vivre en Christ. 5 chapitres pour comprendre qui vous êtes, où vous allez, et pourquoi l'édification est vitale.</p>
+        </div>
+        <div class="free-footer">
+          <span class="free-price">Gratuit</span>
+          <button class="btn-dl" onclick="openModal('dl-modal-1')">Télécharger →</button>
+        </div>
+      </div>
+      <div class="free-card reveal">
+        <span class="free-badge">Gratuit</span>
+        <div class="free-thumb" style="background:#1e1610">🕊️</div>
+        <div class="free-body">
+          <span class="free-tag">Étude biblique</span>
+          <h3>La nouvelle naissance : ce qui a vraiment changé en vous</h3>
+          <p>Comprendre le changement radical opéré par la régénération. Non pas une amélioration, mais une vie entièrement nouvelle reçue en Christ.</p>
+        </div>
+        <div class="free-footer">
+          <span class="free-price">Gratuit</span>
+          <button class="btn-dl" onclick="openModal('dl-modal-2')">Télécharger →</button>
+        </div>
+      </div>
+      <div class="free-card reveal">
+        <span class="free-badge">Gratuit</span>
+        <div class="free-thumb" style="background:#1c1818">🔥</div>
+        <div class="free-body">
+          <span class="free-tag">Guide pratique</span>
+          <h3>Chair ou Esprit : comment discerner d'où vient votre obéissance</h3>
+          <p>Un guide pratique pour identifier si vous servez Dieu avec vos forces naturelles ou avec la vie de Christ. La différence est fondamentale.</p>
+        </div>
+        <div class="free-footer">
+          <span class="free-price">Gratuit</span>
+          <button class="btn-dl" onclick="openModal('dl-modal-3')">Télécharger →</button>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="#boutique" class="btn-outline">Voir aussi nos ebooks approfondis →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BOUTIQUE ══ -->
+<section class="sec-shop" id="boutique">
+  <div class="si">
+    <p class="eyebrow">Boutique — Ebooks & Formations</p>
+    <h2 class="h2">Approfondissez votre<br><em>édification biblique</em></h2>
+    <p class="lead">Des ressources premium pour aller plus loin dans la compréhension et la pratique de la vie de Dieu en Christ.</p>
+    <div class="shop-grid">
+
+      <div class="shop-card reveal">
+        <span class="shop-badge badge-new">Nouveau</span>
+        <div class="shop-thumb" style="background:var(--deep)">
+          <div class="shop-thumb-inner">
+            <h4 style="font-size:18px;color:var(--cream);font-family:var(--serif)">L'Édifice de Dieu</h4>
+            <p style="color:rgba(250,247,240,.45)">Formation complète</p>
+          </div>
+        </div>
+        <div class="shop-body">
+          <span class="shop-tag">Ebook · PDF · 80 pages</span>
+          <h3>L'Édifice de Dieu — Formation complète en 5 niveaux</h3>
+          <p>De la nouvelle naissance à la maturité en Christ. Le parcours de formation complet du Ministère Vivre en Christ, structuré en 5 niveaux progressifs.</p>
+          <div class="shop-includes">
+            <div class="shop-inc-item">80 pages d'enseignement approfondi</div>
+            <div class="shop-inc-item">Exercices de méditation biblique</div>
+            <div class="shop-inc-item">Questions de réflexion personnelle</div>
+            <div class="shop-inc-item">Guide de mise en pratique</div>
+          </div>
+        </div>
+        <div class="shop-footer">
+          <div class="shop-price">
+            <span class="shop-price-main">5 €</span>
+            <span class="shop-price-old">8 €</span>
+          </div>
+          <button class="btn-buy" onclick="openPay('L\'Édifice de Dieu','5 €')">Commander</button>
+        </div>
+      </div>
+
+      <div class="shop-card featured reveal">
+        <span class="shop-badge badge-pop">Le + populaire</span>
+        <div class="shop-thumb" style="background:var(--gold)">
+          <div class="shop-thumb-inner">
+            <h4 style="font-size:18px;color:white;font-family:var(--serif)">Vivre par l'Esprit</h4>
+            <p style="color:rgba(255,255,255,.6)">Série Romains 8</p>
+          </div>
+        </div>
+        <div class="shop-body">
+          <span class="shop-tag">Ebook + Audio · Série complète</span>
+          <h3>Vivre par l'Esprit — Étude complète de Romains 8</h3>
+          <p>La série la plus demandée du Ministère. Comprendre et vivre Romains 8 dans sa profondeur, verset par verset, avec application concrète.</p>
+          <div class="shop-includes">
+            <div class="shop-inc-item">60 pages d'étude verset par verset</div>
+            <div class="shop-inc-item">6 messages audio (format MP3)</div>
+            <div class="shop-inc-item">Fiche de méditation hebdomadaire</div>
+            <div class="shop-inc-item">Accès WhatsApp groupe d'étude</div>
+          </div>
+        </div>
+        <div class="shop-footer">
+          <div class="shop-price">
+            <span class="shop-price-main">8 €</span>
+            <span class="shop-price-old">12 €</span>
+          </div>
+          <button class="btn-buy" onclick="openPay('Vivre par l\'Esprit — Romains 8','8 €')">Commander</button>
+        </div>
+      </div>
+
+      <div class="shop-card reveal">
+        <span class="shop-badge badge-pack">Pack complet</span>
+        <div class="shop-thumb" style="background:var(--charcoal)">
+          <div class="shop-thumb-inner">
+            <h4 style="font-size:18px;color:var(--cream);font-family:var(--serif)">Pack Bâtisseur</h4>
+            <p style="color:rgba(250,247,240,.45)">Tout inclus</p>
+          </div>
+        </div>
+        <div class="shop-body">
+          <span class="shop-tag">Pack · 4 ebooks + 2 formations audio</span>
+          <h3>Pack Bâtisseur — La bibliothèque complète</h3>
+          <p>Tous les ebooks et formations audio du Ministère Vivre en Christ. La bibliothèque complète pour votre édification et celle de votre communauté.</p>
+          <div class="shop-includes">
+            <div class="shop-inc-item">4 ebooks PDF (300+ pages total)</div>
+            <div class="shop-inc-item">2 formations audio complètes</div>
+            <div class="shop-inc-item">Accès groupe WhatsApp premium</div>
+            <div class="shop-inc-item">1 session de questions/réponses</div>
+          </div>
+        </div>
+        <div class="shop-footer">
+          <div class="shop-price">
+            <span class="shop-price-main">18 €</span>
+            <span class="shop-price-old">38 €</span>
+          </div>
+          <button class="btn-buy" onclick="openPay('Pack Bâtisseur complet','18 €')">Commander</button>
+        </div>
+      </div>
+
+      <div class="shop-card reveal">
+        <div class="shop-thumb" style="background:#1A1410">
+          <div class="shop-thumb-inner">
+            <h4 style="font-size:17px;color:var(--gold-l);font-family:var(--serif)">Identité en Christ</h4>
+            <p style="color:rgba(250,247,240,.4)">Qui suis-je vraiment ?</p>
+          </div>
+        </div>
+        <div class="shop-body">
+          <span class="shop-tag">Ebook · PDF · 45 pages</span>
+          <h3>Identité en Christ — Qui suis-je depuis la nouvelle naissance ?</h3>
+          <p>Comprendre l'identité radicalement nouvelle que confère la régénération biblique, et ses implications concrètes au quotidien.</p>
+          <div class="shop-includes">
+            <div class="shop-inc-item">45 pages d'enseignement fondateur</div>
+            <div class="shop-inc-item">Déclarations d'identité bibliques</div>
+          </div>
+        </div>
+        <div class="shop-footer">
+          <div class="shop-price"><span class="shop-price-main">4 €</span></div>
+          <button class="btn-buy" onclick="openPay('Identité en Christ','4 €')">Commander</button>
+        </div>
+      </div>
+
+      <div class="shop-card reveal">
+        <div class="shop-thumb" style="background:#2C1810">
+          <div class="shop-thumb-inner">
+            <h4 style="font-size:17px;color:var(--gold-l);font-family:var(--serif)">Le Ministère Personnel</h4>
+            <p style="color:rgba(250,247,240,.4)">Découvrir son appel</p>
+          </div>
+        </div>
+        <div class="shop-body">
+          <span class="shop-tag">Ebook · PDF · 55 pages</span>
+          <h3>Découvrir et exercer votre ministère personnel</h3>
+          <p>Chaque croyant a un ministère. Ce guide vous aide à le découvrir, le comprendre et commencer à l'exercer concrètement.</p>
+          <div class="shop-includes">
+            <div class="shop-inc-item">55 pages de formation pratique</div>
+            <div class="shop-inc-item">Tests d'identification des dons</div>
+          </div>
+        </div>
+        <div class="shop-footer">
+          <div class="shop-price"><span class="shop-price-main">5 €</span></div>
+          <button class="btn-buy" onclick="openPay('Découvrir votre ministère personnel','5 €')">Commander</button>
+        </div>
+      </div>
+
+      <div class="shop-card reveal">
+        <div class="shop-thumb" style="background:var(--gold-d)">
+          <div class="shop-thumb-inner">
+            <h4 style="font-size:17px;color:white;font-family:var(--serif)">Formation Responsables</h4>
+            <p style="color:rgba(255,255,255,.6)">Pour les leaders</p>
+          </div>
+        </div>
+        <div class="shop-body">
+          <span class="shop-tag">Formation · Pasteurs & Leaders</span>
+          <h3>Bâtir son assemblée sur des fondements solides</h3>
+          <p>Une formation spécialement conçue pour les responsables qui veulent que leurs membres soient réellement bâtis et non simplement nombreux.</p>
+          <div class="shop-includes">
+            <div class="shop-inc-item">Formation complète en 3 modules</div>
+            <div class="shop-inc-item">Outils pédagogiques reproductibles</div>
+            <div class="shop-inc-item">Support WhatsApp dédié</div>
+          </div>
+        </div>
+        <div class="shop-footer">
+          <div class="shop-price"><span class="shop-price-main">23 €</span></div>
+          <button class="btn-buy" onclick="openPay('Formation Responsables','23 €')">Commander</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ ACCOMPAGNEMENT ══ -->
+<section class="sec-accomp" id="accompagnement">
+  <div class="si">
+    <p class="eyebrow">Accompagnement spirituel</p>
+    <h2 class="h2">Choisissez votre niveau<br><em>d'édification</em></h2>
+    <p class="lead">Un accompagnement personnalisé, bibliquement ancré, au service de votre croissance réelle en Christ.</p>
+    <div class="accomp-grid">
+
+      <div class="accomp-card reveal">
+        <span class="accomp-label">Niveau de base</span>
+        <h3>Accompagnement Découverte</h3>
+        <div class="price">Gratuit</div>
+        <div class="price-note">Pour tout nouveau croyant</div>
+        <div class="accomp-features">
+          <div class="accomp-feat">Accès aux 3 ressources gratuites du ministère</div>
+          <div class="accomp-feat">Intégration au groupe WhatsApp d'édification</div>
+          <div class="accomp-feat">Méditation biblique hebdomadaire par email</div>
+          <div class="accomp-feat">Réponses aux questions doctrinales de base</div>
+          <div class="accomp-feat">Accès aux enseignements audio publics</div>
+        </div>
+        <button class="btn-accomp btn-accomp-free" onclick="openModal('accomp-free')">Commencer gratuitement</button>
+      </div>
+
+      <div class="accomp-card featured reveal">
+        <span class="accomp-label">⭐ Recommandé</span>
+        <h3>Accompagnement Fondements</h3>
+        <div class="price">12 €</div>
+        <div class="price-note">par mois · Sans engagement</div>
+        <div class="accomp-features">
+          <div class="accomp-feat">2 sessions d'accompagnement individuel par mois (via WhatsApp/Zoom)</div>
+          <div class="accomp-feat">Parcours de formation personnalisé sur 3 mois</div>
+          <div class="accomp-feat">Accès complet à la bibliothèque d'ebooks</div>
+          <div class="accomp-feat">Suivi hebdomadaire de votre croissance</div>
+          <div class="accomp-feat">Groupe WhatsApp premium restreint</div>
+          <div class="accomp-feat">Réponses prioritaires sous 24h</div>
+        </div>
+        <button class="btn-accomp" onclick="openPay('Accompagnement Fondements','12 €/mois')">S'inscrire maintenant</button>
+      </div>
+
+      <div class="accomp-card reveal">
+        <span class="accomp-label">Niveau avancé</span>
+        <h3>Accompagnement Édification Profonde</h3>
+        <div class="price">30 €</div>
+        <div class="price-note">par mois · Engagement 3 mois</div>
+        <div class="accomp-features">
+          <div class="accomp-feat">4 sessions individuelles par mois (1h chacune)</div>
+          <div class="accomp-feat">Parcours d'édification sur mesure 6 mois</div>
+          <div class="accomp-feat">Accès à toutes les ressources premium</div>
+          <div class="accomp-feat">Accompagnement pour découvrir votre ministère</div>
+          <div class="accomp-feat">Support illimité par WhatsApp</div>
+          <div class="accomp-feat">Invitation aux séminaires en avant-première</div>
+          <div class="accomp-feat">Formation applicable à votre église</div>
+        </div>
+        <button class="btn-accomp" onclick="openPay('Accompagnement Édification Profonde','30 €/mois')">S'inscrire maintenant</button>
+      </div>
+
+    </div>
+    <div style="margin-top:32px;text-align:center;padding:24px;border:.5px solid rgba(184,150,90,.2);border-radius:2px;max-width:640px;margin-left:auto;margin-right:auto">
+      <p style="font-family:var(--serif);font-size:18px;font-style:italic;color:rgba(250,247,240,.7);line-height:1.6">« Nous ne venons pas remplacer votre église — nous venons renforcer ce que Dieu y a commencé. »</p>
+      <p style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:10px">Le Ministère Vivre en Christ</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TÉMOIGNAGES ══ -->
+<section class="sec-testi" style="background:var(--linen)">
+  <div class="si">
+    <p class="eyebrow">Ce qu'ils disent</p>
+    <h2 class="h2">Des vies <em>bâties</em><br>par la Parole</h2>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« Après 10 ans de vie chrétienne, je tournais en rond sans comprendre pourquoi. Le document "Pourquoi se laisser bâtir" m'a ouvert les yeux sur ce que la nouvelle naissance implique vraiment. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div><div class="testi-name">Amos K.</div><div class="testi-loc">Abidjan, Côte d'Ivoire</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« J'essayais de servir Dieu avec mes propres forces depuis des années. L'accompagnement Fondements m'a aidé à comprendre la différence entre chair et Esprit. Ma vie chrétienne a changé. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div><div class="testi-name">Marie-Claire T.</div><div class="testi-loc">Dakar, Sénégal</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« En tant que responsable d'église, la formation "Bâtir son assemblée" m'a donné des outils concrets et bibliques que je n'avais jamais reçus en séminaire. Je recommande à tous les pasteurs. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div><div class="testi-name">Pasteur Jean-Paul M.</div><div class="testi-loc">Douala, Cameroun</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SÉMINAIRES ══ -->
+<section class="sec-sem" id="seminaires">
+  <div class="si">
+    <p class="eyebrow">Événements</p>
+    <h2 class="h2">Séminaires &<br><em>Rencontres</em></h2>
+    <p class="lead">Des temps de formation intensive, ouverts aux croyants et aux serviteurs de Dieu qui veulent être réellement bâtis.</p>
+    <div class="sem-list">
+      <div class="sem-item reveal">
+        <div class="sem-date"><span class="sem-day">14</span><span class="sem-month">Juin 2027</span></div>
+        <div class="sem-info">
+          <h3>Séminaire : Pourquoi se laisser bâtir ?</h3>
+          <p>Abidjan, Côte d'Ivoire · Journée intensive d'enseignement biblique et d'interaction</p>
+          <p class="sem-price">Entrée libre — Places limitées à 80 participants</p>
+        </div>
+        <button class="sem-btn open" onclick="openModal('sem-modal')">S'inscrire</button>
+      </div>
+      <div class="sem-item reveal">
+        <div class="sem-date"><span class="sem-day">19</span><span class="sem-month">Juil 2027</span></div>
+        <div class="sem-info">
+          <h3>Atelier : Responsables — Bâtir son assemblée</h3>
+          <p>En ligne (Zoom) · Réservé aux pasteurs, anciens et leaders · 3h de formation</p>
+          <p class="sem-price">8 € — Places limitées à 30 participants</p>
+        </div>
+        <button class="sem-btn open" onclick="openPay('Atelier Responsables (Zoom)','8 €')">S'inscrire</button>
+      </div>
+      <div class="sem-item reveal">
+        <div class="sem-date"><span class="sem-day">06</span><span class="sem-month">Sept 2027</span></div>
+        <div class="sem-info">
+          <h3>Conférence annuelle Vivre en Christ 2027</h3>
+          <p>Abidjan · 2 jours de formation doctrinale approfondie · Intervenants invités</p>
+          <p class="sem-price">15 € — Ouvert à toutes les dénominations</p>
+        </div>
+        <span class="sem-btn soon">Bientôt</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NEWSLETTER ══ -->
+<section class="sec-nl" id="newsletter" style="padding:80px 52px">
+  <div class="si">
+    <div class="nl-inner">
+      <span class="nl-eyebrow">La Lettre hebdomadaire</span>
+      <h2 class="nl-h2">Recevez la méditation<br><em>de la semaine</em></h2>
+      <p class="nl-sub">Un verset, une méditation profonde, 5 pensées pour nourrir votre édification. Chaque lundi, directement dans votre boîte email. Gratuit.</p>
+      <div class="nl-form">
+        <input class="nl-input" type="text" placeholder="Votre prénom" id="nl-p">
+        <input class="nl-input" type="email" placeholder="Votre adresse email" id="nl-e">
+        <button class="btn-nl" onclick="nlSub()">S'abonner gratuitement</button>
+      </div>
+      <div class="nl-ok" id="nl-ok">✓ Bienvenue ! Votre première lettre arrive lundi. Que le Seigneur vous parle à travers sa Parole.</div>
+      <p class="nl-note">Pas de spam · Désabonnement en un clic · Déjà 500+ abonnés</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section class="sec-contact" id="contact">
+  <div class="si">
+    <p class="eyebrow">Nous rejoindre</p>
+    <h2 class="h2">Entrer en<br><em>contact</em></h2>
+    <div class="contact-split">
+      <div class="contact-info">
+        <p>Vous souhaitez être accompagné, commander une ressource, inviter Vivre en Christ dans votre église ou simplement poser une question biblique ? Écrivez-nous.</p>
+        <div class="cinfo-item"><div class="cinfo-icon">✉</div><span>contact@vivreenchrist.org</span></div>
+        <div class="cinfo-item"><div class="cinfo-icon">📱</div><span>WhatsApp : +225 0574758383</span></div>
+        <div class="cinfo-item"><div class="cinfo-icon">📍</div><span>Abidjan, Côte d'Ivoire</span></div>
+        <div class="cinfo-item"><div class="cinfo-icon">🌐</div><span>vivreenchrist.org</span></div>
+        <div style="margin-top:32px;padding:20px 24px;background:var(--gold-p);border:.5px solid var(--border-s);border-radius:2px">
+          <p style="font-family:var(--serif);font-size:15px;font-style:italic;color:var(--deep);line-height:1.6;margin-bottom:8px">« Vivre en Christ agit dans un esprit de service envers l'Église de Jésus-Christ, sans esprit de concurrence, de division ou de prosélytisme confessionnel. »</p>
+          <p style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)">Notre positionnement</p>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="ctSub(event)">
+        <div class="fg"><label>Nom complet</label><input type="text" placeholder="Jean Kouassi" required></div>
+        <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com" required></div>
+        <div class="fg"><label>Je suis</label>
+          <select>
+            <option>Croyant en recherche de clarté</option>
+            <option>Serviteur / Responsable d'église</option>
+            <option>Pasteur / Ancien</option>
+            <option>Étudiant(e) en théologie</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="fg"><label>Sujet</label>
+          <select>
+            <option>Demande d'accompagnement spirituel</option>
+            <option>Commander une ressource</option>
+            <option>Inviter le ministère dans mon église</option>
+            <option>Question biblique</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="fg"><label>Message</label><textarea placeholder="Votre message..."></textarea></div>
+        <button type="submit" class="btn-gold" style="border:none">Envoyer le message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION PASTEUR ══ -->
+<section class="pasteur-section" id="pasteur">
+  <div class="pasteur-inner">
+    <div class="pasteur-img-wrap reveal">
+      <div style="width:100%;max-width:380px;aspect-ratio:3/4;border-radius:4px;overflow:hidden;box-shadow:0 24px 64px rgba(26,20,16,.15);border:2px solid var(--gold);position:relative">
+        <img src="data:image/jpeg;base64,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zzzzzzzzzzzzzzzzw1z33zz3/wB9999999995lVJhfuuFiPJU5BF9888888888888888888819xxxwxx1xxxxxxxhgFNRq+GmZ5o/cXBBB088988888888888888888sYt994ABBMNx889989hAqqal7ZWKKkhBhQ8888988888888888888988I19oABR599898899BjVFv931gE+t52hAA988988s88888888848U889IwhAAA089898999BHXETPm1mOZAIUBAd988988EAU8888884AAA0488ABBAA088888998JRtZuW7mUN3No0BAV88988oAAA888888oAAkAgQ0IAAAAARw989999tUQ5TOrZmCQeoAAAc98898IAAAc88888gAAYoAABhAAABAAAQ0w1199RSY/fCWxLc0YhAQ888888EEAAg0888sAAAg8AABAAAAAABABAAQF99ph2s7ML/U+a2BBQw0sY88ooAAAA888oAAAIUoAAABAAABAABABA1899Q9bjWD+wVFhIBBAAAAAAsYIIAU884AAAAk5ohBAAAAAAABBAABB995RmFMoLigukYhAAMMMAAAAU8cs08wAAAAAwFsAAAAAAAAAAAAAJJV9tRRmUIFwRO1dE898000IAAId9AYAAAAAAAQgUAAAAAAAAAAAABhJQ99BlhDtwcW+ErvY8oAEp8AA09oIAAAAAAAAE4woAAAAAAAAAAAAAhA89Nd7nLw7DexFjeCmCEA8sAU99McAAAAAAABk80ctAEAAsAAAAABAV8995yMPCq/Nb1HGqZukM08IQ888sAAAAAAM8YYZ88p8oA0IAAAAAM999nkKHUsPX0j3PqWyU8CkUoAwwogAAAAAAA8ssg88988MVsAAAAU9934OOPCs4yA8oOsIEimgR3IkIAAAAAAAAAAA088ZU8898889IAAEc5oEHiI4d8RDYwI4MMkOKR9z0aIAAAAAAAAAAAUs8sB88889s1pAA89s02AIoRKHiqooyoQU0cG5ZPKqoAAAAAAAAAAAc888AU88888JAAR9rAAcqc+1EYVcow0MM8AouatVWMgc0AAAAAAAAAs888oB88988tBAV98kYcMudHsG4YogEcY4kkOTnFrY80J8gAAAAAAA88888ERs5989oABVoygWA49ajsAkAEIQckQMIyzJr6288w8IAAAAAA88898pt0pV8wsBBVY0UyUwU7pMAEcMcMcAcEoMz3LnAu4M8IAAAAAA088899VY9BsBRph/beyyIwr8ggow8OQI0QEMMsuH/TgaiaQgAAAAAAU889995YUsVpB1B6DLS0Y8Gn4IsgWMwsIkgSyUAa3uq40wwkAAAAAAA88BV99lx9p1IABQQLSUqsbT/UMaiwoIoo4uyawKmjmQU888AAAAAAA08NV99IZ19ZtABSQHSwKUnfcwuyyIo0MUU+uGUiGGGswAgAAAAAAAAQ99d999RNQ99pAE4ricAcKvws++qEIss8ugyyMKyiGUvAAAAAAAAAAA9999t0hQA09sBSntK8gO6mEKCWWU4MMsAWmOiIKWuwqAAAAAMAAAAAV9888AgAAQ89JikoqoiGBfeKOWasYAsUTW8qy8eeCmQIAAU88AAwAAV988oEAABB199aWOygWG72+ii+qgEA0c/uwMaUS2++0owAc888EwAABx9sAQQoABR9owoG+k3vKOqCm6qcE8UUfkcMg02m2ewiAI888888AABBU9AAs5IAlxvn/u6uj7muSq2qq0U8YsxMAgow6GWOSmAA888888ABBAAQoAU5IABBjVpCWqfDeSuq++qYIUI8cQoZBKaqK+SyAE888888ABVNBAAAAtgMtF7jBIKK/O6OWq2yuUwUg04EIco6s+euGQAM888888AAV9sIAAABAxxxiDNEO6yOiaWqGOqUAQoAoQEkky8I+6qMA8888888oBR598IABBABBBip8o2KiKGq+ii+4AkAochEqEYYaeM2+gA8888888pFttR88IBBABBBSYw8oW3jVt6C++gsAUIoUoWtw02Q0WIUU98888888s99B188BBABBB6IAEEEmq5a+6yAM4A8oAV0mUaC6SUwgr898888888888oAB09BBJAUAoMIUMrYCq+qEM84AUMBRYaKi8YUcc6D59888888989tgAAR8tBBBpM1AQ0KnSu+SqU84oA8sU0siuAk8Iw+QHB99999999899pAAAR9sBBvAwAwuaLu+uCuU8808MQ0EKQ8QwgUWa6pB999999918R9sAAAB10pVyMUAeSTnWqWKWU88o04k6WmY0Wq26KwdlB199999904Ax8ABJBR98VcW0ACIrr2GWuSg8A0sUS6WKqIS+mkcZhRBd999999IAABwB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" alt="Serviteur de Dieu — Vivre en Christ" style="width:100%;height:100%;object-fit:cover;object-position:calc(50% - 5mm) calc(top + 5mm);display:block">
+      </div>
+      <div style="position:absolute;bottom:-12px;right:-12px;width:100%;max-width:380px;height:100%;border:2px solid rgba(184,150,90,.3);border-radius:4px;z-index:-1"></div>
+    </div>
+    <div class="pasteur-content">
+      <p class="eyebrow">Le serviteur derrière le ministère</p>
+      <h2>21 années de<br><em>formation et d'appel</em></h2>
+      <p>Pendant 21 années, Dieu nous a formés jour après jour pour cette tâche. Non par arrogance, mais par fidélité à un appel reçu et éprouvé.</p>
+      <p>Tout comme Paul qui disait : <em>« selon la grâce de Dieu qui m'a été donnée, j'ai posé le fondement comme un sage architecte »</em> — nous avons été préparés pour poser des fondements solides et bâtir avec des matériaux qui demeurent.</p>
+      <p>Le Ministère Vivre en Christ n'est pas une église supplémentaire ni un mouvement concurrent. C'est une œuvre de formation et de restauration doctrinale, au service de l'Église de Jésus-Christ tout entière.</p>
+      <div class="pasteur-verse">
+        <p>« Selon la grâce de Dieu qui m'a été donnée, j'ai posé le fondement comme un sage architecte, et un autre bâtit dessus. »</p>
+        <cite>1 Corinthiens 3 : 10</cite>
+      </div>
+      <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
+        <a href="#accompagnement" class="btn-gold">Être accompagné</a>
+        <a href="#contact" class="btn-outline">Nous écrire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Vivre <span>en Christ</span></h3>
+        <p>Ministère de formation et de restauration doctrinale, au service de l'Église de Jésus-Christ. Fondé sur 21 années de préparation et d'appel.</p>
+        <div class="footer-verse">
+          <p>« Vous êtes le champ de Dieu, l'édifice de Dieu. »</p>
+          <cite>1 Corinthiens 3 : 9</cite>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Ministère</h4>
+        <a href="#vision">Notre vision</a>
+        <a href="#ressources">Ressources gratuites</a>
+        <a href="#boutique">Boutique</a>
+        <a href="#accompagnement">Accompagnement</a>
+        <a href="#seminaires">Séminaires</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <a href="#ressources">Ebooks gratuits</a>
+        <a href="#boutique">Formations audio</a>
+        <a href="#boutique">Packs complets</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#accompagnement">Accompagnement</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="#">contact@vivreenchrist.org</a>
+        <a href="#">WhatsApp : +225 0574758383</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Vivre en Christ · Ministère d'enseignement biblique · vivreenchrist.org · +225 0574758383</p>
+      <div class="footer-socials">
+        <a href="#" title="Facebook">f</a>
+        <a href="#" title="YouTube">▷</a>
+        <a href="#" title="WhatsApp">w</a>
+        <a href="#" title="Telegram">✈</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ MODAL TÉLÉCHARGEMENT GRATUIT ══ -->
+<div class="overlay" id="dl-modal-1" onclick="oc(event,'dl-modal-1')">
+  <div class="modal">
+    <div class="modal-hd"><h2>Télécharger <em>gratuitement</em></h2><button class="modal-close" onclick="closeModal('dl-modal-1')">✕</button></div>
+    <div class="modal-body">
+      <div id="dlf1">
+        <p style="font-size:14px;color:var(--warm);line-height:1.7;margin-bottom:20px">Laissez-nous votre prénom et email pour recevoir le document <strong>« Pourquoi un enfant de Dieu doit-il se laisser bâtir ? »</strong> directement dans votre boîte mail.</p>
+        <form class="modal-form" onsubmit="dlOk(event,'dlf1','dls1')">
+          <div class="fg"><label>Prénom</label><input type="text" placeholder="Jean" required></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com" required></div>
+          <button type="submit" class="modal-submit">Recevoir le document gratuit</button>
+        </form>
+      </div>
+      <div class="modal-success" id="dls1">
+        <div class="big-icon">📖</div>
+        <h3>Document envoyé !</h3>
+        <p>Vérifiez votre boîte email dans quelques minutes. Si vous ne le trouvez pas, regardez dans vos spams.</p>
+        <div class="verse-box"><p>« Heureux ceux qui ont faim et soif de la justice, car ils seront rassasiés. »</p><cite>Matthieu 5 : 6</cite></div>
+        <button onclick="closeModal('dl-modal-1')" class="btn-outline" style="margin-top:16px">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="dl-modal-2" onclick="oc(event,'dl-modal-2')">
+  <div class="modal">
+    <div class="modal-hd"><h2>Télécharger <em>gratuitement</em></h2><button class="modal-close" onclick="closeModal('dl-modal-2')">✕</button></div>
+    <div class="modal-body">
+      <div id="dlf2">
+        <p style="font-size:14px;color:var(--warm);line-height:1.7;margin-bottom:20px">Recevez <strong>« La nouvelle naissance : ce qui a vraiment changé en vous »</strong> directement par email.</p>
+        <form class="modal-form" onsubmit="dlOk(event,'dlf2','dls2')">
+          <div class="fg"><label>Prénom</label><input type="text" placeholder="Jean" required></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com" required></div>
+          <button type="submit" class="modal-submit">Recevoir le document gratuit</button>
+        </form>
+      </div>
+      <div class="modal-success" id="dls2">
+        <div class="big-icon">🕊️</div>
+        <h3>Document envoyé !</h3>
+        <p>Vérifiez votre boîte email. Que ce document vous édifie pour la gloire de Dieu.</p>
+        <div class="verse-box"><p>« Si quelqu'un est en Christ, il est une nouvelle créature. »</p><cite>2 Corinthiens 5 : 17</cite></div>
+        <button onclick="closeModal('dl-modal-2')" class="btn-outline" style="margin-top:16px">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="dl-modal-3" onclick="oc(event,'dl-modal-3')">
+  <div class="modal">
+    <div class="modal-hd"><h2>Télécharger <em>gratuitement</em></h2><button class="modal-close" onclick="closeModal('dl-modal-3')">✕</button></div>
+    <div class="modal-body">
+      <div id="dlf3">
+        <p style="font-size:14px;color:var(--warm);line-height:1.7;margin-bottom:20px">Recevez <strong>« Chair ou Esprit : comment discerner d'où vient votre obéissance »</strong> par email.</p>
+        <form class="modal-form" onsubmit="dlOk(event,'dlf3','dls3')">
+          <div class="fg"><label>Prénom</label><input type="text" placeholder="Jean" required></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com" required></div>
+          <button type="submit" class="modal-submit">Recevoir le document gratuit</button>
+        </form>
+      </div>
+      <div class="modal-success" id="dls3">
+        <div class="big-icon">🔥</div>
+        <h3>Document envoyé !</h3>
+        <p>Vérifiez votre boîte email. Bonne méditation !</p>
+        <div class="verse-box"><p>« Marchez selon l'Esprit, et vous n'accomplirez pas les désirs de la chair. »</p><cite>Galates 5 : 16</cite></div>
+        <button onclick="closeModal('dl-modal-3')" class="btn-outline" style="margin-top:16px">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL ACCOMPAGNEMENT GRATUIT ══ -->
+<div class="overlay" id="accomp-free" onclick="oc(event,'accomp-free')">
+  <div class="modal">
+    <div class="modal-hd"><h2>Accompagnement <em>Découverte</em></h2><button class="modal-close" onclick="closeModal('accomp-free')">✕</button></div>
+    <div class="modal-body">
+      <div id="acf">
+        <p style="font-size:14px;color:var(--warm);line-height:1.7;margin-bottom:20px">Rejoignez notre communauté d'édification gratuitement. Vous recevrez les ressources de base, la newsletter hebdomadaire et l'accès au groupe WhatsApp.</p>
+        <form class="modal-form" onsubmit="dlOk(event,'acf','acs')">
+          <div class="fg"><label>Prénom</label><input type="text" placeholder="Jean" required></div>
+          <div class="fg"><label>Nom</label><input type="text" placeholder="Kouassi" required></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com" required></div>
+          <div class="fg"><label>WhatsApp</label><input type="tel" placeholder="+225 07 00 00 00 00" required></div>
+          <div class="fg"><label>Pays</label>
+            <select><option>Côte d'Ivoire</option><option>Sénégal</option><option>Mali</option><option>Burkina Faso</option><option>Cameroun</option><option>RD Congo</option><option>France</option><option>Autre</option></select>
+          </div>
+          <button type="submit" class="modal-submit">Rejoindre gratuitement</button>
+        </form>
+      </div>
+      <div class="modal-success" id="acs">
+        <div class="big-icon">✝</div>
+        <h3>Bienvenue dans la communauté !</h3>
+        <p>Vous allez recevoir un message WhatsApp pour rejoindre le groupe d'édification. Les ressources gratuites vous seront envoyées par email.</p>
+        <div class="verse-box"><p>« Vous êtes le champ de Dieu, l'édifice de Dieu. »</p><cite>1 Corinthiens 3 : 9</cite></div>
+        <button onclick="closeModal('accomp-free')" class="btn-outline" style="margin-top:16px">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL PAIEMENT WHATSAPP ══ -->
+<div class="overlay" id="pay-modal" onclick="oc(event,'pay-modal')">
+  <div class="modal">
+    <div class="modal-hd">
+      <div><h2 id="pay-title">Commander</h2><p style="font-size:13px;color:var(--warm);margin-top:4px" id="pay-price"></p></div>
+      <button class="modal-close" onclick="closeModal('pay-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="pay-info">
+        <span class="pay-info-icon">📱</span>
+        <p>Le paiement se fait via <strong>Mobile Money</strong> (Orange Money, MTN, Wave, Moov) ou par virement. Après paiement, envoyez votre preuve de paiement sur WhatsApp et recevez votre ressource immédiatement.</p>
+      </div>
+      <div class="pay-steps">
+        <div class="pay-step"><div class="pay-step-num">1</div><p>Effectuez votre paiement Mobile Money au numéro <strong>+225 0574758383</strong> ou par virement bancaire sur demande.</p></div>
+        <div class="pay-step"><div class="pay-step-num">2</div><p>Envoyez la <strong>capture d'écran du paiement</strong> + votre email sur WhatsApp au même numéro.</p></div>
+        <div class="pay-step"><div class="pay-step-num">3</div><p>Recevez votre ressource <strong>dans les 2 heures</strong> suivant la confirmation du paiement.</p></div>
+      </div>
+      <a id="pay-wa-link" href="#" target="_blank" class="btn-whatsapp" onclick="return waClick()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Commander via WhatsApp
+      </a>
+      <p style="font-size:11px;color:var(--warm);text-align:center;margin-top:10px">WhatsApp : +225 0574758383 · Réponse sous 2h</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL SÉMINAIRE ══ -->
+<div class="overlay" id="sem-modal" onclick="oc(event,'sem-modal')">
+  <div class="modal">
+    <div class="modal-hd" style="background:var(--deep)">
+      <div>
+        <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l);margin-bottom:8px">Inscription gratuite</p>
+        <h2 style="color:var(--cream)">Séminaire <em>14 juin 2027</em></h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('sem-modal')" style="color:rgba(250,247,240,.4)">✕</button>
+    </div>
+    <div style="background:var(--gold-p);padding:14px 40px;display:flex;gap:32px;border-bottom:.5px solid var(--border)">
+      <div style="font-size:13px;color:var(--charcoal)"><strong style="display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);margin-bottom:2px">Date</strong>Sam. 14 juin 2027</div>
+      <div style="font-size:13px;color:var(--charcoal)"><strong style="display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);margin-bottom:2px">Lieu</strong>Abidjan, CI</div>
+      <div style="font-size:13px;color:var(--charcoal)"><strong style="display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);margin-bottom:2px">Horaire</strong>08h–17h</div>
+      <div style="font-size:13px;color:var(--green)"><strong style="display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);margin-bottom:2px">Entrée</strong>Gratuite</div>
+    </div>
+    <div class="modal-body" style="padding-top:24px">
+      <div id="semf">
+        <form class="modal-form" onsubmit="dlOk(event,'semf','sems')">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div class="fg"><label>Prénom *</label><input type="text" required placeholder="Jean"></div>
+            <div class="fg"><label>Nom *</label><input type="text" required placeholder="Kouassi"></div>
+          </div>
+          <div class="fg"><label>Email *</label><input type="email" required placeholder="jean@exemple.com"></div>
+          <div class="fg"><label>WhatsApp *</label><input type="tel" required placeholder="+225 07 00 00 00 00"></div>
+          <div class="fg"><label>Vous êtes</label>
+            <select><option>Croyant(e) en recherche de clarté</option><option>Serviteur / Responsable</option><option>Pasteur / Ancien</option><option>Autre</option></select>
+          </div>
+          <button type="submit" class="modal-submit">Confirmer mon inscription — Gratuit</button>
+        </form>
+      </div>
+      <div class="modal-success" id="sems">
+        <div class="big-icon">✝</div>
+        <h3>Inscription reçue !</h3>
+        <p>Confirmation par WhatsApp dans 48h. Places limitées à 80 participants.</p>
+        <div class="verse-box"><p>« Heureux ceux qui ont faim et soif de la justice, car ils seront rassasiés. »</p><cite>Matthieu 5 : 6</cite></div>
+        <button onclick="closeModal('sem-modal')" class="btn-outline" style="margin-top:16px">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL CONTACT ══ -->
+<div class="overlay" id="contact-modal" onclick="oc(event,'contact-modal')">
+  <div class="modal">
+    <div class="modal-hd"><h2>Demande <em>d'accompagnement</em></h2><button class="modal-close" onclick="closeModal('contact-modal')">✕</button></div>
+    <div class="modal-body">
+      <div id="cmf">
+        <form class="modal-form" onsubmit="dlOk(event,'cmf','cms')">
+          <div class="fg"><label>Prénom & Nom</label><input type="text" required placeholder="Jean Kouassi"></div>
+          <div class="fg"><label>Email</label><input type="email" required placeholder="jean@exemple.com"></div>
+          <div class="fg"><label>WhatsApp</label><input type="tel" placeholder="+225 07 00 00 00 00"></div>
+          <div class="fg"><label>Ce qui décrit le mieux ma situation</label>
+            <select><option>Je tourne en rond depuis des années</option><option>Je sers Dieu mais je suis épuisé</option><option>Je ne comprends pas vraiment la nouvelle naissance</option><option>Je veux découvrir mon ministère</option><option>Je veux former mon église</option></select>
+          </div>
+          <div class="fg"><label>Ma demande</label><textarea placeholder="Décrivez brièvement votre situation ou votre question..." style="min-height:90px"></textarea></div>
+          <button type="submit" class="modal-submit">Envoyer ma demande</button>
+        </form>
+      </div>
+      <div class="modal-success" id="cms">
+        <div class="big-icon">🙏</div>
+        <h3>Demande reçue !</h3>
+        <p>Nous vous contacterons par WhatsApp ou email dans les 48 heures. Que le Seigneur vous prépare à recevoir ce qu'Il a pour vous.</p>
+        <div class="verse-box"><p>« Car c'est Dieu qui produit en vous le vouloir et le faire, selon son bon plaisir. »</p><cite>Philippiens 2 : 13</cite></div>
+        <button onclick="closeModal('contact-modal')" class="btn-outline" style="margin-top:16px">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CHATBOT ══ -->
+<div class="chat-float">
+  <div class="chat-tooltip">Une question ? Je suis là 🙏</div>
+  <button class="chat-btn" onclick="tgChat()">
+    <svg width="22" height="26" viewBox="0 0 22 26" fill="none"><rect x="9" y="0" width="4" height="26" rx="2" fill="white"/><rect x="0" y="9" width="22" height="4" rx="2" fill="white"/></svg>
+  </button>
+</div>
+<div class="chat-panel" id="cp">
+  <div class="chat-hd">
+    <div class="chat-av">✝</div>
+    <div class="chat-hd-info"><h3>Assistant Vivre en Christ</h3><p>En ligne · Répond rapidement</p></div>
+    <button class="chat-x" onclick="tgChat()">✕</button>
+  </div>
+  <div class="chat-msgs" id="cm2">
+    <div class="cmsg bot">
+      <div class="cmsg-av">✝</div>
+      <div>
+        <div class="cmsg-bub">Que la grâce vous soit donnée. Je suis l'assistant de <strong style="color:var(--gold-l)">Vivre en Christ</strong>.<br><br>Je peux vous orienter vers nos ressources, vous informer sur les accompagnements disponibles, ou répondre à vos questions.
+          <div class="cmsg-verse"><p>« Vous êtes le champ de Dieu, l'édifice de Dieu. »</p><cite>1 Corinthiens 3 : 9</cite></div>
+        </div>
+        <div class="qr-row">
+          <button class="qr" onclick="sqr(this)">📖 Ressources gratuites</button>
+          <button class="qr" onclick="sqr(this)">💰 Boutique & ebooks</button>
+          <button class="qr" onclick="sqr(this)">🙏 Accompagnement</button>
+          <button class="qr" onclick="sqr(this)">📅 Séminaires</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="tw" style="padding:0 14px 6px;display:none">
+    <div style="display:flex;gap:7px;align-items:center">
+      <div class="cmsg-av">✝</div>
+      <div class="tdots" style="display:flex"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+  <div class="chat-inp">
+    <textarea class="chat-ta" id="ci" placeholder="Posez votre question..." rows="1" onkeydown="ck(event)" oninput="cr(this)"></textarea>
+    <button class="chat-send" onclick="cs()">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><polygon points="1,1 12,6.5 1,12 3.5,6.5" fill="white"/></svg>
+    </button>
+  </div>
+  <div class="chat-foot">Vivre en Christ · vivreenchrist.org · +225 0574758383</div>
+</div>
+
+<script>
+// ══ NAV ══
+window.addEventListener('scroll',()=>{document.getElementById('nav').style.boxShadow=window.scrollY>20?'0 4px 24px rgba(26,20,16,.08)':''});
+document.getElementById('ham').addEventListener('click',()=>document.getElementById('mob').classList.toggle('open'));
+function cm(){document.getElementById('mob').classList.remove('open')}
+
+// ══ REVEAL ══
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+// ══ MODALS ══
+function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
+function oc(e,id){if(e.target===document.getElementById(id))closeModal(id)}
+function dlOk(e,fid,sid){e.preventDefault();document.getElementById(fid).style.display='none';document.getElementById(sid).style.display='block'}
+
+// ══ PAIEMENT ══
+let payItem='',payPrx='';
+function openPay(item,price){
+  payItem=item;payPrx=price;
+  document.getElementById('pay-title').textContent='Commander : '+item;
+  document.getElementById('pay-price').textContent='Montant : '+price;
+  openModal('pay-modal');
+}
+function waClick(){
+  const msg=encodeURIComponent('Bonjour, je souhaite commander : '+payItem+'\nMontant : '+payPrx+'\nVivreenchrist.org');
+  document.getElementById('pay-wa-link').href='https://wa.me/2250574758383?text='+msg;
+  return true;
+}
+
+// ══ NEWSLETTER ══
+function nlSub(){
+  const e=document.getElementById('nl-e').value;
+  if(!e||!e.includes('@')){alert('Email invalide');return}
+  document.querySelector('.nl-form').style.display='none';
+  document.getElementById('nl-ok').style.display='block';
+}
+
+// ══ CONTACT ══
+function ctSub(e){
+  e.preventDefault();const b=e.target.querySelector('button');
+  b.textContent='✓ Envoyé !';b.style.background='#3B6D11';
+  setTimeout(()=>{b.textContent='Envoyer le message';b.style.background='';e.target.reset()},3000);
+}
+
+// ══ CHATBOT ══
+const SYS=`Tu es l'assistant officiel du Ministère Vivre en Christ, ministère chrétien de formation et restauration doctrinale basé à Abidjan, Côte d'Ivoire (site: vivreenchrist.org, WhatsApp: +225 0574758383).
+
+IDENTITÉ: Chaleureux, bibliquement ancré, bienveillant. Réponds en français. Sois bref (3-5 phrases). Utilise parfois un verset formaté: [texte du verset] — Référence
+
+MINISTÈRE:
+- Mission: Formation et restauration doctrinale, accompagnement des croyants dans la vie de Dieu en Christ
+- Vision: Élever un peuple de croyants qui vivent réellement la vie de Dieu en Christ
+- Conviction: La vie chrétienne n'est pas une discipline religieuse à perfectionner, mais une vie divine à manifester
+- Contact: contact@vivreenchrist.org | WhatsApp: +225 0574758383
+
+RESSOURCES GRATUITES:
+1. "Pourquoi un enfant de Dieu doit-il se laisser bâtir ?" - document fondateur (gratuit)
+2. "La nouvelle naissance : ce qui a vraiment changé en vous" (gratuit)
+3. "Chair ou Esprit : comment discerner" (gratuit)
+
+BOUTIQUE (payant):
+- L'Édifice de Dieu - formation 5 niveaux: 5 €
+- Vivre par l'Esprit (Romains 8): 8 €
+- Pack Bâtisseur complet: 18 €
+- Identité en Christ: 4 €
+- Découvrir votre ministère: 5 €
+- Formation Responsables: 23 €
+
+ACCOMPAGNEMENT:
+- Découverte: Gratuit (groupe WhatsApp + newsletter + ressources de base)
+- Fondements: 12 €/mois (2 sessions/mois, parcours 3 mois)
+- Édification Profonde: 30 €/mois (4 sessions/mois, parcours 6 mois)
+
+SÉMINAIRES:
+- 14 juin 2025: Abidjan, gratuit, "Pourquoi se laisser bâtir?"
+- 19 juillet 2025: Zoom, 5000 FCFA, Responsables
+- 6 septembre 2025: Abidjan, 10 000 FCFA, Conférence annuelle
+
+PAIEMENT: Mobile Money (+225 0574758383) puis WhatsApp avec capture d'écran.`;
+
+let hist=[],chatO=false,ldg=false;
+function tgChat(){chatO=!chatO;document.getElementById('cp').classList.toggle('open',chatO);if(chatO)document.getElementById('ci').focus()}
+async function cs(){
+  const inp=document.getElementById('ci');const t=inp.value.trim();
+  if(!t||ldg)return;
+  am('usr',t);inp.value='';inp.style.height='auto';
+  hist.push({role:'user',content:t});
+  st(true);ldg=true;
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:SYS,messages:hist})});
+    const d=await r.json();
+    const rep=d.content?.[0]?.text||"Je n'ai pas pu répondre. Contactez-nous sur WhatsApp : +225 0574758383";
+    hist.push({role:'assistant',content:rep});
+    st(false);ab(rep);
+  }catch(e){st(false);am('err',"Erreur. Contactez-nous : +225 0574758383")}
+  ldg=false;
+}
+function am(t,tx){
+  const c=document.getElementById('cm2');const d=document.createElement('div');
+  if(t==='usr'){d.className='cmsg usr';d.innerHTML=`<div class="cmsg-av" style="background:rgba(250,247,240,.07);border-color:rgba(250,247,240,.1);color:rgba(250,247,240,.4);font-size:9px">Vous</div><div class="cmsg-bub">${es(tx)}</div>`}
+  else{d.className='cmsg bot';d.innerHTML=`<div class="cmsg-av">✝</div><div class="cmsg-bub" style="border-color:rgba(255,80,80,.12)">${es(tx)}</div>`}
+  c.appendChild(d);sb();
+}
+function ab(t){
+  const c=document.getElementById('cm2');
+  let f=es(t).replace(/\[([^\]]+)\] — ([^\n]+)/g,'<div class="cmsg-verse"><p>$1</p><cite>$2</cite></div>')
+    .replace(/\*\*([^*]+)\*\*/g,'<strong style="color:var(--gold-l)">$1</strong>')
+    .replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>');
+  const d=document.createElement('div');d.className='cmsg bot';
+  d.innerHTML=`<div class="cmsg-av">✝</div><div><div class="cmsg-bub">${f}</div></div>`;
+  c.appendChild(d);sb();
+}
+function sqr(b){const t=b.textContent.replace(/^[^\s]+\s/,'').trim();document.getElementById('ci').value=t;cs();b.closest('.qr-row')?.remove()}
+function st(s){document.getElementById('tw').style.display=s?'block':'none';if(s)sb()}
+function sb(){const m=document.getElementById('cm2');setTimeout(()=>m.scrollTop=m.scrollHeight,50)}
+function ck(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();cs()}}
+function cr(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,90)+'px'}
+function es(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+</script>
+</body>
+</html>
