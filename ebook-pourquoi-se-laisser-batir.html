@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pourquoi se laisser bâtir ? — Ministère Vivre en Christ</title>
+<meta name="description" content="Pourquoi un enfant de Dieu doit-il se laisser bâtir ? Un document de formation spirituelle du Ministère Vivre en Christ.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lato:wght@300;400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --noir:#0D0D0D;--encre:#1C1C1C;--charbon:#2A2A2A;
+  --or:#C8973F;--or-l:#E4B86A;--or-p:#F9EDD4;--or-d:#9B6E28;
+  --creme:#FDFAF4;--lin:#F0E8D5;--blanc:#FFFFFF;
+  --gris:#6B6B6B;--gris-l:#9E9E9E;
+  --display:'Playfair Display',Georgia,serif;
+  --corps:'EB Garamond',Georgia,serif;
+  --sans:'Lato',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--corps);background:var(--creme);color:var(--encre);font-size:18px;line-height:1.9;font-weight:400;overflow-x:hidden}
+
+@media print{
+  .no-print,.nav-eb{display:none!important}
+  body{font-size:11pt;background:white}
+  .couverture{min-height:auto;page-break-after:always;background:#0D0D0D!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section,div{page-break-inside:avoid}
+}
+
+/* ══ NAV ══ */
+.nav-eb{position:fixed;top:0;left:0;right:0;z-index:300;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(253,250,244,.97);backdrop-filter:blur(16px);border-bottom:.5px solid rgba(200,151,63,.2);transform:translateY(-100%);transition:transform .4s}
+.nav-eb.vis{transform:translateY(0)}
+.nav-eb-logo{font-family:var(--display);font-size:14px;font-style:italic;color:var(--charbon)}
+.nav-eb-logo span{color:var(--or)}
+.nav-bar-w{flex:1;max-width:160px;margin:0 18px;height:2px;background:rgba(200,151,63,.15);border-radius:1px;overflow:hidden}
+.nav-bar-f{height:100%;background:var(--or);border-radius:1px;width:0%;transition:width .3s}
+.nav-chap{font-family:var(--sans);font-size:10px;letter-spacing:.09em;color:var(--gris-l);white-space:nowrap;overflow:hidden;max-width:200px;text-overflow:ellipsis}
+.btn-dl-nav{background:var(--or);color:white;border:none;padding:6px 14px;border-radius:2px;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;transition:background .2s;white-space:nowrap}
+.btn-dl-nav:hover{background:var(--or-d)}
+
+/* ══ COUVERTURE ══ */
+.couverture{min-height:100vh;background:var(--noir);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:60px 40px;text-align:center}
+.couv-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 38%,rgba(200,151,63,.09) 0%,transparent 62%),radial-gradient(ellipse 40% 30% at 15% 80%,rgba(200,151,63,.04) 0%,transparent 50%);pointer-events:none}
+.couv-vl{position:absolute;left:50%;top:0;bottom:0;width:.5px;background:linear-gradient(to bottom,transparent,rgba(200,151,63,.12) 25%,rgba(200,151,63,.12) 75%,transparent);pointer-events:none}
+.couv-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
+.couv-tag{font-family:var(--sans);font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:rgba(200,151,63,.5);margin-bottom:32px;display:flex;align-items:center;justify-content:center;gap:16px}
+.couv-tag::before,.couv-tag::after{content:'';width:36px;height:.5px;background:rgba(200,151,63,.3);display:block}
+.couv-croix{width:34px;height:42px;margin:0 auto 28px;opacity:.55}
+.couv-coll{font-family:var(--sans);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,151,63,.38);margin-bottom:12px;display:block}
+.couv-sous-t{font-family:var(--display);font-size:clamp(13px,2vw,17px);font-style:italic;color:rgba(253,250,244,.4);display:block;margin-bottom:8px}
+.couv-titre{font-family:var(--display);font-size:clamp(38px,6.5vw,78px);font-weight:900;color:var(--creme);line-height:.97;letter-spacing:-.02em;margin-bottom:6px;display:block}
+.couv-titre-em{font-family:var(--display);font-size:clamp(20px,3.5vw,38px);font-weight:700;font-style:italic;color:var(--or-l);display:block;margin-bottom:10px}
+.couv-verse-sm{font-family:var(--display);font-size:14px;font-style:italic;color:rgba(253,250,244,.35);margin-bottom:32px;display:block}
+.couv-sep{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:32px}
+.couv-sep::before,.couv-sep::after{content:'';width:52px;height:.5px;background:rgba(200,151,63,.25);display:block}
+.couv-sep-s{color:rgba(200,151,63,.4);font-size:13px}
+.couv-vb{background:rgba(200,151,63,.07);border:.5px solid rgba(200,151,63,.18);border-left:3px solid var(--or);padding:20px 26px;text-align:left;border-radius:0 2px 2px 0;margin:0 auto 36px;max-width:520px}
+.couv-vb p{font-family:var(--display);font-size:16px;font-style:italic;color:rgba(253,250,244,.8);line-height:1.6;margin-bottom:8px}
+.couv-vb cite{font-family:var(--sans);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--or);font-style:normal}
+.couv-min{font-family:var(--sans);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,151,63,.3);margin-bottom:6px}
+.couv-site{font-family:var(--display);font-size:16px;font-weight:600;color:rgba(253,250,244,.55)}
+.couv-scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:rgba(253,250,244,.18);font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--sans);animation:bob 2.5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* ══ BTN DL ══ */
+.btn-dl-wrap{background:var(--lin);padding:40px;text-align:center;border-bottom:.5px solid rgba(200,151,63,.2)}
+.btn-dl-wrap p{font-family:var(--corps);font-size:15px;color:var(--gris);margin-bottom:18px;line-height:1.7}
+.btn-dl{display:inline-flex;align-items:center;gap:9px;background:var(--or);color:white;padding:14px 34px;border-radius:2px;text-decoration:none;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,transform .15s;border:none;cursor:pointer}
+.btn-dl:hover{background:var(--or-d);transform:translateY(-2px)}
+
+/* ══ SOMMAIRE ══ */
+.som{max-width:800px;margin:0 auto;padding:96px 48px}
+.som-h{font-family:var(--display);font-size:clamp(34px,4vw,50px);font-weight:700;color:var(--noir);margin-bottom:44px;padding-bottom:18px;border-bottom:.5px solid rgba(200,151,63,.25)}
+.som-h span{color:var(--or)}
+.som-item{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:baseline;padding:13px 0;border-bottom:.5px solid rgba(200,151,63,.08);text-decoration:none;cursor:pointer;transition:color .2s}
+.som-item:hover .som-nom{color:var(--or-d)}
+.som-num{font-family:var(--sans);font-size:10px;letter-spacing:.1em;color:var(--or);font-weight:700}
+.som-nom{font-family:var(--display);font-size:clamp(14px,1.8vw,18px);font-weight:600;color:var(--charbon);line-height:1.3}
+.som-ref{font-family:var(--sans);font-size:9px;letter-spacing:.06em;color:var(--gris-l);text-align:right}
+
+/* ══ LAYOUT ══ */
+.sec-c{background:var(--creme)}
+.sec-l{background:var(--lin)}
+.sec-n{background:var(--noir)}
+.sec-or-bg{background:var(--or);padding:80px 48px;text-align:center}
+.chap{max-width:740px;margin:0 auto;padding:72px 48px}
+
+/* ══ TYPO ══ */
+.chap-num{font-family:var(--sans);font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:var(--or);font-weight:700;display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.chap-num::after{content:'';width:32px;height:.5px;background:var(--or);display:block}
+.sec-n .chap-num{color:var(--or-l)}
+.sec-n .chap-num::after{background:var(--or-l)}
+.chap-h{font-family:var(--display);font-size:clamp(30px,4vw,54px);font-weight:700;color:var(--noir);line-height:1.06;margin-bottom:10px;letter-spacing:-.01em}
+.chap-h em{font-style:italic;color:var(--or-d)}
+.sec-n .chap-h{color:var(--creme)}
+.chap-sh{font-family:var(--display);font-size:clamp(14px,1.7vw,18px);font-style:italic;color:var(--gris);margin-bottom:36px;line-height:1.5}
+.sec-n .chap-sh{color:rgba(253,250,244,.38)}
+.lead{font-family:var(--display);font-size:clamp(16px,1.9vw,21px);font-style:italic;color:var(--charbon);line-height:1.65;margin-bottom:28px;padding-left:18px;border-left:3px solid rgba(200,151,63,.35)}
+.sec-n .lead{color:rgba(253,250,244,.6);border-left-color:rgba(200,151,63,.25)}
+.bp{font-family:var(--corps);font-size:18px;color:var(--charbon);line-height:1.95;margin-bottom:20px}
+.sec-n .bp{color:rgba(253,250,244,.72)}
+.bp strong{font-weight:700;color:var(--noir)}
+.sec-n .bp strong{color:var(--creme)}
+.bp em{font-style:italic;color:var(--or-d)}
+.sec-n .bp em{color:var(--or-l)}
+
+/* ══ VERSETS ══ */
+.v{margin:34px 0;padding:24px 30px;background:var(--or-p);border:.5px solid rgba(200,151,63,.3);border-radius:3px;position:relative}
+.v::before{content:'"';position:absolute;top:-10px;left:22px;font-family:var(--display);font-size:50px;font-style:italic;color:rgba(200,151,63,.2);line-height:1}
+.v p{font-family:var(--display);font-size:clamp(15px,1.9vw,20px);font-style:italic;color:var(--noir);line-height:1.6;margin-bottom:9px}
+.v cite{font-family:var(--sans);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--or-d);font-style:normal;font-weight:700}
+.v.nuit{background:rgba(200,151,63,.07);border-color:rgba(200,151,63,.17)}
+.v.nuit p{color:var(--creme)}
+.v.nuit cite{color:var(--or-l)}
+
+/* ══ ENCARTS ══ */
+.encart{margin:32px 0;padding:24px 28px;background:var(--blanc);border:.5px solid rgba(200,151,63,.2);border-top:3px solid var(--or);border-radius:0 0 3px 3px}
+.encart h4{font-family:var(--display);font-size:17px;font-weight:700;color:var(--noir);margin-bottom:9px}
+.encart p,.encart li{font-family:var(--corps);font-size:16px;color:var(--gris);line-height:1.8}
+.encart ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:7px}
+.encart li{display:flex;align-items:flex-start;gap:9px}
+.encart li::before{content:'✦';color:var(--or);font-size:10px;margin-top:5px;flex-shrink:0}
+.sec-n .encart{background:rgba(255,255,255,.04);border-color:rgba(200,151,63,.14)}
+.sec-n .encart h4{color:var(--or-l)}
+.sec-n .encart p,.sec-n .encart li{color:rgba(253,250,244,.54)}
+
+.encart-key{margin:32px 0;padding:28px 34px;background:var(--noir);border-radius:3px;text-align:center}
+.encart-key h3{font-family:var(--display);font-size:clamp(17px,2.3vw,26px);font-weight:700;font-style:italic;color:var(--creme);line-height:1.25;margin-bottom:9px}
+.encart-key p{font-family:var(--sans);font-size:11px;letter-spacing:.06em;color:rgba(253,250,244,.32)}
+.sec-n .encart-key{background:rgba(255,255,255,.05);border:.5px solid rgba(200,151,63,.14)}
+
+/* ══ TABLEAU ══ */
+.tab-w{overflow-x:auto;margin:32px 0}
+.tab{width:100%;border-collapse:collapse;font-family:var(--corps)}
+.tab th{background:var(--noir);color:var(--or-l);font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:12px 18px;text-align:left;font-weight:700}
+.tab td{padding:13px 18px;font-size:16px;color:var(--charbon);border-bottom:.5px solid rgba(200,151,63,.1);line-height:1.5}
+.tab tr:nth-child(even) td{background:rgba(200,151,63,.04)}
+.tab tr:hover td{background:var(--or-p)}
+.tab td:first-child{font-weight:700;color:var(--noir)}
+
+/* ══ POINTS ══ */
+.pts{display:flex;flex-direction:column;gap:13px;margin:28px 0}
+.pt{display:flex;gap:16px;align-items:flex-start;padding:17px 20px;background:var(--blanc);border:.5px solid rgba(200,151,63,.17);border-radius:3px}
+.sec-n .pt{background:rgba(255,255,255,.03);border-color:rgba(200,151,63,.12)}
+.pt-n{font-family:var(--display);font-size:32px;font-weight:900;color:rgba(200,151,63,.13);line-height:1;flex-shrink:0;min-width:32px}
+.pt-b h4{font-family:var(--display);font-size:17px;font-weight:700;color:var(--noir);margin-bottom:4px}
+.sec-n .pt-b h4{color:var(--creme)}
+.pt-b p{font-family:var(--corps);font-size:15px;color:var(--gris);line-height:1.75}
+.sec-n .pt-b p{color:rgba(253,250,244,.47)}
+
+/* ══ SEP ══ */
+.sep{display:flex;align-items:center;justify-content:center;gap:16px;margin:44px 0}
+.sep::before,.sep::after{content:'';flex:1;max-width:72px;height:.5px;background:linear-gradient(to right,transparent,rgba(200,151,63,.28))}
+.sep::after{background:linear-gradient(to left,transparent,rgba(200,151,63,.28))}
+.sep s{color:var(--or);opacity:.45;font-size:12px;text-decoration:none}
+
+/* ══ BANDES ══ */
+.bande-chap{background:var(--noir);padding:60px 48px;text-align:center}
+.bande-chap p{font-family:var(--sans);font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:rgba(200,151,63,.42);margin-bottom:12px}
+.bande-chap h2{font-family:var(--display);font-size:clamp(26px,3.8vw,50px);font-weight:900;color:var(--creme);line-height:1.1}
+.bande-chap h2 em{font-style:italic;color:var(--or-l)}
+.sec-or-bg h2{font-family:var(--display);font-size:clamp(24px,3.5vw,46px);font-weight:900;font-style:italic;color:white;line-height:1.2;margin-bottom:14px}
+.sec-or-bg h2 strong{font-style:normal}
+.sec-or-bg p{font-family:var(--corps);font-size:17px;color:rgba(255,255,255,.78);max-width:600px;margin:0 auto;line-height:1.75}
+
+/* ══ CONCLUSION ══ */
+.conc{background:var(--noir);padding:100px 48px;text-align:center}
+.conc-inner{max-width:700px;margin:0 auto}
+.conc-h{font-family:var(--display);font-size:clamp(30px,4.5vw,58px);font-weight:900;color:var(--creme);line-height:1.05;margin-bottom:20px;letter-spacing:-.02em}
+.conc-h em{font-style:italic;color:var(--or-l)}
+.conc-txt{font-family:var(--corps);font-size:17px;color:rgba(253,250,244,.6);line-height:1.9;max-width:580px;margin:0 auto 32px}
+.conc-v{background:rgba(200,151,63,.08);border:.5px solid rgba(200,151,63,.2);border-left:3px solid var(--or);padding:21px 26px;text-align:left;border-radius:0 3px 3px 0;margin-bottom:36px}
+.conc-v p{font-family:var(--display);font-size:18px;font-style:italic;color:var(--creme);line-height:1.55;margin-bottom:8px}
+.conc-v cite{font-family:var(--sans);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--or);font-style:normal}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:28px}
+.btn-o{display:inline-block;background:var(--or);color:white;padding:13px 34px;border-radius:2px;text-decoration:none;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,transform .15s}
+.btn-o:hover{background:var(--or-d);transform:translateY(-2px)}
+.btn-c{display:inline-block;color:rgba(253,250,244,.38);padding:12px 26px;border-radius:2px;text-decoration:none;font-family:var(--sans);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:.5px solid rgba(253,250,244,.1);transition:color .2s,border-color .2s}
+.btn-c:hover{color:var(--or);border-color:var(--or)}
+
+/* ══ PIED ══ */
+.pied{background:var(--encre);padding:32px 48px;text-align:center;border-top:.5px solid rgba(200,151,63,.1)}
+.pied p{font-family:var(--sans);font-size:10px;letter-spacing:.05em;color:rgba(253,250,244,.2);margin-bottom:3px}
+.pied a{color:rgba(200,151,63,.38);text-decoration:none}
+
+/* ══ ANIM ══ */
+.fu{opacity:0;transform:translateY(17px);transition:opacity .75s ease,transform .75s ease}
+.fu.in{opacity:1;transform:translateY(0)}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:768px){
+  .chap,.som,.conc{padding:60px 22px}
+  .bande-chap,.sec-or-bg,.btn-dl-wrap{padding:56px 22px}
+  .nav-eb{padding:0 16px}
+  .tab{font-size:14px}
+  .nav-chap{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-eb no-print" id="nav">
+  <div class="nav-eb-logo">Vivre <span>en Christ</span></div>
+  <div class="nav-bar-w"><div class="nav-bar-f" id="bar"></div></div>
+  <div class="nav-chap" id="nchap">Couverture</div>
+  <button class="btn-dl-nav" onclick="window.print()">⬇ Télécharger PDF</button>
+</nav>
+
+<!-- ══ COUVERTURE ══ -->
+<section class="couverture" id="couv">
+  <div class="couv-bg"></div>
+  <div class="couv-vl"></div>
+  <div class="couv-inner">
+    <div class="couv-tag">Ministère Vivre en Christ · Formation biblique</div>
+    <svg class="couv-croix" viewBox="0 0 34 42" fill="none">
+      <rect x="14" y="0" width="6" height="42" rx="3" fill="#C8973F" opacity=".65"/>
+      <rect x="0" y="14" width="34" height="6" rx="3" fill="#C8973F" opacity=".65"/>
+    </svg>
+    <span class="couv-coll">E-Book · Collection « Formation et Édification »</span>
+    <span class="couv-sous-t">Un document de formation spirituelle</span>
+    <span class="couv-titre">Pourquoi un enfant de Dieu</span>
+    <span class="couv-titre-em">doit-il se laisser bâtir ?</span>
+    <span class="couv-verse-sm">« Élevez-vous, bâtissez... » — Néhémie 2.18</span>
+    <div class="couv-sep"><div class="couv-sep-s">✦</div></div>
+    <div class="couv-vb">
+      <p>« Car nous sommes ouvriers avec Dieu. Vous êtes le champ de Dieu, l'édifice de Dieu. »</p>
+      <cite>1 Corinthiens 3 : 9</cite>
+    </div>
+    <p class="couv-min">Ministère</p>
+    <p class="couv-site">Vivre en Christ</p>
+    <p style="font-family:var(--sans);font-size:9px;letter-spacing:.15em;color:rgba(200,151,63,.28);margin-top:6px">vivreenchrist.org · +225 0574758383</p>
+  </div>
+  <div class="couv-scroll no-print">↓ Lire l'ebook</div>
+</section>
+
+<!-- BTN TÉLÉCHARGEMENT -->
+<div class="btn-dl-wrap no-print">
+  <p>Téléchargez cet ebook gratuitement et conservez-le pour votre édification personnelle.</p>
+  <button class="btn-dl" onclick="window.print()">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v13M5 12l7 7 7-7"/><path d="M3 19h18"/></svg>
+    Télécharger en PDF
+  </button>
+</div>
+
+<!-- ══ SOMMAIRE ══ -->
+<section class="sec-c" id="sommaire">
+<div class="som">
+  <h2 class="som-h">Table des <span>matières</span></h2>
+  <a class="som-item" href="#avant-propos"><span class="som-num">00</span><span class="som-nom">Avant-propos</span><span class="som-ref">Introduction</span></a>
+  <a class="som-item" href="#chap1"><span class="som-num">01</span><span class="som-nom">Vous êtes un nouveau-né — les nouveau-nés ont besoin de soins</span><span class="som-ref">1 Pierre 2.2</span></a>
+  <a class="som-item" href="#chap2"><span class="som-num">02</span><span class="som-nom">Vous êtes régénérés pour un but précis</span><span class="som-ref">1 Pierre 1.3-4</span></a>
+  <a class="som-item" href="#chap3"><span class="som-num">03</span><span class="som-nom">Vous êtes un édifice de Dieu</span><span class="som-ref">1 Corinthiens 3.9</span></a>
+  <a class="som-item" href="#chap4"><span class="som-num">04</span><span class="som-nom">Le rôle central du Saint-Esprit dans l'édification</span><span class="som-ref">2 Corinthiens 3.18</span></a>
+  <a class="som-item" href="#chap5"><span class="som-num">05</span><span class="som-nom">Pourquoi tant de croyants tournent-ils en rond ?</span><span class="som-ref">Romains 8.5</span></a>
+  <a class="som-item" href="#chap6"><span class="som-num">06</span><span class="som-nom">La grâce et la patience de Dieu dans la croissance</span><span class="som-ref">Philippiens 1.6</span></a>
+  <a class="som-item" href="#chap7"><span class="som-num">07</span><span class="som-nom">Le Ministère Vivre en Christ — une réponse suscitée par Dieu</span><span class="som-ref">Éphésiens 4.11-12</span></a>
+  <a class="som-item" href="#conclusion"><span class="som-num">✦</span><span class="som-nom">Conclusion — Votre décision aujourd'hui</span><span class="som-ref">Jean 4.23</span></a>
+</div>
+</section>
+
+<!-- ══ AVANT-PROPOS ══ -->
+<section class="sec-l" id="avant-propos">
+<div class="chap">
+  <p class="chap-num fu">Avant-propos</p>
+  <h2 class="chap-h fu">Une œuvre de Dieu<br>dans votre <em>vie</em></h2>
+  <p class="lead fu">La nouvelle naissance est la plus belle œuvre que Dieu accomplit dans la vie d'un homme. Mais cette œuvre n'est pas terminée le jour de votre conversion — elle commence.</p>
+  <p class="bp fu">En Jésus-Christ, vous avez reçu une vie nouvelle. Vous êtes devenu une nouvelle création et vous êtes désormais appelé à grandir jusqu'à la maturité spirituelle. Mais la croissance spirituelle ne se produit pas automatiquement.</p>
+  <p class="bp fu">Dieu, qui demeure le véritable bâtisseur de son Église, a choisi d'utiliser les ministères qu'Il établit pour nourrir, former et édifier ses enfants. Lorsqu'un croyant n'est pas correctement enseigné, accompagné et enraciné dans la vérité biblique, sa croissance peut être fortement ralentie.</p>
+  <div class="encart fu">
+    <h4>Ce document répond à quatre questions fondamentales</h4>
+    <ul>
+      <li>Qui êtes-vous réellement depuis votre nouvelle naissance ?</li>
+      <li>Vers quoi avance votre vie spirituelle ?</li>
+      <li>Pourquoi tant de croyants tournent-ils en rond ?</li>
+      <li>Que fait le Ministère Vivre en Christ pour vous ?</li>
+    </ul>
+  </div>
+  <p class="bp fu">Ce document a été écrit pour vous aider à comprendre le dessein de Dieu pour votre édification spirituelle et la place essentielle qu'occupe la formation biblique dans votre marche avec Christ. Chaque affirmation qui suit doit être examinée à la lumière des Saintes Écritures. <strong>Lisez avec votre Bible ouverte, vérifiez toutes choses et laissez le Saint-Esprit vous conduire dans la vérité.</strong></p>
+  <p class="bp fu" style="font-style:italic;color:var(--gris)">— Le Ministère Vivre en Christ</p>
+</div>
+</section>
+
+<!-- ══ CHAPITRE 1 ══ -->
+<section class="sec-c" id="chap1">
+<div class="chap">
+  <p class="chap-num fu">Chapitre 01</p>
+  <h2 class="chap-h fu">Vous êtes un nouveau-né —<br>et les nouveau-nés ont<br><em>besoin de soins</em></h2>
+  <div class="v fu">
+    <p>« Comme des enfants nouveau-nés, désirez le lait spirituel pur, afin que par lui vous croissiez pour le salut. »</p>
+    <cite>1 Pierre 2 : 2</cite>
+  </div>
+  <p class="lead fu">Le jour où vous avez reçu Jésus-Christ comme Seigneur et Sauveur, quelque chose d'extraordinaire s'est produit. Non pas un changement de comportement, non pas une décision morale — mais une naissance réelle.</p>
+  <p class="bp fu">Vous êtes entré dans la famille de Dieu comme on entre dans une famille : comme un enfant qui vient de naître. Or, un nouveau-né ne peut pas prendre soin de lui-même. Il ne peut pas se nourrir seul, se protéger seul, se développer seul. Il a absolument besoin que sa famille l'accueille, le prenne en charge et lui prodigue les soins appropriés. Sans cela, il dépérit.</p>
+  <div class="encart fu">
+    <h4>La réalité de beaucoup d'assemblées</h4>
+    <p>Beaucoup d'enfants de Dieu naissent, mais ne sont jamais pris en charge. Ils sont sauvés — c'est vrai — mais ils restent des nouveau-nés spirituels pendant des années, parfois des décennies, faute d'un encadrement adéquat.</p>
+  </div>
+  <p class="bp fu"><strong>Peu importe votre âge : vous êtes un bébé spirituel.</strong> Que vous ayez 20, 40 ou 70 ans au moment de votre conversion, vous n'avez spirituellement que quelques heures. La nouvelle naissance remet tout à zéro. L'ancienneté charnelle ne compte pas. Ce qui compte désormais, c'est la croissance spirituelle — et elle ne se fait pas seule.</p>
+  <p class="bp fu">Pierre compare le croyant nouvellement né à un nourrisson. Ce n'est pas un affront — c'est une réalité spirituelle transposée dans le registre biologique. Et tout comme le nourrisson a besoin du lait de sa mère, le croyant a besoin d'être nourri par la Parole de Dieu, enseigné, encadré, bâti.</p>
+</div>
+</section>
+
+<!-- ══ CHAPITRE 2 ══ -->
+<section class="sec-n" id="chap2">
+<div class="chap">
+  <p class="chap-num fu">Chapitre 02</p>
+  <h2 class="chap-h fu">Vous êtes régénérés<br>pour un but <em>précis</em></h2>
+  <p class="chap-sh fu">Et ce but est plus grand que vous ne le pensez</p>
+  <div class="v nuit fu">
+    <p>« Béni soit Dieu, le Père de notre Seigneur Jésus-Christ, qui, selon sa grande miséricorde, nous a régénérés, pour une espérance vivante, par la résurrection de Jésus-Christ d'entre les morts, pour un héritage qui ne se peut ni corrompre, ni souiller, ni flétrir. »</p>
+    <cite>1 Pierre 1 : 3-4</cite>
+  </div>
+  <p class="lead fu">Pierre utilise un mot fondamental : régénérés. Vous n'avez pas simplement été améliorés, corrigés ou reformés. Vous avez reçu une vie nouvelle — et cette vie nouvelle a un but précis.</p>
+  <p class="bp fu">Combien d'enfants de Dieu, après plusieurs années de vie chrétienne, peuvent dire avec conviction qu'ils avancent concrètement vers cet héritage ? Combien savent même ce qu'il est ? Beaucoup de croyants pensent que le salut est une destination — un point d'arrivée. Mais les Saintes Écritures nous montrent que le salut est aussi un <em>chemin.</em></p>
+  <div class="v nuit fu">
+    <p>« Je suis le chemin, la vérité, et la vie. Nul ne vient au Père que par moi. »</p>
+    <cite>Jean 14 : 6</cite>
+  </div>
+  <p class="bp fu">Jésus est à la fois la <strong>porte</strong> par laquelle on entre et le <strong>chemin</strong> sur lequel on avance. Entrer dans la porte ne suffit pas — il faut parcourir le chemin jusqu'à son terme, qui est le Père lui-même. Votre vie chrétienne n'est pas une vie au hasard. Elle a une direction, un objectif, une fin glorieuse.</p>
+  <div class="encart-key fu">
+    <h3>Vous êtes sauvés en espérance —<br><em>ce n'est que le début.</em></h3>
+    <p>Romains 8.24 — Le salut est une porte ET un chemin.</p>
+  </div>
+</div>
+</section>
+
+<!-- ══ CHAPITRE 3 ══ -->
+<section class="sec-c" id="chap3">
+<div class="chap">
+  <p class="chap-num fu">Chapitre 03</p>
+  <h2 class="chap-h fu">Vous êtes un édifice de Dieu —<br>et Dieu vous bâtit au travers<br>des <em>ministères qu'il a établis</em></h2>
+  <div class="v fu">
+    <p>« Car nous sommes ouvriers avec Dieu. Vous êtes le champ de Dieu, l'édifice de Dieu. »</p>
+    <cite>1 Corinthiens 3 : 9</cite>
+  </div>
+  <p class="lead fu">Paul compare ici le croyant à un édifice en construction. Cette image montre clairement que la vie chrétienne est un processus de croissance, de transformation et d'édification progressive.</p>
+  <p class="bp fu">Cependant, il est essentiel de comprendre une vérité fondamentale : <strong>Christ lui-même demeure le bâtisseur suprême de son Église.</strong></p>
+  <div class="v fu">
+    <p>« Je bâtirai mon Église. »</p>
+    <cite>Matthieu 16 : 18</cite>
+  </div>
+  <p class="bp fu">Dieu est donc l'architecte et le bâtisseur principal. Mais dans sa sagesse, il choisit aussi d'agir au travers des ministères qu'il établit pour enseigner, accompagner et faire grandir son peuple.</p>
+  <div class="v fu">
+    <p>« Selon la grâce de Dieu qui m'a été donnée, j'ai posé le fondement comme un sage architecte, et un autre bâtit dessus. Que chacun prenne garde à la manière dont il bâtit dessus. »</p>
+    <cite>1 Corinthiens 3 : 10</cite>
+  </div>
+  <p class="bp fu">Tous les enseignements ne produisent pas la maturité. Certains nourrissent la chair, d'autres enracinent véritablement le croyant en Christ. Voilà pourquoi l'Église a besoin d'un enseignement solide, équilibré et centré sur Jésus-Christ.</p>
+  <div class="sep fu"><s>✦</s></div>
+  <p class="bp fu"><strong>Le perfectionnement — deux buts indissociables :</strong></p>
+  <div class="v fu">
+    <p>« Et il a donné les uns comme apôtres, les autres comme prophètes, les autres comme évangélistes, les autres comme pasteurs et docteurs, pour le perfectionnement des saints en vue de l'œuvre du ministère et de l'édification du corps de Christ. »</p>
+    <cite>Éphésiens 4 : 11-12</cite>
+  </div>
+  <div class="tab-w fu">
+    <table class="tab">
+      <thead><tr><th>But n° 1 — L'œuvre du ministère</th><th>But n° 2 — L'édification du corps</th></tr></thead>
+      <tbody>
+        <tr><td>Chaque croyant a un ministère à accomplir.</td><td>Quand chaque membre est bâti et exerce son ministère, c'est tout le corps de Christ qui est édifié et qui croît.</td></tr>
+        <tr><td>Il n'est pas fait pour être spectateur.</td><td>La croissance du corps dépend de la maturité de chaque membre.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="bp fu">Un croyant insuffisamment enraciné et formé aura des difficultés à exercer pleinement, durablement et sainement son ministère. C'est pourquoi Dieu donne des ministères d'édification afin de conduire progressivement chaque membre du corps de Christ vers la maturité spirituelle et l'efficacité dans le service.</p>
+  <div class="encart fu">
+    <h4>L'objectif final : la stature parfaite de Christ</h4>
+    <p>Lorsque Jésus parle de perfection en Matthieu 5.48, il ne décrit pas une impeccabilité absolue dans la condition présente. Il parle de maturité spirituelle, d'amour accompli et de ressemblance croissante au caractère du Père. Le but de l'édification chrétienne est que Christ soit progressivement formé en nous.</p>
+  </div>
+  <div class="v fu">
+    <p>« Jusqu'à ce que nous soyons tous parvenus à l'unité de la foi et de la connaissance du Fils de Dieu, à l'état d'homme fait, à la mesure de la stature parfaite de Christ. »</p>
+    <cite>Éphésiens 4 : 13</cite>
+  </div>
+</div>
+</section>
+
+<!-- ══ BANDE OR ══ -->
+<div class="sec-or-bg">
+  <h2>La croissance chrétienne est réelle.<br>Elle est aussi <strong><em>progressive.</em></strong></h2>
+  <p>Dieu agit avec patience envers ses enfants. Il ne demande pas une maturité instantanée, mais une marche sincère, persévérante et soumise à son Esprit.</p>
+</div>
+
+<!-- ══ CHAPITRE 4 ══ -->
+<section class="sec-n" id="chap4">
+<div class="chap">
+  <p class="chap-num fu">Chapitre 04</p>
+  <h2 class="chap-h fu">Le rôle central du<br><em>Saint-Esprit</em><br>dans l'édification</h2>
+  <p class="lead fu">Toute véritable croissance spirituelle dépend du Saint-Esprit. L'enseignement biblique, aussi juste soit-il, ne peut produire la vie de Christ sans l'action intérieure de l'Esprit de Dieu.</p>
+  <div class="v nuit fu">
+    <p>« C'est l'Esprit qui vivifie ; la chair ne sert de rien. »</p>
+    <cite>Jean 6 : 63</cite>
+  </div>
+  <p class="bp fu">Le Saint-Esprit est l'agent principal de toute transformation intérieure. Sans Lui, la connaissance biblique reste intellectuelle. Avec Lui, elle devient vie, puissance et ressemblance à Christ.</p>
+  <div class="pts fu">
+    <div class="pt">
+      <div class="pt-n">✦</div>
+      <div class="pt-b"><h4>Il éclaire les Écritures</h4><p>Ce qui reste opaque à l'intelligence naturelle devient lumineux sous l'action de l'Esprit de vérité. — Jean 16.13</p></div>
+    </div>
+    <div class="pt">
+      <div class="pt-n">✦</div>
+      <div class="pt-b"><h4>Il transforme le cœur</h4><p>La transformation ne vient pas d'un effort de volonté mais d'une œuvre intérieure que seul l'Esprit peut accomplir. — Ézéchiel 36.26-27</p></div>
+    </div>
+    <div class="pt">
+      <div class="pt-n">✦</div>
+      <div class="pt-b"><h4>Il renouvelle l'intelligence</h4><p>L'Esprit produit ce renouvellement progressif de la pensée qui aligne notre façon de voir avec celle de Dieu. — Romains 12.2</p></div>
+    </div>
+    <div class="pt">
+      <div class="pt-n">✦</div>
+      <div class="pt-b"><h4>Il forme Christ dans le croyant</h4><p>L'objectif ultime du Saint-Esprit est de former Christ en nous — non pas de l'imiter de l'extérieur, mais de le manifester de l'intérieur. — Galates 4.19</p></div>
+    </div>
+  </div>
+  <div class="v nuit fu">
+    <p>« Nous tous qui, le visage découvert, contemplons comme dans un miroir la gloire du Seigneur, nous sommes transformés en la même image, de gloire en gloire, comme par le Seigneur, l'Esprit. »</p>
+    <cite>2 Corinthiens 3 : 18</cite>
+  </div>
+  <div class="encart-key fu">
+    <h3>L'objectif de toute édification véritable :<br><em>permettre au Saint-Esprit de produire<br>en nous la ressemblance à Christ.</em></h3>
+    <p>Non pas accumuler des connaissances, mais être transformés.</p>
+  </div>
+</div>
+</section>
+
+<!-- ══ CHAPITRE 5 ══ -->
+<section class="sec-l" id="chap5">
+<div class="chap">
+  <p class="chap-num fu">Chapitre 05</p>
+  <h2 class="chap-h fu">Pourquoi tant de croyants<br><em>tournent-ils en rond ?</em></h2>
+  <p class="lead fu">Des années de vie chrétienne, de cultes, de prières — et pourtant, quelque chose ne progresse pas. La joie est intermittente. La victoire est éphémère. La croissance semble stagner. Pourquoi ?</p>
+
+  <p class="bp fu"><strong>Premier problème : la quantité au lieu de la qualité.</strong> Dans la plupart des assemblées chrétiennes aujourd'hui, l'accroissement du nombre de fidèles prime sur leur perfectionnement. On court après les conversions. On n'accompagne pas les croyants dans leur croissance réelle. Résultat : des assemblées nombreuses et des membres spirituellement anémiés.</p>
+
+  <p class="bp fu">Un seul croyant réellement bâti vaut cent fois plus, pour l'avancement du Royaume, que cinquante croyants laissés à l'état de nourrissons spirituels.</p>
+
+  <div class="sep fu"><s>✦</s></div>
+
+  <p class="bp fu"><strong>Deuxième problème : servir Dieu avec la vie de la chair.</strong> La nouvelle naissance ne consiste pas à améliorer l'ancienne nature humaine. En Christ, Dieu a condamné et crucifié le vieil homme afin que le croyant ne soit plus esclave du péché.</p>
+
+  <div class="v fu">
+    <p>« Sachant que notre vieil homme a été crucifié avec lui. »</p>
+    <cite>Romains 6 : 6</cite>
+  </div>
+
+  <p class="bp fu">Cependant, le croyant doit encore apprendre à marcher selon l'Esprit, car la chair continue de s'opposer aux désirs de l'Esprit.</p>
+
+  <div class="v fu">
+    <p>« La chair a des désirs contraires à ceux de l'Esprit. »</p>
+    <cite>Galates 5 : 17</cite>
+  </div>
+
+  <p class="bp fu">La vie chrétienne devient donc un apprentissage progressif de la dépendance envers le Saint-Esprit et de la manifestation de la vie de Christ. Beaucoup de chrétiens essaient de servir Dieu avec leurs propres forces naturelles. Et c'est épuisant. C'est décourageant. C'est voué à l'échec.</p>
+
+  <div class="v fu">
+    <p>« Car ceux qui vivent selon la chair s'occupent des choses de la chair, mais ceux qui vivent selon l'Esprit s'occupent des choses de l'Esprit. »</p>
+    <cite>Romains 8 : 5</cite>
+  </div>
+
+  <div class="encart-key fu">
+    <h3>La vie chrétienne n'est pas une discipline<br>religieuse à perfectionner —<br><em>c'est une vie divine à manifester.</em></h3>
+    <p>La conviction centrale du Ministère Vivre en Christ.</p>
+  </div>
+
+  <div class="sep fu"><s>✦</s></div>
+
+  <p class="bp fu"><strong>Troisième problème : ignorer son ministère.</strong> Une grande partie des croyants qui « tournent en rond » le font parce qu'ils ne savent pas qu'ils ont eux-mêmes un ministère. Ils pensent que le ministère, c'est pour le pasteur, le prophète, l'évangéliste. Pas pour eux.</p>
+
+  <div class="v fu">
+    <p>« Or vous êtes le corps de Christ, et vous êtes ses membres, chacun pour sa part. »</p>
+    <cite>1 Corinthiens 12 : 27</cite>
+  </div>
+
+  <p class="bp fu">Chaque membre a une fonction. Un corps dont certains membres ne fonctionnent pas est un corps handicapé. Et le corps de Christ est handicapé tant que ses membres ne sont pas bâtis, formés et libérés pour exercer leur appel.</p>
+</div>
+</section>
+
+<!-- ══ CHAPITRE 6 ══ -->
+<section class="sec-n" id="chap6">
+<div class="chap">
+  <p class="chap-num fu">Chapitre 06</p>
+  <h2 class="chap-h fu">La grâce et la patience<br>de Dieu dans<br><em>la croissance</em></h2>
+  <div class="v nuit fu">
+    <p>« Celui qui a commencé en vous cette bonne œuvre la rendra parfaite pour le jour de Jésus-Christ. »</p>
+    <cite>Philippiens 1 : 6</cite>
+  </div>
+  <p class="lead fu">Dieu agit avec patience envers ses enfants. Il ne demande pas une maturité instantanée, mais une marche sincère, persévérante et soumise à son Esprit.</p>
+  <p class="bp fu">L'édification chrétienne n'est pas une pression religieuse. Ce n'est pas un standard impossible à atteindre. C'est une œuvre de transformation opérée par Dieu dans un cœur disponible. La promesse de Philippiens 1.6 est magnifique dans sa certitude : <strong>Dieu achève ce qu'il commence.</strong></p>
+  <p class="bp fu">Le croyant grandit par un ensemble de moyens que Dieu a établis :</p>
+  <div class="pts fu">
+    <div class="pt">
+      <div class="pt-n">1</div>
+      <div class="pt-b"><h4>Par la grâce</h4><p>Non par le mérite humain. Dieu donne gratuitement ce qui est nécessaire pour croître. — Éphésiens 2.8</p></div>
+    </div>
+    <div class="pt">
+      <div class="pt-n">2</div>
+      <div class="pt-b"><h4>Par la communion avec Dieu</h4><p>La prière, l'adoration et la relation intime avec le Père sont des moyens essentiels de croissance. — Jean 15.5</p></div>
+    </div>
+    <div class="pt">
+      <div class="pt-n">3</div>
+      <div class="pt-b"><h4>Par la méditation des Écritures</h4><p>La Parole méditée et assimilée renouvelle l'intelligence et aligne notre façon de penser avec celle de Dieu. — Romains 12.2</p></div>
+    </div>
+    <div class="pt">
+      <div class="pt-n">4</div>
+      <div class="pt-b"><h4>Par la pratique de la Parole</h4><p>La transformation réelle se produit lorsque la connaissance de la Parole devient une réalité vécue au quotidien. — Jacques 1.22</p></div>
+    </div>
+    <div class="pt">
+      <div class="pt-n">5</div>
+      <div class="pt-b"><h4>Par l'action du Saint-Esprit</h4><p>C'est l'Esprit qui produit en nous, progressivement et sûrement, la ressemblance à Christ. — 2 Corinthiens 3.18</p></div>
+    </div>
+  </div>
+  <div class="encart-key fu">
+    <h3>L'édification chrétienne n'est pas<br>une pression religieuse —<br><em>c'est une œuvre de Dieu<br>dans un cœur disponible.</em></h3>
+    <p>Philippiens 1.6 — Il achève ce qu'il commence.</p>
+  </div>
+</div>
+</section>
+
+<!-- ══ CHAPITRE 7 ══ -->
+<section class="sec-c" id="chap7">
+<div class="chap">
+  <p class="chap-num fu">Chapitre 07</p>
+  <h2 class="chap-h fu">Le Ministère Vivre en Christ —<br>une réponse <em>suscitée par Dieu</em></h2>
+  <div class="v fu">
+    <p>« Et il a donné les uns comme apôtres… pour le perfectionnement des saints. »</p>
+    <cite>Éphésiens 4 : 11-12</cite>
+  </div>
+  <p class="lead fu">Face à ce constat — des croyants non bâtis et des assemblées peu équipées pour les bâtir — Dieu a suscité le Ministère Vivre en Christ. Non pas comme une église supplémentaire. Mais comme une œuvre de formation et de restauration doctrinale, au service de l'Église de Jésus-Christ tout entière.</p>
+
+  <p class="bp fu">Vivre en Christ ne prétend pas être l'unique réponse aux besoins spirituels de l'Église. Nous croyons que Dieu agit au travers de nombreux serviteurs fidèles dans le corps de Christ. Cependant, nous sommes convaincus que Dieu nous a confié une mission particulière : contribuer à l'édification des croyants par un enseignement centré sur la vie en Christ, la maturité spirituelle et la pratique authentique de la Parole de Dieu.</p>
+
+  <div class="encart fu">
+    <h4>Notre objet</h4>
+    <p>Vivre en Christ a pour objet de promouvoir la connaissance biblique authentique et d'accompagner les croyants dans la compréhension, l'appropriation et la mise en pratique de la vie de Dieu en Jésus-Christ.</p>
+  </div>
+
+  <p class="bp fu">Pour cela, nous œuvrons concrètement pour :</p>
+  <div class="pts fu">
+    <div class="pt"><div class="pt-n">✦</div><div class="pt-b"><h4>L'enseignement et la formation biblique</h4><p>Solide, ancrée dans les Saintes Écritures, équilibrée et centrée sur Jésus-Christ.</p></div></div>
+    <div class="pt"><div class="pt-n">✦</div><div class="pt-b"><h4>La clarification des fondements</h4><p>Là où la confusion règne sur les vérités essentielles de la foi chrétienne.</p></div></div>
+    <div class="pt"><div class="pt-n">✦</div><div class="pt-b"><h4>L'accompagnement spirituel personnalisé</h4><p>Dans la croissance des croyants et la découverte de leur ministère.</p></div></div>
+    <div class="pt"><div class="pt-n">✦</div><div class="pt-b"><h4>L'organisation de séminaires et ateliers</h4><p>Des temps de formation intensive ouverts à tous les croyants et serviteurs.</p></div></div>
+    <div class="pt"><div class="pt-n">✦</div><div class="pt-b"><h4>La production de supports pédagogiques</h4><p>Enseignements audio, vidéo et écrits pour équiper l'Église.</p></div></div>
+  </div>
+
+  <div class="sep fu"><s>✦</s></div>
+
+  <p class="bp fu"><strong>Notre positionnement :</strong> Notre désir n'est pas de remplacer les assemblées locales, mais de servir l'Église de Jésus-Christ dans un esprit d'humilité, de fidélité biblique et de collaboration fraternelle.</p>
+
+  <div class="tab-w fu">
+    <table class="tab">
+      <thead><tr><th colspan="2">À qui Vivre en Christ s'adresse-t-il ?</th></tr></thead>
+      <tbody>
+        <tr><td>Croyants en recherche de clarté</td><td>La vie chrétienne vous semble confuse, épuisante ou superficielle. Nous vous accompagnons vers la clarté biblique.</td></tr>
+        <tr><td>Serviteurs ouverts à l'examen biblique</td><td>Vous servez Dieu avec sincérité mais désirez aller plus loin dans la compréhension de ce qu'Il a accompli en Christ.</td></tr>
+        <tr><td>Responsables qui veulent former profondément</td><td>Vous conduisez une assemblée et voulez que vos membres soient réellement bâtis.</td></tr>
+        <tr><td>Églises qui acceptent l'enseignement transversal</td><td>Toute assemblée désireuse de ramener la vie chrétienne à sa cohérence biblique est la bienvenue.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+
+<!-- ══ CONCLUSION ══ -->
+<section class="conc" id="conclusion">
+  <div class="conc-inner">
+    <p style="font-family:var(--sans);font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:rgba(200,151,63,.42);margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:14px" class="fu">
+      <span style="width:26px;height:.5px;background:rgba(200,151,63,.3);display:block"></span>
+      Conclusion
+      <span style="width:26px;height:.5px;background:rgba(200,151,63,.3);display:block"></span>
+    </p>
+    <h2 class="conc-h fu">Votre décision<br><em>aujourd'hui</em></h2>
+    <div class="conc-v fu">
+      <p>« L'heure vient, et elle est déjà venue, où les vrais adorateurs adoreront le Père en esprit et en vérité ; car ce sont là les adorateurs que le Père demande. »</p>
+      <cite>Jean 4 : 23</cite>
+    </div>
+    <p class="conc-txt fu">Dieu cherche des vrais adorateurs. Des hommes et des femmes dont la vie intérieure est si remplie de la vie de Christ que l'adoration en découle naturellement, comme un fleuve qui déborde de sa source. Mais on ne devient pas un vrai adorateur par accident. On le devient parce qu'on a été bâti.</p>
+    <p class="conc-txt fu" style="font-family:var(--display);font-size:19px;font-style:italic;color:rgba(253,250,244,.55)">Et vous — êtes-vous en croissance réelle ?<br>Ou tournez-vous en rond depuis des années ?</p>
+    <p class="conc-txt fu">Si cette question vous a touché, ce n'est pas par hasard. C'est l'Esprit de Dieu qui vous parle. Et il ne vous parle pas pour vous condamner — il vous parle pour vous inviter à quelque chose de plus grand que ce que vous avez connu jusqu'ici.</p>
+    <div class="conc-v fu">
+      <p>« Vous êtes le champ de Dieu, l'édifice de Dieu. »</p>
+      <cite>1 Corinthiens 3 : 9</cite>
+    </div>
+    <p style="font-family:var(--display);font-size:17px;font-style:italic;color:rgba(253,250,244,.35);margin-bottom:24px" class="fu">Votre prochaine étape</p>
+    <div class="btns fu">
+      <a href="https://vivreenchrist.org/#accompagnement" class="btn-o">Demander un accompagnement</a>
+      <a href="https://wa.me/2250574758383?text=Bonjour%2C%20j%27ai%20lu%20l%27ebook%20%22Pourquoi%20se%20laisser%20b%C3%A2tir%20%3F%22%20et%20je%20souhaite%20aller%20plus%20loin." class="btn-o" style="background:#25D366">📱 WhatsApp</a>
+      <a href="https://vivreenchrist.org/#ressources" class="btn-c">Autres ressources gratuites</a>
+    </div>
+    <p style="font-family:var(--sans);font-size:10px;color:rgba(253,250,244,.18);margin-top:4px;letter-spacing:.05em">vivreenchrist.org · contact@vivreenchrist.org · +225 0574758383</p>
+    <p style="font-family:var(--corps);font-size:14px;font-style:italic;color:rgba(253,250,244,.3);margin-top:20px">« Nous sommes au service de votre édification,<br>pour la gloire de Dieu et l'avancement de son Royaume. »</p>
+  </div>
+</section>
+
+<div class="pied">
+  <p>© 2025 Ministère Vivre en Christ · <a href="https://vivreenchrist.org">vivreenchrist.org</a> · Abidjan, Côte d'Ivoire · +225 0574758383</p>
+  <p style="margin-top:4px">« Vous êtes le champ de Dieu, l'édifice de Dieu. » — 1 Corinthiens 3.9</p>
+</div>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.07});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+const bar=document.getElementById('bar');
+const nav=document.getElementById('nav');
+const nchap=document.getElementById('nchap');
+const map={'couv':'Couverture','sommaire':'Sommaire','avant-propos':'Avant-propos','chap1':'Chapitre 1','chap2':'Chapitre 2','chap3':'Chapitre 3','chap4':'Chapitre 4 — Saint-Esprit','chap5':'Chapitre 5','chap6':'Chapitre 6 — Grâce','chap7':'Chapitre 7 — Ministère','conclusion':'Conclusion'};
+window.addEventListener('scroll',()=>{
+  const sc=window.scrollY;
+  const tot=document.body.scrollHeight-window.innerHeight;
+  bar.style.width=Math.min(100,(sc/tot)*100)+'%';
+  nav.classList.toggle('vis',sc>window.innerHeight*.35);
+  Object.keys(map).forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el)return;
+    const r=el.getBoundingClientRect();
+    if(r.top<=80&&r.bottom>80)nchap.textContent=map[id];
+  });
+});
+</script>
+</body>
+</html>
