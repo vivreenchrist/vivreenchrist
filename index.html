@@ -925,7 +925,7 @@ footer{background:var(--ink);padding:60px 52px 36px}
           <p style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)">Notre positionnement</p>
         </div>
       </div>
-      <form class="contact-form" onsubmit="ctSub(event)">
+      <form class="contact-form" action="https://formspree.io/f/maqzyaer" method="POST"><input type="hidden" name="_subject" value="Message — Formulaire de contact">
         <div class="fg"><label>Nom complet</label><input type="text" placeholder="Jean Kouassi" required></div>
         <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com" required></div>
         <div class="fg"><label>Je suis</label>
@@ -994,7 +994,7 @@ footer{background:var(--ink);padding:60px 52px 36px}
     <div class="modal-hd"><h2>Télécharger <em>gratuitement</em></h2><button class="modal-close" onclick="closeModal('dl-modal-1')">✕</button></div>
     <div class="modal-body">
       <div id="dlf1"><p style="font-size:14px;color:var(--warm);line-height:1.7;margin-bottom:20px">Laissez-nous votre prénom et email pour recevoir le document <strong>« Pourquoi un enfant de Dieu doit-il se laisser bâtir ? »</strong> directement dans votre boîte mail.</p>
-        <form class="modal-form" onsubmit="dlOk(event,'dlf1','dls1')">
+        <form class="modal-form" onsubmit="dlOk(event,'dlf1','dls1')"><input type='hidden' name='_subject' value='Téléchargement — Pourquoi se laisser bâtir'>
           <div class="fg"><label>Prénom</label><input type="text" placeholder="Jean" required></div>
           <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com" required></div>
           <button type="submit" class="modal-submit">Recevoir le document gratuit</button>
@@ -1010,7 +1010,7 @@ footer{background:var(--ink);padding:60px 52px 36px}
     <div class="modal-hd"><h2>Télécharger <em>gratuitement</em></h2><button class="modal-close" onclick="closeModal('dl-modal-2')">✕</button></div>
     <div class="modal-body">
       <div id="dlf2"><p style="font-size:14px;color:var(--warm);line-height:1.7;margin-bottom:20px">Recevez <strong>« La nouvelle naissance : ce qui a vraiment changé en vous »</strong> directement par email.</p>
-        <form class="modal-form" onsubmit="dlOk(event,'dlf2','dls2')">
+        <form class="modal-form" onsubmit="dlOk(event,'dlf2','dls2')"><input type='hidden' name='_subject' value='Téléchargement — La nouvelle naissance'>
           <div class="fg"><label>Prénom</label><input type="text" placeholder="Jean" required></div>
           <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com" required></div>
           <button type="submit" class="modal-submit">Recevoir le document gratuit</button>
@@ -1026,7 +1026,7 @@ footer{background:var(--ink);padding:60px 52px 36px}
     <div class="modal-hd"><h2>Télécharger <em>gratuitement</em></h2><button class="modal-close" onclick="closeModal('dl-modal-3')">✕</button></div>
     <div class="modal-body">
       <div id="dlf3"><p style="font-size:14px;color:var(--warm);line-height:1.7;margin-bottom:20px">Recevez <strong>« Chair ou Esprit : comment discerner d'où vient votre obéissance »</strong> par email.</p>
-        <form class="modal-form" onsubmit="dlOk(event,'dlf3','dls3')">
+        <form class="modal-form" onsubmit="dlOk(event,'dlf3','dls3')"><input type='hidden' name='_subject' value='Téléchargement — Chair ou Esprit'>
           <div class="fg"><label>Prénom</label><input type="text" placeholder="Jean" required></div>
           <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com" required></div>
           <button type="submit" class="modal-submit">Recevoir le document gratuit</button>
@@ -1042,7 +1042,7 @@ footer{background:var(--ink);padding:60px 52px 36px}
     <div class="modal-hd"><h2>Accompagnement <em>Découverte</em></h2><button class="modal-close" onclick="closeModal('accomp-free')">✕</button></div>
     <div class="modal-body">
       <div id="acf"><p style="font-size:14px;color:var(--warm);line-height:1.7;margin-bottom:20px">Rejoignez notre communauté d'édification gratuitement. Vous recevrez les ressources de base, la newsletter hebdomadaire et l'accès au groupe WhatsApp.</p>
-        <form class="modal-form" onsubmit="dlOk(event,'acf','acs')">
+        <form class="modal-form" onsubmit="dlOk(event,'acf','acs')"><input type='hidden' name='_subject' value='Inscription — Accompagnement Découverte'>
           <div class="fg"><label>Prénom</label><input type="text" placeholder="Jean" required></div>
           <div class="fg"><label>Nom</label><input type="text" placeholder="Kouassi" required></div>
           <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com" required></div>
@@ -1085,7 +1085,7 @@ footer{background:var(--ink);padding:60px 52px 36px}
     </div>
     <div class="modal-body" style="padding-top:24px">
       <div id="semf">
-        <form class="modal-form" onsubmit="dlOk(event,'semf','sems')">
+        <form class="modal-form" onsubmit="dlOk(event,'semf','sems')"><input type='hidden' name='_subject' value='Inscription — Séminaire 14 juin 2027'>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
             <div class="fg"><label>Prénom *</label><input type="text" required placeholder="Jean"></div>
             <div class="fg"><label>Nom *</label><input type="text" required placeholder="Kouassi"></div>
@@ -1105,7 +1105,7 @@ footer{background:var(--ink);padding:60px 52px 36px}
     <div class="modal-hd"><h2>Demande <em>d'accompagnement</em></h2><button class="modal-close" onclick="closeModal('contact-modal')">✕</button></div>
     <div class="modal-body">
       <div id="cmf">
-        <form class="modal-form" onsubmit="dlOk(event,'cmf','cms')">
+        <form class="modal-form" onsubmit="dlOk(event,'cmf','cms')"><input type='hidden' name='_subject' value='Demande — Accompagnement spirituel'>
           <div class="fg"><label>Prénom &amp; Nom</label><input type="text" required placeholder="Jean Kouassi"></div>
           <div class="fg"><label>Email</label><input type="email" required placeholder="jean@exemple.com"></div>
           <div class="fg"><label>WhatsApp</label><input type="tel" placeholder="+225 07 00 00 00 00"></div>
@@ -1141,7 +1141,20 @@ document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden'}
 function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
 function oc(e,id){if(e.target===document.getElementById(id))closeModal(id)}
-function dlOk(e,fid,sid){e.preventDefault();document.getElementById(fid).style.display='none';document.getElementById(sid).style.display='block'}
+function dlOk(e,fid,sid){
+  e.preventDefault();
+  const form=e.target;
+  const data=new FormData(form);
+  fetch('https://formspree.io/f/maqzyaer',{method:'POST',body:data,headers:{'Accept':'application/json'}})
+    .then(r=>{
+      document.getElementById(fid).style.display='none';
+      document.getElementById(sid).style.display='block';
+    })
+    .catch(()=>{
+      document.getElementById(fid).style.display='none';
+      document.getElementById(sid).style.display='block';
+    });
+}
 
 // ══ PAIEMENT ══
 let payItem='',payPrx='';
@@ -1152,7 +1165,7 @@ function waClick(){const msg=encodeURIComponent('Bonjour, je souhaite commander 
 function nlSub(){const e=document.getElementById('nl-e').value;if(!e||!e.includes('@')){alert('Email invalide');return}document.querySelector('.nl-form').style.display='none';document.getElementById('nl-ok').style.display='block'}
 
 // ══ CONTACT ══
-function ctSub(e){e.preventDefault();const b=e.target.querySelector('button');b.textContent='✓ Envoyé !';b.style.background='#3B6D11';setTimeout(()=>{b.textContent='Envoyer le message';b.style.background='';e.target.reset()},3000)}
+
 </script>
 </body>
 </html>
