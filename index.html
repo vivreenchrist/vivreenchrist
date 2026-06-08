@@ -990,17 +990,15 @@ footer{background:var(--ink);padding:60px 52px 36px}
 
 <!-- ══ MODALS ══ -->
 <div class="overlay" id="dl-modal-1" onclick="oc(event,'dl-modal-1')">
-  <div class="modal">
+  <div class="modal" style="max-width:580px">
     <div class="modal-hd"><h2>Télécharger <em>gratuitement</em></h2><button class="modal-close" onclick="closeModal('dl-modal-1')">✕</button></div>
-    <div class="modal-body">
-      <div id="dlf1"><p style="font-size:14px;color:var(--warm);line-height:1.7;margin-bottom:20px">Laissez-nous votre prénom et email pour recevoir le document <strong>« Pourquoi un enfant de Dieu doit-il se laisser bâtir ? »</strong> directement dans votre boîte mail.</p>
-        <form class="modal-form" onsubmit="dlOk(event,'dlf1','dls1')"><input type='hidden' name='_subject' value='Téléchargement — Pourquoi se laisser bâtir'>
-          <div class="fg"><label>Prénom</label><input type="text" placeholder="Jean" required></div>
-          <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com" required></div>
-          <button type="submit" class="modal-submit">Recevoir le document gratuit</button>
-        </form>
+    <div class="modal-body" style="padding-bottom:24px">
+      <p style="font-size:14px;color:var(--warm);line-height:1.7;margin-bottom:16px">Entrez votre prénom et email pour recevoir <strong>« Pourquoi un enfant de Dieu doit-il se laisser bâtir ? »</strong> directement dans votre boîte mail.</p>
+      <iframe width="100%" height="280" src="https://6587de12.sibforms.com/v2/serve/MUIFAOkujArSoPDsv1TOcB4pB71Oe1QQKQ5ZpijMvRhPy0h0jgMcWQg5fHlvhdHGhRtG8JOp9D3og4TbzBheLLTfToE4n5uHktUU6HcPHj_FpMIL7x1GEdVqiemHxgiDoZKQUzFnIieW0CtEQobfurYB2XRCapDzd9CaTyQ96OBNB18L_M28HGrNmmw3vgimqmHgme75fVdAIfcOBw==" frameborder="0" scrolling="auto" allowfullscreen style="display:block;max-width:100%;border-radius:2px"></iframe>
+      <div style="margin-top:16px;padding:14px 18px;background:var(--gold-p);border-left:3px solid var(--gold);border-radius:0 3px 3px 0">
+        <p style="font-family:var(--serif);font-size:14px;font-style:italic;color:var(--deep);line-height:1.55;margin-bottom:4px">« Heureux ceux qui ont faim et soif de la justice, car ils seront rassasiés. »</p>
+        <cite style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-style:normal">Matthieu 5 : 6</cite>
       </div>
-      <div class="modal-success" id="dls1"><div class="big-icon">📖</div><h3>Document envoyé !</h3><p>Vérifiez votre boîte email dans quelques minutes. Si vous ne le trouvez pas, regardez dans vos spams.</p><div class="verse-box"><p>« Heureux ceux qui ont faim et soif de la justice, car ils seront rassasiés. »</p><cite>Matthieu 5 : 6</cite></div><button onclick="closeModal('dl-modal-1')" class="btn-outline" style="margin-top:16px">Fermer</button></div>
     </div>
   </div>
 </div>
@@ -1141,19 +1139,11 @@ document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden'}
 function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
 function oc(e,id){if(e.target===document.getElementById(id))closeModal(id)}
-function dlOk(e,fid,sid){
+
+function dlOk(e,fid,sid) {
   e.preventDefault();
-  const form=e.target;
-  const data=new FormData(form);
-  fetch('https://formspree.io/f/maqzyaer',{method:'POST',body:data,headers:{'Accept':'application/json'}})
-    .then(r=>{
-      document.getElementById(fid).style.display='none';
-      document.getElementById(sid).style.display='block';
-    })
-    .catch(()=>{
-      document.getElementById(fid).style.display='none';
-      document.getElementById(sid).style.display='block';
-    });
+  document.getElementById(fid).style.display='none';
+  document.getElementById(sid).style.display='block';
 }
 
 // ══ PAIEMENT ══
@@ -1162,7 +1152,12 @@ function openPay(item,price){payItem=item;payPrx=price;document.getElementById('
 function waClick(){const msg=encodeURIComponent('Bonjour, je souhaite commander : '+payItem+'\nMontant : '+payPrx+'\nvivreenchrist.org');document.getElementById('pay-wa-link').href='https://wa.me/2250574758383?text='+msg;return true}
 
 // ══ NEWSLETTER ══
-function nlSub(){const e=document.getElementById('nl-e').value;if(!e||!e.includes('@')){alert('Email invalide');return}document.querySelector('.nl-form').style.display='none';document.getElementById('nl-ok').style.display='block'}
+function nlSub(){
+  const email = document.getElementById('nl-e').value.trim();
+  if(!email||!email.includes('@')){alert('Email invalide');return}
+  document.querySelector('.nl-form').style.display='none';
+  document.getElementById('nl-ok').style.display='block';
+}
 
 // ══ CONTACT ══
 
