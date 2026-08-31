@@ -147,12 +147,18 @@ nav {
   min-height: 100vh;
   background: var(--black);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   padding: 100px 8% 80px;
   gap: 5%;
   position: relative;
   overflow: hidden;
+}
+
+.hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .hero::before {
@@ -279,64 +285,6 @@ nav {
   color: rgba(250,247,240,0.45);
   margin-top: 0.3rem;
   display: block;
-}
-
-.hero-photo-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.hero-photo-frame {
-  position: relative;
-  width: 100%;
-  max-width: 360px;
-}
-
-.hero-photo-frame::before {
-  content: '';
-  position: absolute;
-  inset: -8px -8px auto auto;
-  width: 60%;
-  height: 60%;
-  border-top: 1px solid var(--gold);
-  border-right: 1px solid var(--gold);
-  opacity: 0.4;
-}
-
-.hero-photo-frame img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  display: block;
-  filter: grayscale(15%);
-}
-
-.hero-photo-caption {
-  text-align: center;
-}
-.hero-photo-caption strong {
-  display: block;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
-  color: var(--cream);
-  font-weight: 500;
-}
-.hero-photo-caption span {
-  font-size: 0.78rem;
-  color: rgba(250,247,240,0.45);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.hero-citation {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.95rem;
-  font-style: italic;
-  color: rgba(250,247,240,0.5);
-  text-align: center;
-  max-width: 280px;
 }
 
 /* ===========================
@@ -1576,9 +1524,7 @@ footer {
   nav { padding: 0 4%; }
   .nav-links { display: none; }
   section { padding: 60px 5%; }
-  .hero { grid-template-columns: 1fr; padding: 100px 5% 60px; }
-  .hero-photo-col { order: -1; }
-  .hero-photo-frame { max-width: 220px; }
+  .hero { padding: 100px 5% 60px; }
   .ressources-single { grid-template-columns: 1fr; }
   .apropos-grid { grid-template-columns: 1fr; }
   .formation-section { grid-template-columns: 1fr; padding: 60px 5%; }
@@ -1598,7 +1544,6 @@ footer {
 =========================== -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="https://vivreenchrist.org/photo-noel.jpg" alt="Noël Tchabi — Vivre en Christ">
     <span class="nav-logo-text">Noël Tchabi &nbsp;·&nbsp; Vivre en Christ</span>
   </a>
   <ul class="nav-links">
@@ -1625,58 +1570,6 @@ footer {
     </div>
     <p class="hero-intro">Vous avez reçu la vie de Christ. Mais avez-vous été conduit à comprendre ce que cela implique vraiment pour la suite ? Nous sommes là pour vous bâtir.</p>
     <div class="hero-btns">
-       <section class="vec-preuve">
-  <div class="vec-preuve__inner">
-    <p class="vec-preuve__kicker">Le ministère à l'œuvre</p>
-    <p class="vec-preuve__phrase">
-      Depuis <strong>février 2026</strong>, un enseignement biblique
-      <strong>chaque dimanche matin</strong>, sans interruption.
-    </p>
-    <div class="vec-preuve__grid">
-      <div class="vec-preuve__item">
-        <span class="vec-preuve__num">17</span>
-        <span class="vec-preuve__lab">croyants formés chaque semaine</span>
-      </div>
-      <div class="vec-preuve__item">
-        <span class="vec-preuve__num">6</span>
-        <span class="vec-preuve__lab">pays, sur trois continents</span>
-      </div>
-      <div class="vec-preuve__item">
-        <span class="vec-preuve__num">90</span>
-        <span class="vec-preuve__lab">minutes d'enseignement hebdomadaire</span>
-      </div>
-    </div>
-    <p class="vec-preuve__pays">
-      Côte d'Ivoire · Bénin · Ghana · France · Canada · États-Unis
-    </p>
-    <p class="vec-preuve__note">
-      Un groupe se réunit également en présentiel à Abidjan.
-    </p>
-  </div>
-</section>
-
-<style>
-.vec-preuve{padding:3.5rem 1.25rem;background:#0f1c33;color:#fff}
-.vec-preuve__inner{max-width:960px;margin:0 auto;text-align:center}
-.vec-preuve__kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
-  color:#9db4d8;margin:0 0 1rem}
-.vec-preuve__phrase{font-size:1.35rem;line-height:1.55;margin:0 0 2.5rem;
-  font-weight:300;color:#eaf0fa}
-.vec-preuve__phrase strong{font-weight:600;color:#fff}
-.vec-preuve__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;
-  margin-bottom:2rem}
-.vec-preuve__item{display:flex;flex-direction:column;gap:.4rem}
-.vec-preuve__num{font-size:2.6rem;font-weight:700;line-height:1;color:#fff}
-.vec-preuve__lab{font-size:.85rem;color:#9db4d8;line-height:1.4}
-.vec-preuve__pays{font-size:.95rem;color:#c8d6ec;letter-spacing:.04em;
-  padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);margin:0 0 .5rem}
-.vec-preuve__note{font-size:.85rem;color:#8fa4c6;margin:0;font-style:italic}
-@media(max-width:640px){
-  .vec-preuve__grid{grid-template-columns:1fr;gap:1.75rem}
-  .vec-preuve__phrase{font-size:1.15rem}
-  .vec-preuve__num{font-size:2.2rem}
-}
-</style>
       <a href="#ressources" class="btn-primary">Ressources gratuites</a>
       <a href="#accompagnement" class="btn-secondary">Être accompagné</a>
     </div>
@@ -1696,16 +1589,6 @@ footer {
     </div>
   </div>
 
-  <div class="hero-photo-col">
-    <div class="hero-photo-frame">
-      <img src="https://vivreenchrist.org/photo-noel.jpg" alt="Noël Tchabi — Fondateur Vivre en Christ">
-    </div>
-    <div class="hero-photo-caption">
-      <strong>Noël Tchabi</strong>
-      <span>Fondateur · Ministère Vivre en Christ</span>
-    </div>
-    <p class="hero-citation">« Selon la grâce de Dieu qui m'a été donnée... »</p>
-  </div>
 </header>
 
 <!-- Citation 1 Cor 3:9 -->
@@ -2001,9 +1884,63 @@ footer {
 </section>
 
 <!-- ===========================
-     BOUTIQUE
+     PREUVE / LE MINISTÈRE À L'ŒUVRE
+     Repositionné ici (avant l'accompagnement) : sert d'appui de crédibilité
+     juste avant la demande d'engagement, plutôt que d'ouvrir la page.
 =========================== -->
+<section class="vec-preuve">
+  <div class="vec-preuve__inner">
+    <p class="vec-preuve__kicker">Le ministère à l'œuvre</p>
+    <p class="vec-preuve__phrase">
+      Depuis <strong>février 2026</strong>, un enseignement biblique
+      <strong>chaque dimanche matin</strong>, sans interruption.
+    </p>
+    <div class="vec-preuve__grid">
+      <!-- Chiffres à ajuster seulement quand ils changent vraiment (pas chaque semaine) -->
+      <div class="vec-preuve__item">
+        <span class="vec-preuve__num">15+</span>
+        <span class="vec-preuve__lab">croyants formés chaque semaine</span>
+      </div>
+      <div class="vec-preuve__item">
+        <span class="vec-preuve__num">6</span>
+        <span class="vec-preuve__lab">pays, sur trois continents</span>
+      </div>
+      <div class="vec-preuve__item">
+        <span class="vec-preuve__num">90</span>
+        <span class="vec-preuve__lab">minutes d'enseignement hebdomadaire</span>
+      </div>
+    </div>
+    <p class="vec-preuve__pays">
+      Côte d'Ivoire · Bénin · Ghana · France · Canada · États-Unis
+    </p>
+    <p class="vec-preuve__note">
+      Un groupe se réunit également en présentiel à Abidjan.
+    </p>
+  </div>
+</section>
 
+<style>
+.vec-preuve{padding:3.5rem 1.25rem;background:#0f1c33;color:#fff}
+.vec-preuve__inner{max-width:960px;margin:0 auto;text-align:center}
+.vec-preuve__kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+  color:#9db4d8;margin:0 0 1rem}
+.vec-preuve__phrase{font-size:1.35rem;line-height:1.55;margin:0 0 2.5rem;
+  font-weight:300;color:#eaf0fa}
+.vec-preuve__phrase strong{font-weight:600;color:#fff}
+.vec-preuve__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;
+  margin-bottom:2rem}
+.vec-preuve__item{display:flex;flex-direction:column;gap:.4rem}
+.vec-preuve__num{font-size:2.6rem;font-weight:700;line-height:1;color:#fff}
+.vec-preuve__lab{font-size:.85rem;color:#9db4d8;line-height:1.4}
+.vec-preuve__pays{font-size:.95rem;color:#c8d6ec;letter-spacing:.04em;
+  padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);margin:0 0 .5rem}
+.vec-preuve__note{font-size:.85rem;color:#8fa4c6;margin:0;font-style:italic}
+@media(max-width:640px){
+  .vec-preuve__grid{grid-template-columns:1fr;gap:1.75rem}
+  .vec-preuve__phrase{font-size:1.15rem}
+  .vec-preuve__num{font-size:2.2rem}
+}
+</style>
 
 <!-- ===========================
      ACCOMPAGNEMENT
