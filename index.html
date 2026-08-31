@@ -1428,96 +1428,6 @@ footer {
 .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
 
 /* ===========================
-   MODALS
-=========================== */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  z-index: 2000;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.modal-overlay.active { display: flex; }
-
-.modal {
-  background: var(--cream);
-  max-width: 440px;
-  width: 100%;
-  padding: 2.5rem;
-  border-radius: 4px;
-  position: relative;
-}
-
-.modal-close {
-  position: absolute;
-  top: 1rem; right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  color: var(--text-muted);
-  cursor: pointer;
-  line-height: 1;
-  padding: 4px 8px;
-}
-
-.modal h2 {
-  font-size: 1.6rem;
-  font-weight: 300;
-  color: var(--black-soft);
-  margin-bottom: 0.5rem;
-}
-
-.modal-verse {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.9rem;
-  font-style: italic;
-  color: var(--gold);
-  margin-bottom: 1.5rem;
-  display: block;
-}
-
-.modal .form-group input,
-.modal .form-group select,
-.modal .form-group textarea {
-  background: white;
-  border: 1px solid rgba(184,150,90,0.25);
-  color: var(--text);
-}
-
-.modal .form-group select option { background: white; color: var(--text); }
-
-.modal-success {
-  display: none;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-.modal-success-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
-.modal-success h3 {
-  font-size: 1.4rem;
-  font-weight: 300;
-  color: var(--black-soft);
-  margin-bottom: 0.8rem;
-}
-.modal-success p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-  margin-bottom: 0.5rem;
-}
-.modal-success .success-verse {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.95rem;
-  font-style: italic;
-  color: var(--gold);
-  margin-top: 1rem;
-}
-
-/* ===========================
    RESPONSIVE
 =========================== */
 @media (max-width: 768px) {
@@ -1563,12 +1473,12 @@ footer {
 <header class="hero">
   <div class="hero-content">
     <span class="hero-label">Ministère Vivre en Christ · Formation &amp; Édification</span>
-    <h1>Pourquoi un enfant<br>de Dieu doit-il se<br>laisser <em>bâtir ?</em></h1>
+    <h1>Vous avez reçu la vie de Christ.<br>Il est temps d'être <em>bâti.</em></h1>
     <div class="hero-verse">
       « Élevez-vous, bâtissez… »
       <span>Néhémie 2 : 18</span>
     </div>
-    <p class="hero-intro">Vous avez reçu la vie de Christ. Mais avez-vous été conduit à comprendre ce que cela implique vraiment pour la suite ? Nous sommes là pour vous bâtir.</p>
+    <p class="hero-intro">Le Ministère Vivre en Christ existe pour vous accompagner, pas à pas, vers une croissance réelle — un enseignement biblique chaque semaine, un accompagnement personnel, une formation progressive. Pas seulement une foi qui sait, mais une vie qui se transforme.</p>
     <div class="hero-btns">
       <a href="#ressources" class="btn-primary">Ressources gratuites</a>
       <a href="#accompagnement" class="btn-secondary">Être accompagné</a>
@@ -2350,133 +2260,10 @@ footer {
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
-<!-- MODAL DÉCOUVERTE -->
-<div class="modal-overlay" id="modal-decouverte">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('modal-decouverte')">✕</button>
-    <div id="modal-decouverte-form">
-      <h2>Accompagnement <em>Découverte</em></h2>
-      <span class="modal-verse">Inscription gratuite</span>
-      <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:1.5rem;">Rejoignez notre communauté d'édification gratuitement. Vous recevrez les ressources de base, la newsletter hebdomadaire et l'accès au groupe WhatsApp.</p>
-      <form class="contact-form" onsubmit="submitDecouverte(event)" style="gap:0.8rem;">
-        <div class="form-row">
-          <div class="form-group"><label>Prénom</label><input type="text" required></div>
-          <div class="form-group"><label>Nom</label><input type="text" required></div>
-        </div>
-        <div class="form-group"><label>Email</label><input type="email" required></div>
-        <div class="form-group"><label>WhatsApp</label><input type="tel" placeholder="+225..."></div>
-        <div class="form-group">
-          <label>Pays</label>
-          <select>
-            <option>Côte d'Ivoire</option><option>Sénégal</option><option>Mali</option>
-            <option>Burkina Faso</option><option>Cameroun</option><option>RD Congo</option>
-            <option>France</option><option>Autre</option>
-          </select>
-        </div>
-        <button type="submit" class="btn-primary">Rejoindre gratuitement</button>
-      </form>
-    </div>
-    <div class="modal-success" id="modal-decouverte-success">
-      <span class="modal-success-icon">✝</span>
-      <h3>Bienvenue dans la communauté !</h3>
-      <p>Vous allez recevoir un message WhatsApp pour rejoindre le groupe d'édification.</p>
-      <div class="modal-verse success-verse">« Vous êtes le champ de Dieu, l'édifice de Dieu. » — 1 Corinthiens 3 : 9</div>
-      <button class="btn-secondary" onclick="closeModal('modal-decouverte')" style="margin-top:1rem;">Fermer</button>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL PAIEMENT -->
-<div class="modal-overlay" id="modal-paiement">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('modal-paiement')">✕</button>
-    <h2 id="modal-paiement-titre">Commander</h2>
-    <span class="modal-verse">📱 Paiement via Mobile Money</span>
-    <div style="background:var(--cream);border-radius:4px;padding:1.5rem;margin:1rem 0;">
-      <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;margin-bottom:1rem;">Le paiement se fait via <strong>Mobile Money</strong> (Orange Money, MTN, Wave, Moov). Après paiement, envoyez votre preuve de paiement sur WhatsApp et recevez votre accès immédiatement.</p>
-      <div style="display:flex;flex-direction:column;gap:0.8rem;">
-        <div style="display:flex;gap:1rem;align-items:flex-start;">
-          <span style="background:var(--gold);color:var(--black);width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:600;flex-shrink:0;">1</span>
-          <span style="font-size:0.88rem;color:var(--text-muted);">Effectuez votre paiement Mobile Money au numéro <strong>+225 0574758383</strong>.</span>
-        </div>
-        <div style="display:flex;gap:1rem;align-items:flex-start;">
-          <span style="background:var(--gold);color:var(--black);width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:600;flex-shrink:0;">2</span>
-          <span style="font-size:0.88rem;color:var(--text-muted);">Envoyez la <strong>capture d'écran du paiement</strong> + votre email sur WhatsApp au même numéro.</span>
-        </div>
-        <div style="display:flex;gap:1rem;align-items:flex-start;">
-          <span style="background:var(--gold);color:var(--black);width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:600;flex-shrink:0;">3</span>
-          <span style="font-size:0.88rem;color:var(--text-muted);">Recevez votre accès <strong>dans les 2 heures</strong> suivant la confirmation du paiement.</span>
-        </div>
-      </div>
-    </div>
-    <a href="https://wa.me/2250574758383" class="btn-primary" style="width:100%;justify-content:center;" target="_blank" rel="noopener">Commander via WhatsApp</a>
-    <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin-top:0.8rem;">WhatsApp : +225 0574758383 · Réponse sous 2h</p>
-  </div>
-</div>
-
-<!-- MODAL SÉMINAIRE -->
-<div class="modal-overlay" id="modal-seminaire">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('modal-seminaire')">✕</button>
-    <div id="modal-seminaire-form">
-      <h2>Être <em>informé</em></h2>
-      <span class="modal-verse">Inscription gratuite · Dates à confirmer</span>
-      <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:1.5rem;">Laissez vos coordonnées pour être contacté dès que les dates des séminaires sont confirmées.</p>
-      <form class="contact-form" onsubmit="submitSeminaire(event)" style="gap:0.8rem;">
-        <div class="form-group"><label>Prénom *</label><input type="text" required></div>
-        <div class="form-group"><label>Nom *</label><input type="text" required></div>
-        <div class="form-group"><label>Email *</label><input type="email" required></div>
-        <div class="form-group"><label>WhatsApp *</label><input type="tel" placeholder="+225..." required></div>
-        <button type="submit" class="btn-primary">M'inscrire pour être informé</button>
-      </form>
-    </div>
-    <div class="modal-success" id="modal-seminaire-success">
-      <span class="modal-success-icon">✝</span>
-      <h3>Inscription reçue !</h3>
-      <p>Vous serez contacté par WhatsApp dès la confirmation des dates.</p>
-      <div class="modal-verse success-verse">« Heureux ceux qui ont faim et soif de la justice, car ils seront rassasiés. » — Matthieu 5 : 6</div>
-      <button class="btn-secondary" onclick="closeModal('modal-seminaire')" style="margin-top:1rem;">Fermer</button>
-    </div>
-  </div>
-</div>
-
 <!-- ===========================
      JAVASCRIPT
 =========================== -->
 <script>
-// Modals
-function openModal(id, titre, prix) {
-  document.getElementById(id).classList.add('active');
-  if (titre && document.getElementById('modal-paiement-titre')) {
-    document.getElementById('modal-paiement-titre').textContent = titre + (prix ? ' — ' + prix : '');
-  }
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal(id) {
-  document.getElementById(id).classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-document.querySelectorAll('.modal-overlay').forEach(overlay => {
-  overlay.addEventListener('click', function(e) {
-    if (e.target === this) closeModal(this.id);
-  });
-});
-
-// Soumissions formulaires (simulation)
-function submitDecouverte(e) {
-  e.preventDefault();
-  document.getElementById('modal-decouverte-form').style.display = 'none';
-  document.getElementById('modal-decouverte-success').style.display = 'block';
-}
-
-function submitSeminaire(e) {
-  e.preventDefault();
-  document.getElementById('modal-seminaire-form').style.display = 'none';
-  document.getElementById('modal-seminaire-success').style.display = 'block';
-}
-
 // Le site est statique (pas de serveur ni de base de données) : ces deux
 // formulaires n'inventent donc pas un envoi — ils ouvrent un vrai canal
 // (WhatsApp / email) avec le message déjà rédigé, pour que le message
@@ -2509,14 +2296,6 @@ function submitNewsletter(e) {
   f.style.display = 'none';
 }
 
-// Esc pour fermer les modals
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal-overlay.active').forEach(m => {
-      closeModal(m.id);
-    });
-  }
-});
 </script>
 
 </body>
