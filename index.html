@@ -1,2302 +1,538 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vivre en Christ — Formation &amp; Édification Biblique</title>
-<meta name="description" content="Ministère de formation et de restauration doctrinale. Enseignements, ebooks, accompagnement spirituel pour vivre pleinement la vie de Dieu en Christ. Basé à Abidjan, Côte d'Ivoire.">
-<meta name="keywords" content="formation chrétienne, édification biblique, vie en Christ, ministère, accompagnement spirituel, ebooks chrétiens, Abidjan, Côte d'Ivoire, Afrique francophone">
-<meta name="author" content="Noël Tchabi — Ministère Vivre en Christ">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://vivreenchrist.org/">
-<!-- Open Graph -->
-<meta property="og:title" content="Vivre en Christ — Formation &amp; Édification Biblique">
-<meta property="og:description" content="Ministère de formation et de restauration doctrinale. Enseignements, ebooks, accompagnement spirituel pour vivre pleinement la vie de Dieu en Christ.">
-<meta property="og:image" content="https://vivreenchrist.org/photo-noel.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://vivreenchrist.org/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accueil — Académie Vivre en Christ</title>
+<meta name="description" content="Le parcours du disciple selon le Ministère Vivre en Christ : cinq fondements, quatre premiers pas, cinq étapes d'un chemin de progrès, dans l'ordre, verset par verset.">
+<link rel="canonical" href="https://vivreenchrist.org/academie/index.html">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:site_name" content="Vivre en Christ">
-<!-- Twitter -->
+<meta property="og:title" content="Accueil — Académie Vivre en Christ">
+<meta property="og:description" content="Le parcours du disciple selon le Ministère Vivre en Christ : cinq fondements, quatre premiers pas, cinq étapes d'un chemin de progrès, dans l'ordre, verset par verset.">
+<meta property="og:image" content="https://vivreenchrist.org/academie/assets/img/og-cover.png">
+<meta property="og:url" content="https://vivreenchrist.org/academie/index.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vivre en Christ — Formation &amp; Édification Biblique">
-<meta name="twitter:description" content="Ministère de formation et de restauration doctrinale. Accompagnement spirituel pour vivre pleinement la vie de Dieu en Christ.">
-<meta name="twitter:image" content="https://vivreenchrist.org/photo-noel.jpg">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-/* ===========================
-   VARIABLES & RESET
-=========================== */
-:root {
-  --gold: #B8965A;
-  --gold-light: #C8973F;
-  --gold-pale: #D4A96A;
-  --black: #0D0D0D;
-  --black-soft: #1A1410;
-  --cream: #FAF7F0;
-  --cream-light: #FDFAF4;
-  --text: #2C2416;
-  --text-muted: #6B5B45;
-  --border: rgba(184,150,90,0.2);
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Jost', sans-serif;
-  background: var(--cream);
-  color: var(--text);
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-/* ===========================
-   TYPOGRAPHY
-=========================== */
-h1, h2, h3, h4 {
-  font-family: 'Cormorant Garamond', serif;
-  line-height: 1.2;
-}
-
-.serif { font-family: 'Cormorant Garamond', serif; }
-em { font-style: italic; }
-
-/* ===========================
-   NAVIGATION
-=========================== */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  background: rgba(13,13,13,0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(184,150,90,0.15);
-  padding: 0 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: var(--cream);
-}
-
-.nav-logo img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid var(--gold);
-}
-
-.nav-logo-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  color: var(--cream);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-.nav-links a {
-  color: rgba(250,247,240,0.75);
-  text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover { color: var(--gold); }
-
-.nav-cta {
-  background: var(--gold) !important;
-  color: var(--black) !important;
-  padding: 7px 18px !important;
-  border-radius: 2px !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.06em !important;
-}
-
-.nav-cta:hover { background: var(--gold-pale) !important; }
-
-/* ===========================
-   HERO
-=========================== */
-.hero {
-  min-height: 100vh;
-  background: var(--black);
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  padding: 100px 8% 80px;
-  gap: 5%;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-content {
-  max-width: 760px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(184,150,90,0.08) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.hero-label {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.5rem;
-  display: block;
-}
-
-.hero h1 {
-  font-size: clamp(2.4rem, 4.5vw, 4rem);
-  color: var(--cream);
-  font-weight: 300;
-  line-height: 1.15;
-  margin-bottom: 1.5rem;
-}
-
-.hero-verse {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.05rem;
-  font-style: italic;
-  color: var(--gold);
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-  border-left: 2px solid var(--gold);
-}
-
-.hero-verse span {
-  display: block;
-  font-size: 0.78rem;
-  font-family: 'Jost', sans-serif;
-  font-style: normal;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(184,150,90,0.7);
-  margin-top: 0.3rem;
-}
-
-.hero-intro {
-  color: rgba(250,247,240,0.7);
-  font-size: 1rem;
-  max-width: 480px;
-  margin-bottom: 2.5rem;
-  line-height: 1.8;
-}
-
-.hero-btns {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--gold);
-  color: var(--black);
-  padding: 13px 28px;
-  font-family: 'Jost', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 2px;
-  transition: background 0.2s, transform 0.2s;
-  border: none;
-  cursor: pointer;
-}
-.btn-primary:hover { background: var(--gold-pale); transform: translateY(-1px); }
-
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: transparent;
-  color: var(--cream);
-  padding: 13px 28px;
-  font-family: 'Jost', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 2px;
-  border: 1px solid rgba(250,247,240,0.25);
-  transition: border-color 0.2s, color 0.2s;
-  cursor: pointer;
-}
-.btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
-
-.hero-stats {
-  display: flex;
-  gap: 2.5rem;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(184,150,90,0.15);
-}
-
-.stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.2rem;
-  font-weight: 300;
-  color: var(--gold);
-  line-height: 1;
-  display: block;
-}
-.stat-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(250,247,240,0.45);
-  margin-top: 0.3rem;
-  display: block;
-}
-
-/* ===========================
-   SECTION BASES
-=========================== */
-section { padding: 90px 8%; }
-
-.section-label {
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.section-title {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 300;
-  color: var(--black-soft);
-  margin-bottom: 1rem;
-}
-
-.section-title em {
-  color: var(--gold);
-  font-style: italic;
-}
-
-.section-intro {
-  font-size: 1rem;
-  color: var(--text-muted);
-  max-width: 560px;
-  line-height: 1.8;
-  margin-bottom: 3rem;
-}
-
-/* ===========================
-   VISION / PROBLÈME
-=========================== */
-#vision {
-  background: var(--cream-light);
-}
-
-.problems-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.problem-card {
-  background: white;
-  border: 1px solid var(--border);
-  padding: 2rem;
-  border-radius: 4px;
-}
-
-.problem-icon { font-size: 1.8rem; margin-bottom: 1rem; display: block; }
-
-.problem-card h3 {
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: var(--black-soft);
-  margin-bottom: 0.8rem;
-}
-
-.problem-card p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-/* ===========================
-   CINQ VÉRITÉS
-=========================== */
-.truths-section {
-  background: var(--black-soft);
-}
-
-.truths-header { margin-bottom: 3rem; }
-.truths-header .section-title { color: var(--cream); }
-.truths-header .section-intro { color: rgba(250,247,240,0.55); }
-
-.truths-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.truth-card {
-  border: 1px solid rgba(184,150,90,0.2);
-  padding: 2rem;
-  border-radius: 4px;
-  position: relative;
-}
-
-.truth-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem;
-  font-weight: 300;
-  color: rgba(184,150,90,0.2);
-  line-height: 1;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.truth-card h3 {
-  font-size: 1.1rem;
-  color: var(--cream);
-  font-weight: 500;
-  margin-bottom: 0.8rem;
-}
-
-.truth-card p {
-  font-size: 0.88rem;
-  color: rgba(250,247,240,0.55);
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
-}
-
-.truth-verse {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.95rem;
-  font-style: italic;
-  color: var(--gold);
-  padding-left: 0.8rem;
-  border-left: 2px solid rgba(184,150,90,0.3);
-}
-
-.truth-verse cite {
-  display: block;
-  font-size: 0.72rem;
-  font-family: 'Jost', sans-serif;
-  font-style: normal;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(184,150,90,0.5);
-  margin-top: 0.3rem;
-}
-
-.truths-cta {
-  border-top: 1px solid rgba(184,150,90,0.15);
-  padding-top: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.truths-cta-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
-  font-style: italic;
-  color: rgba(250,247,240,0.65);
-  max-width: 480px;
-}
-
-/* ===========================
-   VISION STATEMENT
-=========================== */
-.vision-statement {
-  background: var(--gold);
-  padding: 60px 8%;
-  text-align: center;
-}
-
-.vision-statement blockquote {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  font-weight: 400;
-  color: var(--black);
-  line-height: 1.5;
-  max-width: 700px;
-  margin: 0 auto 1rem;
-}
-
-.vision-statement cite {
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(13,13,13,0.55);
-  font-style: normal;
-}
-
-/* ===========================
-   RESSOURCES (1 seul ebook)
-=========================== */
-#ressources {
-  background: var(--cream-light);
-}
-
-.ressources-single {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5%;
-  align-items: center;
-  margin-top: 3rem;
-}
-
-.ebook-mockup {
-  background: var(--black);
-  border-radius: 4px;
-  padding: 3rem 2.5rem;
-  text-align: center;
-  position: relative;
-  box-shadow: 20px 20px 60px rgba(0,0,0,0.15);
-}
-
-.ebook-mockup::before {
-  content: 'E-Book Gratuit';
-  position: absolute;
-  top: 1.2rem; right: 1.2rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gold);
-  background: rgba(184,150,90,0.1);
-  padding: 4px 10px;
-  border-radius: 2px;
-}
-
-.ebook-mockup h3 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: var(--cream);
-  line-height: 1.3;
-  margin-bottom: 0.5rem;
-}
-
-.ebook-mockup .ebook-sub {
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 2rem;
-  display: block;
-}
-
-.ebook-divider {
-  width: 40px;
-  height: 1px;
-  background: var(--gold);
-  margin: 0 auto 2rem;
-  opacity: 0.4;
-}
-
-.ebook-mockup p {
-  font-size: 0.85rem;
-  color: rgba(250,247,240,0.45);
-  line-height: 1.7;
-  margin-bottom: 2rem;
-}
-
-.ebook-info {
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(250,247,240,0.3);
-}
-
-.ebook-details h4 {
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: var(--black-soft);
-  margin-bottom: 1rem;
-  line-height: 1.3;
-}
-
-.ebook-desc {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.8;
-  margin-bottom: 2rem;
-}
-
-.ebook-points {
-  list-style: none;
-  margin-bottom: 2rem;
-}
-
-.ebook-points li {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  padding: 0.5rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-  border-bottom: 1px solid var(--border);
-}
-
-.ebook-points li::before {
-  content: '✦';
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-  font-size: 0.65rem;
-  top: 0.65rem;
-}
-
-.ressources-coming {
-  margin-top: 3rem;
-  padding: 2rem;
-  border: 1px dashed rgba(184,150,90,0.3);
-  border-radius: 4px;
-  text-align: center;
-}
-
-.ressources-coming p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  font-style: italic;
-}
-
-.ressources-coming a {
-  color: var(--gold);
-  text-decoration: none;
-  font-size: 0.82rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-top: 0.8rem;
-  display: inline-block;
-}
-
-/* ===========================
-   À PROPOS
-=========================== */
-#a-propos {
-  background: white;
-}
-
-.apropos-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 5%;
-  align-items: start;
-  margin-top: 3rem;
-}
-
-.apropos-photo {
-  position: relative;
-}
-
-.apropos-photo img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  display: block;
-  filter: grayscale(20%);
-}
-
-.apropos-photo-info {
-  background: var(--black);
-  padding: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.apropos-photo-info strong {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
-  color: var(--cream);
-  font-weight: 500;
-}
-
-.apropos-photo-info span {
-  font-size: 0.75rem;
-  color: var(--gold);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.apropos-content h2 {
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 300;
-  color: var(--black-soft);
-  margin-bottom: 1.5rem;
-}
-
-.apropos-content p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.85;
-  margin-bottom: 1.2rem;
-}
-
-.apropos-temoignage {
-  background: var(--cream);
-  border-left: 3px solid var(--gold);
-  padding: 1.5rem 2rem;
-  margin: 2rem 0;
-  border-radius: 0 4px 4px 0;
-}
-
-.apropos-temoignage-label {
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.8rem;
-  display: block;
-}
-
-.apropos-temoignage p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
-  font-style: italic;
-  color: var(--black-soft);
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-.apropos-contact-info {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.apropos-contact-item {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.apropos-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
-
-/* ===========================
-   EBOOK FONDATEUR (section dédiée)
-=========================== */
-#ebook-fondateur {
-  background: var(--black-soft);
-  padding: 80px 8%;
-}
-
-.ebook-fondateur-inner {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4%;
-  align-items: center;
-}
-
-.ebook-cover {
-  background: linear-gradient(160deg, #1A1410 0%, #0D0D0D 100%);
-  border: 1px solid rgba(184,150,90,0.25);
-  padding: 3rem 2rem;
-  text-align: center;
-  border-radius: 4px;
-  position: relative;
-}
-
-.ebook-cover-badge {
-  display: inline-block;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  border: 1px solid rgba(184,150,90,0.3);
-  padding: 4px 12px;
-  margin-bottom: 1.5rem;
-  border-radius: 2px;
-}
-
-.ebook-cover h3 {
-  font-size: 1.4rem;
-  font-weight: 300;
-  color: var(--cream);
-  line-height: 1.3;
-  margin-bottom: 0.8rem;
-}
-
-.ebook-cover-ministry {
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(184,150,90,0.5);
-  display: block;
-  margin-top: 1.5rem;
-}
-
-.ebook-fondateur-content h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  font-weight: 300;
-  color: var(--cream);
-  margin-bottom: 1rem;
-}
-
-.ebook-fondateur-content p {
-  font-size: 0.95rem;
-  color: rgba(250,247,240,0.6);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
-
-.ebook-checklist {
-  list-style: none;
-  margin-bottom: 2rem;
-}
-
-.ebook-checklist li {
-  font-size: 0.9rem;
-  color: rgba(250,247,240,0.65);
-  padding: 0.5rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-  border-bottom: 1px solid rgba(184,150,90,0.1);
-}
-
-.ebook-checklist li::before {
-  content: '✦';
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-  font-size: 0.65rem;
-  top: 0.65rem;
-}
-
-.ebook-meta {
-  font-size: 0.75rem;
-  color: rgba(250,247,240,0.3);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-top: 1rem;
-}
-
-/* ===========================
-   BOUTIQUE
-=========================== */
-#boutique {
-  background: var(--cream);
-}
-
-.boutique-coming {
-  margin-top: 3rem;
-  background: white;
-  border: 1px solid var(--border);
-  padding: 3rem;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.boutique-coming p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.8;
-  max-width: 500px;
-  margin: 0 auto 1.5rem;
-}
-
-/* ===========================
-   ACCOMPAGNEMENT
-=========================== */
-#accompagnement {
-  background: var(--cream-light);
-}
-
-.accomp-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-
-.accomp-card {
-  background: white;
-  border: 1px solid var(--border);
-  padding: 2rem;
-  border-radius: 4px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.accomp-card.featured {
-  border-color: var(--gold);
-  box-shadow: 0 4px 30px rgba(184,150,90,0.1);
-}
-
-.accomp-badge {
-  position: absolute;
-  top: -1px; right: 1.5rem;
-  background: var(--gold);
-  color: var(--black);
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  font-weight: 500;
-}
-
-.accomp-level {
-  font-size: 0.68rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 0.8rem;
-}
-
-.accomp-card h3 {
-  font-size: 1.2rem;
-  color: var(--black-soft);
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.accomp-price {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  color: var(--gold);
-  font-weight: 300;
-  line-height: 1;
-  margin-bottom: 0.3rem;
-}
-
-.accomp-price-detail {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
-}
-
-.accomp-features {
-  list-style: none;
-  flex: 1;
-  margin-bottom: 2rem;
-}
-
-.accomp-features li {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  padding: 0.5rem 0;
-  padding-left: 1.3rem;
-  position: relative;
-  border-bottom: 1px solid rgba(184,150,90,0.1);
-}
-
-.accomp-features li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-  font-size: 0.7rem;
-}
-
-.accomp-quote {
-  margin-top: 3rem;
-  padding: 2rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  text-align: center;
-}
-
-.accomp-quote p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem;
-  font-style: italic;
-  color: var(--text-muted);
-}
-
-.accomp-quote cite {
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-style: normal;
-  display: block;
-  margin-top: 0.8rem;
-}
-
-/* ===========================
-   SECTION TÉMOIGNAGES (honnête)
-=========================== */
-.temoignages-section {
-  background: var(--cream);
-  padding: 60px 8%;
-  text-align: center;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.temoignages-section .section-label { display: block; margin-bottom: 0.8rem; }
-
-.temoignages-section h2 {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-  font-weight: 300;
-  color: var(--black-soft);
-  margin-bottom: 1.2rem;
-}
-
-.temoignages-section p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  max-width: 520px;
-  margin: 0 auto;
-  line-height: 1.8;
-  font-style: italic;
-}
-
-/* ===========================
-   SÉMINAIRES
-=========================== */
-#seminaires {
-  background: white;
-}
-
-.seminaires-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-
-.seminaire-card {
-  border: 1px solid var(--border);
-  padding: 2rem;
-  border-radius: 4px;
-  position: relative;
-}
-
-.sem-date-badge {
-  display: inline-block;
-  font-size: 0.68rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  padding: 4px 10px;
-  border-radius: 2px;
-  margin-bottom: 1.2rem;
-}
-
-.seminaire-card h3 {
-  font-size: 1.15rem;
-  color: var(--black-soft);
-  font-weight: 500;
-  margin-bottom: 0.8rem;
-}
-
-.sem-lieu {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-}
-
-.sem-price {
-  font-size: 0.85rem;
-  color: var(--gold);
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-}
-
-.sem-cta {
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(184,150,90,0.3);
-  padding-bottom: 2px;
-  cursor: pointer;
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  font-family: 'Jost', sans-serif;
-}
-
-.sem-cta:hover { color: var(--gold-pale); }
-
-/* ===========================
-   NEWSLETTER
-=========================== */
-#newsletter {
-  background: var(--black-soft);
-  padding: 80px 8%;
-  text-align: center;
-}
-
-#newsletter .section-title { color: var(--cream); }
-#newsletter .section-intro { color: rgba(250,247,240,0.55); margin: 0 auto 2.5rem; }
-
-.newsletter-form {
-  display: flex;
-  gap: 0;
-  max-width: 480px;
-  margin: 0 auto;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-
-.newsletter-form input[type="email"] {
-  flex: 1;
-  padding: 14px 18px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(184,150,90,0.2);
-  border-right: none;
-  color: var(--cream);
-  font-family: 'Jost', sans-serif;
-  font-size: 0.9rem;
-  outline: none;
-  border-radius: 2px 0 0 2px;
-}
-
-.newsletter-form input::placeholder { color: rgba(250,247,240,0.3); }
-
-.newsletter-form button {
-  padding: 14px 24px;
-  background: var(--gold);
-  color: var(--black);
-  font-family: 'Jost', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  border-radius: 0 2px 2px 0;
-  transition: background 0.2s;
-}
-
-.newsletter-form button:hover { background: var(--gold-pale); }
-
-.newsletter-note {
-  font-size: 0.75rem;
-  color: rgba(250,247,240,0.3);
-  margin-top: 1rem;
-  letter-spacing: 0.05em;
-}
-
-.newsletter-confirm {
-  display: none;
-  color: var(--gold);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
-  font-style: italic;
-  margin-top: 1rem;
-}
-
-/* ===========================
-   SECTION 21 ANS (unique, avant contact)
-=========================== */
-.formation-section {
-  background: var(--cream-light);
-  padding: 80px 8%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5%;
-  align-items: center;
-}
-
-.formation-content h2 {
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 300;
-  color: var(--black-soft);
-  margin-bottom: 1.5rem;
-}
-
-.formation-content p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.85;
-  margin-bottom: 1.2rem;
-}
-
-.formation-verse {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.05rem;
-  font-style: italic;
-  color: var(--gold);
-  padding: 1.5rem 2rem;
-  border-left: 3px solid var(--gold);
-  margin: 2rem 0;
-  background: white;
-}
-
-.formation-verse cite {
-  display: block;
-  font-size: 0.72rem;
-  font-family: 'Jost', sans-serif;
-  font-style: normal;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(184,150,90,0.6);
-  margin-top: 0.5rem;
-}
-
-.formation-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-.formation-visual {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.stat-box {
-  background: var(--black-soft);
-  padding: 2rem;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.stat-box .num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3.5rem;
-  font-weight: 300;
-  color: var(--gold);
-  line-height: 1;
-  display: block;
-}
-
-.stat-box .label {
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(250,247,240,0.4);
-  display: block;
-  margin-top: 0.5rem;
-}
-
-/* ===========================
-   CONTACT
-=========================== */
-#contact {
-  background: var(--black);
-  padding: 90px 8%;
-}
-
-#contact .section-title { color: var(--cream); margin-bottom: 0.8rem; }
-#contact .section-intro { color: rgba(250,247,240,0.5); margin-bottom: 3rem; }
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 5%;
-  align-items: start;
-}
-
-.contact-infos {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.contact-info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.contact-info-icon {
-  font-size: 1.2rem;
-  width: 40px;
-  height: 40px;
-  background: rgba(184,150,90,0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.contact-info-text strong {
-  display: block;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.3rem;
-}
-
-.contact-info-text a,
-.contact-info-text span {
-  color: rgba(250,247,240,0.6);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.contact-positionning {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border: 1px solid rgba(184,150,90,0.15);
-  border-radius: 4px;
-}
-
-.contact-positionning p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  font-style: italic;
-  color: rgba(250,247,240,0.45);
-  line-height: 1.7;
-}
-
-.contact-positionning cite {
-  display: block;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(184,150,90,0.4);
-  margin-top: 0.8rem;
-  font-style: normal;
-}
-
-/* FORMULAIRE */
-.contact-form { display: flex; flex-direction: column; gap: 1rem; }
-
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
-.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-
-.form-group label {
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(250,247,240,0.4);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  padding: 12px 16px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(184,150,90,0.15);
-  color: var(--cream);
-  font-family: 'Jost', sans-serif;
-  font-size: 0.9rem;
-  border-radius: 2px;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus { border-color: rgba(184,150,90,0.4); }
-
-.form-group select option { background: var(--black); color: var(--cream); }
-
-.form-group textarea { resize: vertical; min-height: 100px; }
-
-/* ===========================
-   FOOTER
-=========================== */
-footer {
-  background: #070707;
-  padding: 60px 8% 30px;
-  border-top: 1px solid rgba(184,150,90,0.1);
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-
-.footer-brand h3 {
-  font-size: 1.2rem;
-  color: var(--cream);
-  font-weight: 400;
-  margin-bottom: 0.8rem;
-}
-
-.footer-brand p {
-  font-size: 0.85rem;
-  color: rgba(250,247,240,0.35);
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
-}
-
-.footer-verse {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.9rem;
-  font-style: italic;
-  color: rgba(184,150,90,0.5);
-  padding-left: 0.8rem;
-  border-left: 1px solid rgba(184,150,90,0.2);
-}
-
-.footer-col h4 {
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.2rem;
-  font-weight: 500;
-}
-
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-
-.footer-col a {
-  font-size: 0.85rem;
-  color: rgba(250,247,240,0.4);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.footer-col a:hover { color: var(--gold); }
-
-.footer-bottom {
-  padding-top: 2rem;
-  border-top: 1px solid rgba(184,150,90,0.08);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-/* CORRECTION 1 : © 2026 */
-.footer-copy {
-  font-size: 0.78rem;
-  color: rgba(250,247,240,0.2);
-  letter-spacing: 0.05em;
-}
-
-/* ===========================
-   FLOATING WHATSAPP
-=========================== */
-.whatsapp-float {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 999;
-  width: 52px;
-  height: 52px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.35);
-  transition: transform 0.2s;
-}
-
-.whatsapp-float:hover { transform: scale(1.08); }
-.whatsapp-float svg { width: 28px; height: 28px; fill: white; }
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-@media (max-width: 768px) {
-  nav { padding: 0 4%; }
-  .nav-links { display: none; }
-  section { padding: 60px 5%; }
-  .hero { padding: 100px 5% 60px; }
-  .ressources-single { grid-template-columns: 1fr; }
-  .apropos-grid { grid-template-columns: 1fr; }
-  .formation-section { grid-template-columns: 1fr; padding: 60px 5%; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .ebook-fondateur-inner { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-}
-</style>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#14161d">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  (function(){
+    var t = localStorage.getItem('vec_theme') ||
+      (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (t === 'dark') document.documentElement.setAttribute('data-theme','dark');
+  })();
+</script>
 </head>
-
 <body>
 
-<!-- ===========================
-     NAVIGATION
-     CORRECTION 2 : "À Propos" ajouté dans le menu principal
-=========================== -->
-<nav>
-  <a href="#" class="nav-logo">
-    <span class="nav-logo-text">Noël Tchabi &nbsp;·&nbsp; Vivre en Christ</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#vision">Vision</a></li>
-    <li><a href="#ressources">Ressources</a></li>
-    <li><a href="#a-propos">À Propos</a></li>
-    <li><a href="#accompagnement">Accompagnement</a></li>
-    <li><a href="#seminaires">Séminaires</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#accompagnement" class="nav-cta">Être bâti</a></li>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" stroke="var(--gold)" stroke-width="1.4"/>
+        <path d="M20 8 L20 32 M11 15 L29 15" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="3.2" fill="var(--gold)"/>
+      </svg>
+      <span class="brand-text">
+        <b>Académie Vivre en Christ</b>
+        <span>vivreenchrist.org</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn desktop-only" id="theme-toggle" aria-label="Basculer le mode sombre">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn" id="nav-open" aria-label="Ouvrir le sommaire">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h11"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="progress-rail"><i id="progress-fill"></i></div>
+</header>
+
+<div class="drawer-backdrop"></div>
+<nav class="drawer" aria-label="Sommaire du parcours">
+  <button class="icon-btn close-drawer" id="nav-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <div style="clear:both"></div>
+  <h4>Sommaire</h4>
+  <ul class="drawer-list">
+    <li><a href="index.html" data-slug="index" class="active">Accueil — Sommaire général</a></li>
+  </ul>
+
+  
+  <h4>Ouverture · Avant de commencer</h4>
+  <ul class="drawer-list">
+    
+    <li><a href="comment-utiliser.html" data-slug="comment-utiliser" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Ouverture — Comment utiliser ce manuel
+    </a></li>
+    
+  </ul>
+  
+  <h4>Partie A · Les cinq fondements</h4>
+  <ul class="drawer-list">
+    
+    <li><a href="fondement-1.html" data-slug="fondement-1" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Fondement 1 — Les deux hommes : Adam et Christ
+    </a></li>
+    
+    <li><a href="fondement-2.html" data-slug="fondement-2" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Fondement 2 — La mort en Adam, sept dimensions
+    </a></li>
+    
+    <li><a href="fondement-3.html" data-slug="fondement-3" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Fondement 3 — La vie en Christ, sept dimensions
+    </a></li>
+    
+    <li><a href="fondement-4.html" data-slug="fondement-4" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Fondement 4 — L'Évangile : contenu et réponse
+    </a></li>
+    
+    <li><a href="fondement-5.html" data-slug="fondement-5" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Fondement 5 — La nouvelle naissance
+    </a></li>
+    
+  </ul>
+  
+  <h4>Partie B · Les premiers pas du disciple</h4>
+  <ul class="drawer-list">
+    
+    <li><a href="etape-1.html" data-slug="etape-1" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Étape 1 — Vérifier le témoignage de l'Esp…
+    </a></li>
+    
+    <li><a href="etape-2.html" data-slug="etape-2" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Étape 2 — Le baptême et la communion de l…
+    </a></li>
+    
+    <li><a href="etape-3.html" data-slug="etape-3" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Étape 3 — Membre du corps de Christ
+    </a></li>
+    
+    <li><a href="etape-4.html" data-slug="etape-4" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Étape 4 — La communion quotidienne avec l…
+    </a></li>
+    
+  </ul>
+  
+  <h4>Partie C · Le chemin du progrès</h4>
+  <ul class="drawer-list">
+    
+    <li><a href="intro-progres.html" data-slug="intro-progres" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Introduction — Introduction au chemin de progrès
+    </a></li>
+    
+    <li><a href="progres-1.html" data-slug="progres-1" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Étape de progrès 1 — Romains 6 : de la croyance à l'…
+    </a></li>
+    
+    <li><a href="progres-2.html" data-slug="progres-2" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Étape de progrès 2 — Romains 7 : la loi, le combat, …
+    </a></li>
+    
+    <li><a href="progres-3.html" data-slug="progres-3" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Étape de progrès 3 — Romains 8 : identité, intercess…
+    </a></li>
+    
+    <li><a href="progres-4.html" data-slug="progres-4" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Étape de progrès 4 — Romains 9 à 11 : la fidélité de…
+    </a></li>
+    
+    <li><a href="progres-5.html" data-slug="progres-5" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Étape de progrès 5 — Romains 12 : l'offrande totale,…
+    </a></li>
+    
+  </ul>
+  
+  <h4>Clôture · Pour conclure</h4>
+  <ul class="drawer-list">
+    
+    <li><a href="conclusion.html" data-slug="conclusion" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Conclusion — Conclusion générale
+    </a></li>
+    
+    <li><a href="limites.html" data-slug="limites" class="">
+      
+      <svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      
+      Limites et hypothèses — Limites et hypothèses de ce man…
+    </a></li>
+    
+  </ul>
+  
+
+  <h4>Le ministère</h4>
+  <ul class="drawer-list">
+    <li><a href="https://vivreenchrist.org" target="_blank" rel="noopener">vivreenchrist.org (site principal)</a></li>
+    <li><a href="mailto:contact@vivreenchrist.org">contact@vivreenchrist.org</a></li>
   </ul>
 </nav>
 
-<!-- ===========================
-     HERO
-=========================== -->
-<header class="hero">
-  <div class="hero-content">
-    <span class="hero-label">Ministère Vivre en Christ · Formation &amp; Édification</span>
-    <h1>Vous avez reçu la vie de Christ.<br>Il est temps d'être <em>bâti.</em></h1>
-    <div class="hero-verse">
-      « Élevez-vous, bâtissez… »
-      <span>Néhémie 2 : 18</span>
-    </div>
-    <p class="hero-intro">Le Ministère Vivre en Christ existe pour vous accompagner, pas à pas, vers une croissance réelle — un enseignement biblique chaque semaine, un accompagnement personnel, une formation progressive. Pas seulement une foi qui sait, mais une vie qui se transforme.</p>
-    <div class="hero-btns">
-      <a href="#ressources" class="btn-primary">Ressources gratuites</a>
-      <a href="#accompagnement" class="btn-secondary">Être accompagné</a>
-    </div>
-    <div class="hero-stats">
-      <div>
-        <span class="stat-num">21</span>
-        <span class="stat-label">Années de formation</span>
-      </div>
-      <div>
-        <span class="stat-num">5</span>
-        <span class="stat-label">Vérités fondatrices</span>
-      </div>
-      <div>
-        <span class="stat-num">∞</span>
-        <span class="stat-label">Grâce de Dieu</span>
-      </div>
-    </div>
+
+
+<section class="hero">
+  <span class="eyebrow">Ministère Vivre en Christ · Abidjan, Côte d'Ivoire</span>
+  <h1>Vivre en Christ,<br><em>par Christ et pour Christ</em></h1>
+  <p class="sub">Cinq fondements, quatre premiers pas, cinq étapes d'un chemin de progrès — pour amener chaque disciple à la marche parfaite par l'Esprit.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="comment-utiliser.html">Commencer le parcours</a>
+    <a class="btn btn-secondary" href="#sommaire">Voir le sommaire</a>
   </div>
-
-</header>
-
-<!-- Citation 1 Cor 3:9 -->
-<div style="background:var(--black-soft); padding:40px 8%; text-align:center; border-top:1px solid rgba(184,150,90,0.1);">
-  <blockquote style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-style:italic; color:rgba(250,247,240,0.6); max-width:600px; margin:0 auto 0.5rem;">
-    « Car nous sommes ouvriers avec Dieu. Vous êtes le champ de Dieu, l'édifice de Dieu. »
-  </blockquote>
-  <cite style="font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(184,150,90,0.4); font-style:normal;">1 Corinthiens 3 : 9</cite>
-  <p style="margin-top:1.5rem; font-size:0.95rem; color:rgba(250,247,240,0.45); max-width:580px; margin:1.5rem auto 0; line-height:1.8;">
-    La vie chrétienne n'est pas une discipline religieuse à perfectionner, mais <strong style="color:rgba(250,247,240,0.75);">une vie divine à manifester.</strong> Dieu n'a pas réformé votre ancienne vie — Il l'a crucifiée pour vous donner la sienne.
-  </p>
-</div>
-
-<!-- ===========================
-     VISION / PROBLÈME
-=========================== -->
-<section id="vision">
-  <span class="section-label">Le constat biblique</span>
-  <h2 class="section-title">Pourquoi tant de croyants<br><em>tournent-ils en rond ?</em></h2>
-  <p class="section-intro">Des années de cultes, de prières — et pourtant quelque chose ne progresse pas. La joie est intermittente. La victoire éphémère. Voici pourquoi.</p>
-
-  <div class="problems-grid">
-    <div class="problem-card">
-      <span class="problem-icon">👶</span>
-      <h3>Des nouveau-nés sans soins</h3>
-      <p>Beaucoup d'enfants de Dieu naissent mais ne sont jamais pris en charge. Ils restent des nourrissons spirituels pendant des années, faute d'un encadrement adéquat. « Comme des enfants nouveau-nés, désirez le lait spirituel pur. » — 1 Pierre 2.2</p>
-    </div>
-    <div class="problem-card">
-      <span class="problem-icon">🔄</span>
-      <h3>La quantité au lieu de la qualité</h3>
-      <p>On court après les conversions sans accompagner les croyants dans leur croissance réelle. Résultat : des assemblées nombreuses et des membres spirituellement anémiés.</p>
-    </div>
-    <div class="problem-card">
-      <span class="problem-icon">💪</span>
-      <h3>Servir Dieu avec la vie de la chair</h3>
-      <p>Ils essaient d'obéir à Dieu avec leurs propres forces naturelles. C'est épuisant, décourageant et voué à l'échec. « Ceux qui vivent selon la chair s'occupent des choses de la chair. » — Romains 8.5</p>
-    </div>
-    <div class="problem-card">
-      <span class="problem-icon">🙈</span>
-      <h3>Ignorer son ministère personnel</h3>
-      <p>La plupart pensent que le ministère, c'est pour le pasteur. Pas pour eux. Ils se considèrent comme des spectateurs passifs, alors que « vous êtes le corps de Christ, et vous êtes ses membres, chacun pour sa part. » — 1 Corinthiens 12.27</p>
-    </div>
+  <div class="stat-row">
+    <div class="stat"><b>5</b><span>Fondements</span></div>
+    <div class="stat"><b>4</b><span>Premiers pas</span></div>
+    <div class="stat"><b>5</b><span>Étapes de progrès</span></div>
+    <div class="stat"><b><span data-progress-pct>0</span>%</b><span>Votre progression</span></div>
   </div>
 </section>
 
-<!-- ===========================
-     CINQ VÉRITÉS
-=========================== -->
-<section class="truths-section">
-  <div class="truths-header">
-    <span class="section-label">La réponse biblique</span>
-    <h2 class="section-title">Cinq vérités qui <em>libèrent</em></h2>
-    <p class="section-intro">Chaque affirmation repose sur les Saintes Écritures. Lisez avec votre Bible ouverte. Vérifiez par vous-même.</p>
+<section class="parts-overview" id="sommaire">
+  <div class="intro-block">
+    <p>Ce parcours rassemble le fondement doctrinal bâti par le Ministère Vivre en Christ pour la formation des disciples. Chaque affirmation a été testée verset par verset ; chaque inférence théologique qui dépasse ce qu'un texte affirme littéralement est explicitement signalée comme telle. Toutes les citations bibliques sont tirées de la version Louis Segond 1910.</p>
+    <p>Il est conçu pour être parcouru <strong>dans l'ordre</strong>, chaque partie posant les fondations de la suivante — sans précipitation. Votre progression est enregistrée localement sur cet appareil, sans création de compte.</p>
+    <p><span class="badge badge-free" style="margin-right:.4rem;">Accès libre</span>Tout le parcours — l'Ouverture, les cinq fondements, les premiers pas et le chemin de progrès — se lit librement ici, sans compte ni paiement.</p>
   </div>
 
-  <div class="truths-grid">
-    <div class="truth-card">
-      <span class="truth-num">01</span>
-      <h3>Vous êtes un nouveau-né — et les nouveau-nés ont besoin de soins</h3>
-      <p>La nouvelle naissance remet tout à zéro. L'ancienneté charnelle ne compte pas. Ce qui compte désormais, c'est la croissance spirituelle.</p>
-      <div class="truth-verse">
-        « Comme des enfants nouveau-nés, désirez le lait spirituel pur, afin que par lui vous croissiez pour le salut. »
-        <cite>1 Pierre 2 : 2</cite>
-      </div>
+  
+  <div class="part-group">
+    <div class="part-group-head">
+      <h2>Ouverture — Avant de commencer</h2>
+      <span class="count">1 section</span>
     </div>
-    <div class="truth-card">
-      <span class="truth-num">02</span>
-      <h3>Vous êtes régénérés pour un but précis</h3>
-      <p>Vous n'avez pas été améliorés ou reformés. Vous avez reçu une vie nouvelle avec un but précis : une espérance vivante et un héritage éternel.</p>
-      <div class="truth-verse">
-        « C'est en espérance que nous sommes sauvés. »
-        <cite>Romains 8 : 24</cite>
-      </div>
-    </div>
-    <div class="truth-card">
-      <span class="truth-num">03</span>
-      <h3>Vous êtes un édifice de Dieu</h3>
-      <p>Vous n'êtes pas un bâtiment achevé. Vous êtes un chantier ouvert. Sur tout chantier, il faut un bâtisseur qualifié avec les bons matériaux.</p>
-      <div class="truth-verse">
-        « Vous êtes le champ de Dieu, l'édifice de Dieu. »
-        <cite>1 Corinthiens 3 : 9</cite>
-      </div>
-    </div>
-    <div class="truth-card">
-      <span class="truth-num">04</span>
-      <h3>Le perfectionnement des saints est une nécessité vitale</h3>
-      <p>Dieu a donné des apôtres et pasteurs pour une tâche précise : le perfectionnement des saints. Un croyant non bâti ne peut pas exercer son ministère.</p>
-      <div class="truth-verse">
-        « Pour le perfectionnement des saints en vue de l'œuvre du ministère. »
-        <cite>Éphésiens 4 : 12</cite>
-      </div>
-    </div>
-    <div class="truth-card">
-      <span class="truth-num">05</span>
-      <h3>L'objectif final : la stature parfaite de Christ</h3>
-      <p>Dieu ne veut pas simplement que vous « alliez mieux ». Il veut que la personne même de Christ soit formée en vous jusqu'à la pleine maturité.</p>
-      <div class="truth-verse">
-        « À la mesure de la stature parfaite de Christ. »
-        <cite>Éphésiens 4 : 13</cite>
-      </div>
-    </div>
-  </div>
-
-  <div class="truths-cta">
-    <p class="truths-cta-text">Vous êtes vraiment en croissance réelle ? Ou tournez-vous en rond depuis des années ? Si cette question vous a touché, c'est l'Esprit de Dieu qui vous parle.</p>
-    <a href="#accompagnement" class="btn-primary">Être accompagné →</a>
-  </div>
-</section>
-
-<!-- Vision Statement -->
-<div class="vision-statement">
-  <blockquote>
-    « Élever un peuple de croyants qui vivent <strong>réellement la vie de Dieu</strong> en Christ, par l'Esprit, dans la <strong>simplicité et la vérité biblique.</strong> »
-  </blockquote>
-  <cite>La vision du Ministère Vivre en Christ · vivreenchrist.org</cite>
-</div>
-
-<!-- ===========================
-     RESSOURCES
-     CORRECTION 3 : Suppression des 2 ebooks fantômes
-     Ne reste que l'ebook fondateur qui existe réellement
-=========================== -->
-<section id="ressources">
-  <span class="section-label">Collection gratuite</span>
-  <h2 class="section-title">Ressource <em>offerte</em><br>pour votre édification</h2>
-  <p class="section-intro">Un document de formation spirituelle accessible immédiatement, sans frais, pour tout croyant qui désire être bâti.</p>
-
-  <div class="ressources-single">
-    <div class="ebook-mockup">
-      <h3>Pourquoi un enfant de Dieu<br>doit-il se laisser bâtir ?</h3>
-      <span class="ebook-sub">Vivre en Christ</span>
-      <div class="ebook-divider"></div>
-      <p>Le document fondateur du Ministère Vivre en Christ. 7 chapitres pour comprendre qui vous êtes, où vous allez, et pourquoi l'édification est vitale.</p>
-      <span class="ebook-info">✅ Gratuit · Lecture en ligne · 7 chapitres</span>
-    </div>
-
-    <div class="ebook-details">
-      <h4>Le document fondateur du Ministère Vivre en Christ</h4>
-      <p class="ebook-desc">Un document de formation spirituelle qui répond aux quatre questions fondamentales que tout croyant sincère se pose :</p>
-      <ul class="ebook-points">
-        <li>Qui êtes-vous réellement depuis votre nouvelle naissance ?</li>
-        <li>Vers quoi avance votre vie spirituelle ?</li>
-        <li>Pourquoi tant de croyants tournent-ils en rond ?</li>
-        <li>Que fait le Ministère Vivre en Christ pour vous ?</li>
-      </ul>
-      <a href="https://vivreenchrist.org/ebook-pourquoi-se-laisser-batir.html" class="btn-primary" target="_blank" rel="noopener">Télécharger gratuitement</a>
-    </div>
-  </div>
-
-  <div class="ressources-coming">
-    <p>D'autres ressources de formation sont en cours de préparation. Abonnez-vous à la lettre hebdomadaire pour être informé dès leur parution.</p>
-    <a href="#newsletter">Être informé des prochaines ressources →</a>
-  </div>
-</section>
-
-<!-- ===========================
-     À PROPOS
-=========================== -->
-   <section id="dimanche" class="vec-dim">
-  <div class="vec-dim__inner">
-    <div class="vec-dim__txt">
-      <p class="vec-dim__kicker">Chaque semaine</p>
-      <h2 class="vec-dim__titre">L'enseignement du <em>dimanche</em></h2>
-      <p class="vec-dim__p">
-        Chaque dimanche matin, pendant une heure trente, nous ouvrons les Écritures
-        ensemble. Pas un culte, pas une prédication : un enseignement suivi,
-        verset par verset, avec le temps de poser des questions.
-      </p>
-      <p class="vec-dim__p">
-        Nous nous retrouvons par appel WhatsApp. Le groupe est ouvert, et il est
-        gratuit. Vous pouvez venir écouter une fois avant de décider.
-      </p>
-      <ul class="vec-dim__liste">
-        <li>Chaque dimanche, 4h00 – 5h30 (heure d'Abidjan · GMT)</li>
-        <li>Par appel de groupe WhatsApp</li>
-        <li>Enseignement suivi, questions ouvertes</li>
-        <li>Gratuit, sans inscription préalable</li>
-      </ul>
-      <a class="vec-dim__btn"
-         href="https://wa.me/2250574758383?text=Bonjour%2C%20je%20souhaite%20rejoindre%20l%27enseignement%20du%20dimanche">
-        Demander à rejoindre
+    
+    <div class="card-grid">
+      
+      <a class="step-card" href="comment-utiliser.html" data-slug="comment-utiliser">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Ouverture</span>
+        <h3>Comment utiliser ce manuel</h3>
       </a>
-      <p class="vec-dim__note">
-        Écrivez simplement « Je souhaite rejoindre l'enseignement du dimanche ».
+      
+    </div>
+  </div>
+  
+  <div class="part-group">
+    <div class="part-group-head">
+      <h2>Partie A — Les cinq fondements</h2>
+      <span class="count">5 sections</span>
+    </div>
+    <p class="part-group-sub">Ce qu'il faut savoir avant de vivre en Christ</p>
+    <div class="card-grid">
+      
+      <a class="step-card" href="fondement-1.html" data-slug="fondement-1">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Fondement 1</span>
+        <h3>Les deux hommes : Adam et Christ</h3>
+      </a>
+      
+      <a class="step-card" href="fondement-2.html" data-slug="fondement-2">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Fondement 2</span>
+        <h3>La mort en Adam, sept dimensions</h3>
+      </a>
+      
+      <a class="step-card" href="fondement-3.html" data-slug="fondement-3">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Fondement 3</span>
+        <h3>La vie en Christ, sept dimensions</h3>
+      </a>
+      
+      <a class="step-card" href="fondement-4.html" data-slug="fondement-4">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Fondement 4</span>
+        <h3>L'Évangile : contenu et réponse</h3>
+      </a>
+      
+      <a class="step-card" href="fondement-5.html" data-slug="fondement-5">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Fondement 5</span>
+        <h3>La nouvelle naissance</h3>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="part-group">
+    <div class="part-group-head">
+      <h2>Partie B — Les premiers pas du disciple</h2>
+      <span class="count">4 sections</span>
+    </div>
+    <p class="part-group-sub">Ce qu'il faut vivre après être né de nouveau</p>
+    <div class="card-grid">
+      
+      <a class="step-card" href="etape-1.html" data-slug="etape-1">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Étape 1</span>
+        <h3>Vérifier le témoignage de l'Esprit</h3>
+      </a>
+      
+      <a class="step-card" href="etape-2.html" data-slug="etape-2">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Étape 2</span>
+        <h3>Le baptême et la communion de l'Esprit déjà reçu</h3>
+      </a>
+      
+      <a class="step-card" href="etape-3.html" data-slug="etape-3">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Étape 3</span>
+        <h3>Membre du corps de Christ</h3>
+      </a>
+      
+      <a class="step-card" href="etape-4.html" data-slug="etape-4">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Étape 4</span>
+        <h3>La communion quotidienne avec le Saint-Esprit</h3>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="part-group">
+    <div class="part-group-head">
+      <h2>Partie C — Le chemin du progrès</h2>
+      <span class="count">6 sections</span>
+    </div>
+    <p class="part-group-sub">Cinq étapes, de Romains 6 à Romains 12</p>
+    <div class="card-grid">
+      
+      <a class="step-card" href="intro-progres.html" data-slug="intro-progres">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Introduction</span>
+        <h3>Introduction au chemin de progrès</h3>
+      </a>
+      
+      <a class="step-card" href="progres-1.html" data-slug="progres-1">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Étape de progrès 1</span>
+        <h3>Romains 6 : de la croyance à l'offrande</h3>
+      </a>
+      
+      <a class="step-card" href="progres-2.html" data-slug="progres-2">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Étape de progrès 2</span>
+        <h3>Romains 7 : la loi, le combat, et ce qu'ils révèlent</h3>
+      </a>
+      
+      <a class="step-card" href="progres-3.html" data-slug="progres-3">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Étape de progrès 3</span>
+        <h3>Romains 8 : identité, intercession, sécurité</h3>
+      </a>
+      
+      <a class="step-card" href="progres-4.html" data-slug="progres-4">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Étape de progrès 4</span>
+        <h3>Romains 9 à 11 : la fidélité de Dieu, fondement de la confiance</h3>
+      </a>
+      
+      <a class="step-card" href="progres-5.html" data-slug="progres-5">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Étape de progrès 5</span>
+        <h3>Romains 12 : l'offrande totale, jusqu'au renoncement à soi</h3>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="part-group">
+    <div class="part-group-head">
+      <h2>Clôture — Pour conclure</h2>
+      <span class="count">2 sections</span>
+    </div>
+    
+    <div class="card-grid">
+      
+      <a class="step-card" href="conclusion.html" data-slug="conclusion">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Conclusion</span>
+        <h3>Conclusion générale</h3>
+      </a>
+      
+      <a class="step-card" href="limites.html" data-slug="limites">
+        
+        <span class="done-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10.5l3.8 3.8L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        
+        <span class="num">Limites et hypothèses</span>
+        <h3>Limites et hypothèses de ce manuel</h3>
+      </a>
+      
+    </div>
+  </div>
+  
+</section>
+
+<section class="closing-band">
+  <span class="eyebrow">Pour aller plus loin</span>
+  <p class="sub" style="max-width:32rem;margin:.7rem auto 0;">Ce parcours pose les fondements. Pour un accompagnement personnel — pas à pas, avec un suivi réel — retrouvez le Ministère Vivre en Christ sur le site principal.</p>
+  <div class="links">
+    <a class="btn btn-primary" href="https://vivreenchrist.org/#accompagnement" target="_blank" rel="noopener">Être accompagné personnellement</a>
+    <a class="btn btn-secondary" href="https://vivreenchrist.org" target="_blank" rel="noopener">vivreenchrist.org</a>
+    <button class="btn-ghost" id="reset-progress" type="button">Réinitialiser ma progression</button>
+  </div>
+</section>
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-col">
+      <h5>Académie Vivre en Christ</h5>
+      <p>Bâtir un peuple de croyants qui vivent véritablement la vie de Dieu en Christ. Un projet du Ministère Vivre en Christ, Abidjan, Côte d'Ivoire.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Le parcours</h5>
+      <p>
+        <a href="index.html">Sommaire général</a><br>
+        <a href="comment-utiliser.html">Comment utiliser ce manuel</a><br>
+        <a href="https://vivreenchrist.org/#accompagnement" target="_blank" rel="noopener">Être accompagné personnellement</a>
       </p>
     </div>
-    <blockquote class="vec-dim__cit">
-      <p>« Et ce que tu as entendu de moi en présence de beaucoup de témoins,
-      confie-le à des hommes fidèles, qui soient capables de l'enseigner
-      aussi à d'autres. »</p>
-      <cite>2 Timothée 2 : 2</cite>
-    </blockquote>
-  </div>
-</section>
-
-<style>
-.vec-dim{padding:4.5rem 1.25rem;background:#fff}
-.vec-dim__inner{max-width:1040px;margin:0 auto;display:grid;
-  grid-template-columns:1.4fr 1fr;gap:3.5rem;align-items:center}
-.vec-dim__kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;
-  color:#7a8ba6;margin:0 0 .75rem}
-.vec-dim__titre{font-size:2rem;margin:0 0 1.25rem;color:#0f1c33;font-weight:700;
-  line-height:1.25}
-.vec-dim__titre em{font-style:italic;color:#1f3864}
-.vec-dim__p{color:#4a5568;line-height:1.75;margin:0 0 1rem}
-.vec-dim__liste{list-style:none;padding:0;margin:1.75rem 0;border-left:3px solid #1f3864;
-  padding-left:1.25rem}
-.vec-dim__liste li{padding:.4rem 0;color:#2d3748;font-size:.95rem}
-.vec-dim__btn{display:inline-block;background:#1f3864;color:#fff;padding:.9rem 1.8rem;
-  border-radius:6px;text-decoration:none;font-weight:600;transition:background .2s}
-.vec-dim__btn:hover{background:#0f1c33}
-.vec-dim__note{font-size:.85rem;color:#8a94a6;margin:.9rem 0 0;font-style:italic}
-.vec-dim__cit{margin:0;padding:2rem;background:#f7f8fa;border-radius:10px;
-  border-left:4px solid #1f3864}
-.vec-dim__cit p{font-style:italic;color:#2d3748;line-height:1.75;margin:0 0 1rem;
-  font-size:1.02rem}
-.vec-dim__cit cite{font-style:normal;font-size:.85rem;color:#7a8ba6;font-weight:600;
-  letter-spacing:.05em}
-@media(max-width:840px){
-  .vec-dim__inner{grid-template-columns:1fr;gap:2.5rem}
-}
-</style>
-
-
-<section id="a-propos">
-  <span class="section-label">À Propos</span>
-  <h2 class="section-title">L'homme derrière<br><em>le ministère</em></h2>
-
-  <div class="apropos-grid">
-    <div class="apropos-photo">
-      <img src="https://vivreenchrist.org/photo-noel.jpg" alt="Noël Tchabi — Fondateur Ministère Vivre en Christ, Abidjan">
-      <div class="apropos-photo-info">
-        <strong>Noël Tchabi</strong>
-        <span>Fondateur · Ministère Vivre en Christ</span>
-        <span style="font-size:0.78rem;color:rgba(184,150,90,0.6);letter-spacing:0;">📍 Abidjan, Côte d'Ivoire · 🌐 vivreenchrist.org</span>
-      </div>
-    </div>
-
-    <div class="apropos-content">
-      <h2>L'homme derrière<br>le ministère</h2>
-      <p>Je ne suis pas un théologien de formation académique. Je suis un homme que Dieu a saisi, formé et envoyé — non par les chemins des hommes, mais par ceux de l'Esprit.</p>
-      <p>Pendant 21 années, loin des projecteurs, Dieu m'a conduit à traverser les Écritures avec une question qui ne me quittait pas : <em>pourquoi tant de croyants naissent de nouveau, mais ne grandissent jamais vraiment ?</em></p>
-      <p>J'ai vu des frères et sœurs sincères tourner en rond pendant des décennies. Des hommes de Dieu servir avec zèle, mais dans l'épuisement de la chair. Des assemblées nombreuses, mais des membres spirituellement anémiés. Cette réalité m'a brisé, puis elle m'a poussé à chercher une réponse biblique sérieuse.</p>
-
-      <div class="apropos-temoignage">
-        <span class="apropos-temoignage-label">Le témoignage fondateur</span>
-        <p>Un dimanche de septembre 2005, en plein culte, voyant l'état de l'Église, je pensais : <em>« Si telle est l'Église de Dieu, ce n'est pas la peine... »</em> C'est alors que j'entendis pour la première fois en moi la voix de Dieu qui me dit : <strong>« Cherche-moi. Je me laisse trouver par ceux qui me cherchent. »</strong></p>
-      </div>
-
-      <p>Basé à Abidjan, en Côte d'Ivoire, mais la grâce de Dieu et le numérique nous permettent de toucher des croyants à travers toute l'Église francophone.</p>
-
-      <div class="apropos-contact-info">
-        <span class="apropos-contact-item">📍 Abidjan, Côte d'Ivoire</span>
-        <span class="apropos-contact-item">🌐 vivreenchrist.org</span>
-        <span class="apropos-contact-item">📱 +225 0574758383</span>
-      </div>
-
-      <div class="apropos-btns">
-        <a href="#accompagnement" class="btn-primary">Être accompagné →</a>
-        <a href="#contact" class="btn-secondary">Écrire à Noël →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===========================
-     EBOOK FONDATEUR (section dédiée)
-=========================== -->
-<section id="ebook-fondateur">
-  <span class="section-label" style="color:var(--gold);">Ressource offerte</span>
-  <div class="ebook-fondateur-inner" style="margin-top:2rem;">
-    <div class="ebook-cover">
-      <span class="ebook-cover-badge">E-Book Gratuit</span>
-      <h3>Pourquoi un enfant de Dieu<br>doit-il se laisser bâtir ?</h3>
-      <div style="width:30px;height:1px;background:var(--gold);margin:1.5rem auto;opacity:0.4;"></div>
-      <p style="font-size:0.82rem;color:rgba(250,247,240,0.4);line-height:1.6;">Document fondateur<br>du Ministère Vivre en Christ</p>
-      <span class="ebook-cover-ministry">vivreenchrist.org</span>
-    </div>
-
-    <div class="ebook-fondateur-content">
-      <h2 style="color:var(--cream);">Téléchargez l'ebook<br><em style="color:var(--gold);">fondateur</em> gratuitement</h2>
-      <p>Un document de formation spirituelle qui répond aux quatre questions fondamentales que tout croyant sincère se pose :</p>
-      <ul class="ebook-checklist">
-        <li>Qui êtes-vous réellement depuis votre nouvelle naissance ?</li>
-        <li>Vers quoi avance votre vie spirituelle ?</li>
-        <li>Pourquoi tant de croyants tournent-ils en rond ?</li>
-        <li>Que fait le Ministère Vivre en Christ pour vous ?</li>
-      </ul>
-      <a href="https://vivreenchrist.org/ebook-pourquoi-se-laisser-batir.html" class="btn-primary" target="_blank" rel="noopener">Télécharger gratuitement</a>
-      <p class="ebook-meta" style="margin-top:1rem;">✅ Gratuit · Lecture en ligne ou PDF · 7 chapitres</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===========================
-     PREUVE / LE MINISTÈRE À L'ŒUVRE
-     Repositionné ici (avant l'accompagnement) : sert d'appui de crédibilité
-     juste avant la demande d'engagement, plutôt que d'ouvrir la page.
-=========================== -->
-<section class="vec-preuve">
-  <div class="vec-preuve__inner">
-    <p class="vec-preuve__kicker">Le ministère à l'œuvre</p>
-    <p class="vec-preuve__phrase">
-      Depuis <strong>février 2026</strong>, un enseignement biblique
-      <strong>chaque dimanche matin</strong>, sans interruption.
-    </p>
-    <div class="vec-preuve__grid">
-      <!-- Chiffres à ajuster seulement quand ils changent vraiment (pas chaque semaine) -->
-      <div class="vec-preuve__item">
-        <span class="vec-preuve__num">15+</span>
-        <span class="vec-preuve__lab">croyants formés chaque semaine</span>
-      </div>
-      <div class="vec-preuve__item">
-        <span class="vec-preuve__num">6</span>
-        <span class="vec-preuve__lab">pays, sur trois continents</span>
-      </div>
-      <div class="vec-preuve__item">
-        <span class="vec-preuve__num">90</span>
-        <span class="vec-preuve__lab">minutes d'enseignement hebdomadaire</span>
-      </div>
-    </div>
-    <p class="vec-preuve__pays">
-      Côte d'Ivoire · Bénin · Ghana · France · Canada · États-Unis
-    </p>
-    <p class="vec-preuve__note">
-      Un groupe se réunit également en présentiel à Abidjan.
-    </p>
-  </div>
-</section>
-
-<style>
-.vec-preuve{padding:3.5rem 1.25rem;background:#0f1c33;color:#fff}
-.vec-preuve__inner{max-width:960px;margin:0 auto;text-align:center}
-.vec-preuve__kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
-  color:#9db4d8;margin:0 0 1rem}
-.vec-preuve__phrase{font-size:1.35rem;line-height:1.55;margin:0 0 2.5rem;
-  font-weight:300;color:#eaf0fa}
-.vec-preuve__phrase strong{font-weight:600;color:#fff}
-.vec-preuve__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;
-  margin-bottom:2rem}
-.vec-preuve__item{display:flex;flex-direction:column;gap:.4rem}
-.vec-preuve__num{font-size:2.6rem;font-weight:700;line-height:1;color:#fff}
-.vec-preuve__lab{font-size:.85rem;color:#9db4d8;line-height:1.4}
-.vec-preuve__pays{font-size:.95rem;color:#c8d6ec;letter-spacing:.04em;
-  padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);margin:0 0 .5rem}
-.vec-preuve__note{font-size:.85rem;color:#8fa4c6;margin:0;font-style:italic}
-@media(max-width:640px){
-  .vec-preuve__grid{grid-template-columns:1fr;gap:1.75rem}
-  .vec-preuve__phrase{font-size:1.15rem}
-  .vec-preuve__num{font-size:2.2rem}
-}
-</style>
-
-<!-- ===========================
-     ACCOMPAGNEMENT
-=========================== -->
-   <section id="accompagnement" class="vec-acc">
-  <div class="vec-acc__inner">
-    <p class="vec-acc__kicker">Accompagnement spirituel</p>
-    <h2 class="vec-acc__titre">Choisissez votre niveau d'<em>édification</em></h2>
-    <p class="vec-acc__intro">
-      Un accompagnement personnalisé, bibliquement ancré, au service de votre
-      croissance réelle en Christ.
-    </p>
-
-    <div class="vec-acc__grid">
-
-      <article class="vec-acc__c">
-        <p class="vec-acc__lvl">Niveau de base</p>
-        <h3 class="vec-acc__h">Découverte</h3>
-        <p class="vec-acc__prix"><span>Gratuit</span></p>
-        <p class="vec-acc__pour">Pour tout croyant qui commence</p>
-        <ul class="vec-acc__ul">
-          <li>Accès à l'enseignement du dimanche</li>
-          <li>Tous les livrets en téléchargement libre</li>
-          <li>Groupe WhatsApp d'édification</li>
-          <li>Réponses aux questions doctrinales dans le groupe</li>
-        </ul>
-        <a class="vec-acc__btn vec-acc__btn--out"
-           href="https://wa.me/2250574758383?text=Bonjour%2C%20je%20souhaite%20rejoindre%20l%27accompagnement%20D%C3%A9couverte">
-          Commencer gratuitement
-        </a>
-      </article>
-
-      <article class="vec-acc__c vec-acc__c--soon">
-        <p class="vec-acc__badge vec-acc__badge--soon">Bientôt disponible</p>
-        <p class="vec-acc__lvl">Niveau intermédiaire</p>
-        <h3 class="vec-acc__h">Fondements</h3>
-        <p class="vec-acc__prix"><span>8 000 F</span> <small>CFA / mois · 12 €</small></p>
-        <p class="vec-acc__pour">Sans engagement de durée</p>
-        <ul class="vec-acc__ul">
-          <li>2 sessions individuelles par mois (WhatsApp ou Zoom)</li>
-          <li>Parcours de formation personnalisé sur 3 mois</li>
-          <li>Suivi hebdomadaire de votre croissance</li>
-          <li>Groupe WhatsApp restreint</li>
-          <li>Réponses sous 24 h</li>
-        </ul>
-        <a class="vec-acc__btn vec-acc__btn--out"
-           href="https://wa.me/2250574758383?text=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20pr%C3%A9venu%C2%B7e%20quand%20l%27accompagnement%20Fondements%20ouvrira">
-          Me prévenir à l'ouverture
-        </a>
-      </article>
-
-      <article class="vec-acc__c vec-acc__c--soon">
-        <p class="vec-acc__badge vec-acc__badge--soon">Bientôt disponible</p>
-        <p class="vec-acc__lvl">Niveau avancé</p>
-        <h3 class="vec-acc__h">Édification profonde</h3>
-        <p class="vec-acc__prix"><span>20 000 F</span> <small>CFA / mois · 30 €</small></p>
-        <p class="vec-acc__pour">Engagement de 3 mois</p>
-        <ul class="vec-acc__ul">
-          <li>4 sessions individuelles par mois (1 h chacune)</li>
-          <li>Parcours d'édification sur mesure, 6 mois</li>
-          <li>Accompagnement pour discerner votre ministère</li>
-          <li>Formation applicable dans votre assemblée</li>
-          <li>Invitation aux séminaires en avant-première</li>
-        </ul>
-        <a class="vec-acc__btn vec-acc__btn--out"
-           href="https://wa.me/2250574758383?text=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20pr%C3%A9venu%C2%B7e%20quand%20l%27%C3%A9dification%20profonde%20ouvrira">
-          Me prévenir à l'ouverture
-        </a>
-      </article>
-
-    </div>
-    <p class="vec-acc__soonnote">Les niveaux Fondements et Édification profonde ouvriront dans une prochaine étape. Le niveau Découverte, lui, est pleinement actif dès aujourd'hui.</p>
-
-    <p class="vec-acc__hon">
-      L'accompagnement individuel est limité à <strong>cinq personnes</strong> :
-      au-delà, je ne pourrais plus le faire sérieusement. Si les places sont prises,
-      je vous le dirai simplement et vous serez prévenu dès qu'une se libère.
-    </p>
-
-    <p class="vec-acc__pos">
-      « Nous ne venons pas remplacer votre église — nous venons renforcer
-      ce que Dieu y a commencé. »
-    </p>
-  </div>
-</section>
-
-<style>
-.vec-acc{padding:4.5rem 1.25rem;background:#f7f8fa}
-.vec-acc__inner{max-width:1100px;margin:0 auto}
-.vec-acc__kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;
-  color:#7a8ba6;text-align:center;margin:0 0 .75rem}
-.vec-acc__titre{font-size:2rem;text-align:center;margin:0 0 1rem;color:#0f1c33;
-  font-weight:700;line-height:1.25}
-.vec-acc__titre em{font-style:italic;color:#1f3864}
-.vec-acc__intro{text-align:center;max-width:620px;margin:0 auto 3rem;color:#4a5568;
-  line-height:1.7}
-.vec-acc__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
-  gap:1.5rem;align-items:stretch}
-.vec-acc__c{background:#fff;border:1px solid #e2e6ee;border-radius:10px;padding:2rem;
-  display:flex;flex-direction:column;position:relative}
-.vec-acc__c--mid{border:2px solid #1f3864;box-shadow:0 12px 34px rgba(31,56,100,.12)}
-.vec-acc__badge{position:absolute;top:-.75rem;left:50%;transform:translateX(-50%);
-  background:#1f3864;color:#fff;font-size:.68rem;letter-spacing:.1em;
-  text-transform:uppercase;padding:.35rem 1rem;border-radius:99px;font-weight:700;
-  white-space:nowrap;margin:0}
-.vec-acc__lvl{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
-  color:#8a94a6;margin:0 0 .5rem;font-weight:600}
-.vec-acc__h{font-size:1.35rem;margin:0 0 1rem;color:#0f1c33;font-weight:700}
-.vec-acc__prix{margin:0 0 .4rem}
-.vec-acc__prix span{font-size:2rem;font-weight:700;color:#1f3864}
-.vec-acc__prix small{font-size:.85rem;color:#8a94a6;font-weight:500}
-.vec-acc__pour{font-size:.85rem;color:#8a94a6;margin:0 0 1.5rem}
-.vec-acc__ul{list-style:none;padding:0;margin:0 0 1.75rem;flex:1}
-.vec-acc__ul li{padding:.5rem 0 .5rem 1.5rem;position:relative;font-size:.92rem;
-  color:#4a5568;line-height:1.55;border-bottom:1px solid #f0f2f6}
-.vec-acc__ul li::before{content:"✓";position:absolute;left:0;color:#1f3864;
-  font-weight:700}
-.vec-acc__btn{display:block;background:#1f3864;color:#fff;padding:.85rem;
-  border-radius:6px;text-decoration:none;font-weight:600;text-align:center;
-  transition:background .2s;font-size:.93rem}
-.vec-acc__btn:hover{background:#0f1c33}
-.vec-acc__btn--out{background:#fff;color:#1f3864;border:1.5px solid #1f3864}
-.vec-acc__btn--out:hover{background:#eef2f9}
-.vec-acc__hon{max-width:640px;margin:2.5rem auto 0;text-align:center;font-size:.9rem;
-  color:#4a5568;line-height:1.7;background:#fff;padding:1.25rem 1.5rem;
-  border-radius:8px;border:1px solid #e2e6ee}
-.vec-acc__pos{text-align:center;font-style:italic;color:#7a8ba6;margin:2rem 0 0;
-  font-size:.95rem}
-.vec-acc__c--soon{opacity:.82}
-.vec-acc__badge--soon{background:#8a94a6}
-.vec-acc__soonnote{text-align:center;font-size:.85rem;color:#8a94a6;margin:1.25rem 0 0;
-  font-style:italic}
-</style>
-
-
-
-<!-- ===========================
-     TÉMOIGNAGES (section honnête)
-=========================== -->
-<div class="temoignages-section">
-  <span class="section-label">Ce que nous vivons</span>
-  <h2>Six mois <em>de fidélité</em></h2>
-  <p>Depuis février 2026, l'enseignement du dimanche n'a jamais été interrompu. Une quinzaine de croyants, sur trois continents. Les témoignages de vies transformées viendront enrichir cette page — nous préférons les recueillir plutôt que de les annoncer.</p>
-</div>
-
-<!-- ===========================
-     SÉMINAIRES
-     CORRECTION 4 : Reformulation des dates "À confirmer"
-=========================== -->
-   <section id="seminaires" class="vec-sem">
-  <div class="vec-sem__inner">
-    <p class="vec-sem__kicker">Rencontres</p>
-    <h2 class="vec-sem__titre">Séminaires et formations <em>en présentiel</em></h2>
-    <p class="vec-sem__p">
-      Des temps de formation intensive à Abidjan, ouverts aux croyants et aux
-      serviteurs de Dieu, sont en préparation. Aucune date n'est encore arrêtée :
-      nous préférons vous le dire plutôt que d'annoncer ce qui n'est pas fixé.
-    </p>
-    <p class="vec-sem__p">
-      Laissez-nous un message et vous serez prévenu dès qu'une date sera confirmée.
-    </p>
-    <a class="vec-sem__btn"
-       href="https://wa.me/2250574758383?text=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20pr%C3%A9venu%20des%20prochains%20s%C3%A9minaires">
-      Être prévenu
-    </a>
-  </div>
-</section>
-
-<style>
-.vec-sem{padding:4rem 1.25rem;background:#fff}
-.vec-sem__inner{max-width:680px;margin:0 auto;text-align:center}
-.vec-sem__kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;
-  color:#7a8ba6;margin:0 0 .75rem}
-.vec-sem__titre{font-size:1.8rem;margin:0 0 1.25rem;color:#0f1c33;font-weight:700;
-  line-height:1.3}
-.vec-sem__titre em{font-style:italic;color:#1f3864}
-.vec-sem__p{color:#4a5568;line-height:1.75;margin:0 0 1rem}
-.vec-sem__btn{display:inline-block;margin-top:1rem;background:#1f3864;color:#fff;
-  padding:.85rem 1.8rem;border-radius:6px;text-decoration:none;font-weight:600;
-  transition:background .2s}
-.vec-sem__btn:hover{background:#0f1c33}
-</style>
-
-
-<!-- ===========================
-     NEWSLETTER
-=========================== -->
-<section id="newsletter">
-  <span class="section-label">La Lettre hebdomadaire</span>
-  <h2 class="section-title" style="color:var(--cream);">Recevez la méditation<br><em>de la semaine</em></h2>
-  <p class="section-intro">Un verset, une méditation profonde, 5 pensées pour nourrir votre édification. Chaque lundi, directement dans votre boîte email. Gratuit.</p>
-
-  <form class="newsletter-form" onsubmit="submitNewsletter(event)">
-    <input type="email" placeholder="Votre adresse email" required>
-    <button type="submit">S'abonner</button>
-  </form>
-  <div class="newsletter-confirm" id="newsletter-confirm">
-    ✓ Votre logiciel de messagerie va s'ouvrir avec un message déjà prêt — il ne vous reste qu'à l'envoyer pour confirmer votre inscription.
-  </div>
-  <p class="newsletter-note">Pas de spam · Désabonnement en un clic · Rejoignez les premiers membres de la communauté</p>
-</section>
-
-<!-- ===========================
-     SECTION 21 ANS (UNIQUE — CORRECTION 5 : suppression du doublon hero)
-=========================== -->
-<div class="formation-section">
-  <div class="formation-content">
-    <span class="section-label">Le serviteur derrière le ministère</span>
-    <h2>21 années de<br><em style="color:var(--gold);font-style:italic;">formation et d'appel</em></h2>
-    <p>Pendant 21 années, Dieu nous a formés jour après jour pour cette tâche. Non par arrogance, mais par fidélité à un appel reçu et éprouvé.</p>
-    <p>Tout comme Paul qui disait : <em>« selon la grâce de Dieu qui m'a été donnée, j'ai posé le fondement comme un sage architecte »</em> — nous avons été préparés pour poser des fondements solides et bâtir avec des matériaux qui demeurent.</p>
-    <div class="formation-verse">
-      « Selon la grâce de Dieu qui m'a été donnée, j'ai posé le fondement comme un sage architecte, et un autre bâtit dessus. »
-      <cite>1 Corinthiens 3 : 10</cite>
-    </div>
-    <div class="formation-btns">
-      <a href="#accompagnement" class="btn-primary">Être accompagné</a>
-      <a href="#contact" class="btn-secondary">Nous écrire</a>
-    </div>
-  </div>
-
-  <div class="formation-visual">
-    <div class="stat-box">
-      <span class="num">21</span>
-      <span class="label">Années de formation</span>
-    </div>
-    <div class="stat-box" style="background:var(--gold);">
-      <span class="num" style="color:var(--black);font-size:2.5rem;font-style:italic;font-family:'Cormorant Garamond',serif;">« Soyez bâtis »</span>
-      <span class="label" style="color:rgba(0,0,0,0.5);">1 Pierre 2 : 5</span>
-    </div>
-  </div>
-</div>
-
-<!-- ===========================
-     CONTACT
-=========================== -->
-<section id="contact">
-  <span class="section-label" style="color:var(--gold);">Nous rejoindre</span>
-  <h2 class="section-title">Entrer en<br><em style="color:var(--gold);">contact</em></h2>
-  <p class="section-intro">Vous souhaitez être accompagné, commander une ressource, inviter Vivre en Christ dans votre église ou simplement poser une question biblique ? Écrivez-nous.</p>
-
-  <div class="contact-grid">
-    <div class="contact-infos">
-      <div class="contact-info-item">
-        <span class="contact-info-icon">✉</span>
-        <div class="contact-info-text">
-          <strong>Email</strong>
-          <a href="mailto:contact@vivreenchrist.org">contact@vivreenchrist.org</a>
-        </div>
-      </div>
-      <div class="contact-info-item">
-        <span class="contact-info-icon">📱</span>
-        <div class="contact-info-text">
-          <strong>WhatsApp</strong>
-          <a href="https://wa.me/2250574758383">+225 0574758383</a>
-        </div>
-      </div>
-      <div class="contact-info-item">
-        <span class="contact-info-icon">📍</span>
-        <div class="contact-info-text">
-          <strong>Localisation</strong>
-          <span>Abidjan, Côte d'Ivoire</span>
-        </div>
-      </div>
-      <div class="contact-info-item">
-        <span class="contact-info-icon">🌐</span>
-        <div class="contact-info-text">
-          <strong>Site</strong>
-          <a href="https://vivreenchrist.org">vivreenchrist.org</a>
-        </div>
-      </div>
-
-      <div class="contact-positionning">
-        <p>« Vivre en Christ agit dans un esprit de service envers l'Église de Jésus-Christ, sans esprit de concurrence, de division ou de prosélytisme confessionnel. »</p>
-        <cite>Notre positionnement</cite>
-      </div>
-    </div>
-
-    <form class="contact-form" onsubmit="submitContact(event)">
-      <div class="form-group">
-        <label>Nom complet</label>
-        <input type="text" name="nom" placeholder="Votre nom" required>
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" name="email" placeholder="Votre email" required>
-      </div>
-      <div class="form-group">
-        <label>Je suis</label>
-        <select name="profil">
-          <option>Croyant en recherche de clarté</option>
-          <option>Serviteur / Responsable d'église</option>
-          <option>Pasteur / Ancien</option>
-          <option>Étudiant(e) en théologie</option>
-          <option>Autre</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Sujet</label>
-        <select name="sujet">
-          <option>Demande d'accompagnement spirituel</option>
-          <option>Commander une ressource</option>
-          <option>Inviter le ministère dans mon église</option>
-          <option>Question biblique</option>
-          <option>Autre</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea name="message" placeholder="Votre message..." rows="4"></textarea>
-      </div>
-      <button type="submit" class="btn-primary">Envoyer sur WhatsApp →</button>
-      <p style="font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:0.6rem;">Ce bouton ouvre WhatsApp avec votre message déjà rédigé — il vous suffit de l'envoyer.</p>
-    </form>
-  </div>
-</section>
-
-<!-- ===========================
-     MENTIONS LÉGALES & CONFIDENTIALITÉ
-=========================== -->
-<section id="mentions-legales" class="vec-legal">
-  <div class="vec-legal__inner">
-    <p class="vec-legal__kicker">Informations légales</p>
-    <h2 class="vec-legal__titre">Mentions légales &amp; confidentialité</h2>
-
-    <div class="vec-legal__grid">
-      <div class="vec-legal__col">
-        <h3>Éditeur du site</h3>
-        <p>Ce site est publié par Noël Tchabi, fondateur du Ministère Vivre en Christ, basé à Abidjan, Côte d'Ivoire.</p>
-        <p>Contact : <a href="mailto:contact@vivreenchrist.org">contact@vivreenchrist.org</a> · WhatsApp <a href="https://wa.me/2250574758383">+225 0574758383</a></p>
-        <p>Hébergement : GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107, États-Unis).</p>
-      </div>
-      <div class="vec-legal__col">
-        <h3>Vos données personnelles</h3>
-        <p>Les seules informations recueillies sont celles que vous saisissez vous-même dans un formulaire (nom, email, message). Elles servent uniquement à vous répondre, à vous transmettre la ressource demandée, ou à vous ajouter à la lettre hebdomadaire si vous le demandez.</p>
-        <p>Ces formulaires vous mettent directement en relation avec Noël Tchabi par WhatsApp ou par email — vos informations ne transitent par aucune base de données ni aucun service tiers.</p>
-        <p>Elles ne sont ni vendues ni partagées. Vous pouvez à tout moment demander à les consulter, les corriger ou les supprimer en écrivant à <a href="mailto:contact@vivreenchrist.org">contact@vivreenchrist.org</a>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-.vec-legal{padding:3.5rem 1.25rem;background:#f7f8fa;border-top:1px solid #e2e6ee}
-.vec-legal__inner{max-width:1040px;margin:0 auto}
-.vec-legal__kicker{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
-  color:#8a94a6;margin:0 0 .5rem;text-align:center}
-.vec-legal__titre{font-size:1.5rem;color:#0f1c33;font-weight:700;margin:0 0 2rem;
-  text-align:center}
-.vec-legal__grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
-.vec-legal__col h3{font-size:.95rem;color:#1f3864;margin:0 0 .8rem;font-weight:700}
-.vec-legal__col p{font-size:.86rem;color:#4a5568;line-height:1.7;margin:0 0 .8rem}
-.vec-legal__col a{color:#1f3864}
-@media(max-width:720px){.vec-legal__grid{grid-template-columns:1fr;gap:2rem}}
-</style>
-
-<!-- ===========================
-     FOOTER
-     CORRECTION 1 : © 2026
-=========================== -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <h3>Vivre en Christ</h3>
-      <p>Ministère de formation et de restauration doctrinale, au service de l'Église de Jésus-Christ. Fondé sur 21 années de préparation et d'appel.</p>
-      <div class="footer-verse">« Vous êtes le champ de Dieu, l'édifice de Dieu. »<br><small style="font-style:normal;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(184,150,90,0.3);">1 Corinthiens 3 : 9</small></div>
-    </div>
-
     <div class="footer-col">
-      <h4>Ministère</h4>
-      <ul>
-        <li><a href="#vision">Notre vision</a></li>
-        <li><a href="#ressources">Ressources gratuites</a></li>
-        <a href="#dimanche">Le dimanche</a>
-        <li><a href="#accompagnement">Accompagnement</a></li>
-        <li><a href="#seminaires">Séminaires</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Ressources</h4>
-      <ul>
-        <li><a href="#ressources">Ebooks gratuits</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
-        <li><a href="#accompagnement">Accompagnement</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="mailto:contact@vivreenchrist.org">contact@vivreenchrist.org</a></li>
-        <li><a href="https://wa.me/2250574758383">WhatsApp : +225 0574758383</a></li>
-      </ul>
+      <h5>Contact</h5>
+      <p>
+        <a href="mailto:contact@vivreenchrist.org">contact@vivreenchrist.org</a><br>
+        <a href="tel:+2250574758383">+225 05 74 75 83 83</a> · Abidjan, Côte d'Ivoire<br>
+        <a href="https://vivreenchrist.org" target="_blank" rel="noopener">vivreenchrist.org — accompagnement &amp; ressources</a>
+      </p>
     </div>
   </div>
-
   <div class="footer-bottom">
-    <!-- CORRECTION 1 : © 2026 (corrigé depuis © 2025) -->
-    <span class="footer-copy">© 2026 Vivre en Christ · Ministère d'enseignement biblique · vivreenchrist.org · <a href="#mentions-legales" style="color:inherit;text-decoration:underline;">Mentions légales &amp; confidentialité</a></span>
+    <span>© 2026 Ministère Vivre en Christ. Citations bibliques : version Louis Segond 1910.</span>
+    <span>vivreenchrist.org/academie</span>
   </div>
 </footer>
 
-<!-- WhatsApp flottant -->
-<a href="https://wa.me/2250574758383?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20le%20Minist%C3%A8re%20Vivre%20en%20Christ" class="whatsapp-float" title="Une question ? Écrivez-nous 🙏" target="_blank" rel="noopener">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-</a>
-
-<!-- ===========================
-     JAVASCRIPT
-=========================== -->
 <script>
-// Le site est statique (pas de serveur ni de base de données) : ces deux
-// formulaires n'inventent donc pas un envoi — ils ouvrent un vrai canal
-// (WhatsApp / email) avec le message déjà rédigé, pour que le message
-// vous parvienne réellement.
-function submitContact(e) {
-  e.preventDefault();
-  var f = e.target;
-  var lignes = [
-    'Nouveau message depuis le site (formulaire de contact)',
-    '',
-    'Nom : ' + f.nom.value,
-    'Email : ' + f.email.value,
-    'Je suis : ' + f.profil.value,
-    'Sujet : ' + f.sujet.value,
-    'Message : ' + (f.message.value || '(non renseigné)')
-  ];
-  var texte = encodeURIComponent(lignes.join('\n'));
-  window.open('https://wa.me/2250574758383?text=' + texte, '_blank');
-  f.reset();
-}
-
-function submitNewsletter(e) {
-  e.preventDefault();
-  var f = e.target;
-  var email = f.querySelector('input[type=email]').value;
-  var sujet = encodeURIComponent("Inscription — Lettre hebdomadaire");
-  var corps = encodeURIComponent("Merci de m'ajouter à la liste de diffusion de la lettre hebdomadaire.\n\nMon email : " + email);
-  window.location.href = 'mailto:contact@vivreenchrist.org?subject=' + sujet + '&body=' + corps;
-  document.getElementById('newsletter-confirm').style.display = 'block';
-  f.style.display = 'none';
-}
-
+  window.__VEC_SLUG__ = "index";
+  window.__VEC_STEPS__ = [{"slug": "comment-utiliser", "kicker": "Ouverture"}, {"slug": "fondement-1", "kicker": "Fondement 1"}, {"slug": "fondement-2", "kicker": "Fondement 2"}, {"slug": "fondement-3", "kicker": "Fondement 3"}, {"slug": "fondement-4", "kicker": "Fondement 4"}, {"slug": "fondement-5", "kicker": "Fondement 5"}, {"slug": "etape-1", "kicker": "Étape 1"}, {"slug": "etape-2", "kicker": "Étape 2"}, {"slug": "etape-3", "kicker": "Étape 3"}, {"slug": "etape-4", "kicker": "Étape 4"}, {"slug": "intro-progres", "kicker": "Introduction"}, {"slug": "progres-1", "kicker": "Étape de progrès 1"}, {"slug": "progres-2", "kicker": "Étape de progrès 2"}, {"slug": "progres-3", "kicker": "Étape de progrès 3"}, {"slug": "progres-4", "kicker": "Étape de progrès 4"}, {"slug": "progres-5", "kicker": "Étape de progrès 5"}, {"slug": "conclusion", "kicker": "Conclusion"}, {"slug": "limites", "kicker": "Limites et hypothèses"}];
 </script>
-
+<script src="assets/js/app.js"></script>
 </body>
 </html>
