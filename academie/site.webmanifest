@@ -1,0 +1,13 @@
+{
+  "name": "Académie Vivre en Christ",
+  "short_name": "Académie VEC",
+  "description": "Le parcours du disciple, fondement par fondement — Ministère Vivre en Christ.",
+  "start_url": "/academie/index.html",
+  "display": "standalone",
+  "background_color": "#14161d",
+  "theme_color": "#14161d",
+  "icons": [
+    { "src": "/academie/assets/img/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/academie/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
