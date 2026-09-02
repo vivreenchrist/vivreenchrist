@@ -1945,13 +1945,17 @@ footer {
    <section id="accompagnement" class="vec-acc">
   <div class="vec-acc__inner">
     <p class="vec-acc__kicker">Accompagnement spirituel</p>
-    <h2 class="vec-acc__titre">Choisissez votre niveau d'<em>édification</em></h2>
+    <h2 class="vec-acc__titre">Un accompagnement <em>personnalisé</em></h2>
     <p class="vec-acc__intro">
       Un accompagnement personnalisé, bibliquement ancré, au service de votre
       croissance réelle en Christ.
     </p>
 
-    <div class="vec-acc__grid">
+    <!-- Niveaux Fondements et Édification profonde retirés temporairement
+         (aucune échéance de lancement confirmée) — voir avec Noël avant de
+         les remettre en ligne. Markup conservé en commentaire pour éviter
+         de tout retaper : cf. historique git de ce fichier. -->
+    <div class="vec-acc__grid vec-acc__grid--single">
 
       <article class="vec-acc__c">
         <p class="vec-acc__lvl">Niveau de base</p>
@@ -1970,52 +1974,7 @@ footer {
         </a>
       </article>
 
-      <article class="vec-acc__c vec-acc__c--soon">
-        <p class="vec-acc__badge vec-acc__badge--soon">Bientôt disponible</p>
-        <p class="vec-acc__lvl">Niveau intermédiaire</p>
-        <h3 class="vec-acc__h">Fondements</h3>
-        <p class="vec-acc__prix"><span>8 000 F</span> <small>CFA / mois · 12 €</small></p>
-        <p class="vec-acc__pour">Sans engagement de durée</p>
-        <ul class="vec-acc__ul">
-          <li>2 sessions individuelles par mois (WhatsApp ou Zoom)</li>
-          <li>Parcours de formation personnalisé sur 3 mois</li>
-          <li>Suivi hebdomadaire de votre croissance</li>
-          <li>Groupe WhatsApp restreint</li>
-          <li>Réponses sous 24 h</li>
-        </ul>
-        <a class="vec-acc__btn vec-acc__btn--out"
-           href="https://wa.me/2250574758383?text=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20pr%C3%A9venu%C2%B7e%20quand%20l%27accompagnement%20Fondements%20ouvrira">
-          Me prévenir à l'ouverture
-        </a>
-      </article>
-
-      <article class="vec-acc__c vec-acc__c--soon">
-        <p class="vec-acc__badge vec-acc__badge--soon">Bientôt disponible</p>
-        <p class="vec-acc__lvl">Niveau avancé</p>
-        <h3 class="vec-acc__h">Édification profonde</h3>
-        <p class="vec-acc__prix"><span>20 000 F</span> <small>CFA / mois · 30 €</small></p>
-        <p class="vec-acc__pour">Engagement de 3 mois</p>
-        <ul class="vec-acc__ul">
-          <li>4 sessions individuelles par mois (1 h chacune)</li>
-          <li>Parcours d'édification sur mesure, 6 mois</li>
-          <li>Accompagnement pour discerner votre ministère</li>
-          <li>Formation applicable dans votre assemblée</li>
-          <li>Invitation aux séminaires en avant-première</li>
-        </ul>
-        <a class="vec-acc__btn vec-acc__btn--out"
-           href="https://wa.me/2250574758383?text=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20pr%C3%A9venu%C2%B7e%20quand%20l%27%C3%A9dification%20profonde%20ouvrira">
-          Me prévenir à l'ouverture
-        </a>
-      </article>
-
     </div>
-    <p class="vec-acc__soonnote">Les niveaux Fondements et Édification profonde ouvriront dans une prochaine étape. Le niveau Découverte, lui, est pleinement actif dès aujourd'hui.</p>
-
-    <p class="vec-acc__hon">
-      L'accompagnement individuel est limité à <strong>cinq personnes</strong> :
-      au-delà, je ne pourrais plus le faire sérieusement. Si les places sont prises,
-      je vous le dirai simplement et vous serez prévenu dès qu'une se libère.
-    </p>
 
     <p class="vec-acc__pos">
       « Nous ne venons pas remplacer votre église — nous venons renforcer
@@ -2036,6 +1995,7 @@ footer {
   line-height:1.7}
 .vec-acc__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
   gap:1.5rem;align-items:stretch}
+.vec-acc__grid--single{grid-template-columns:minmax(0,440px);justify-content:center}
 .vec-acc__c{background:#fff;border:1px solid #e2e6ee;border-radius:10px;padding:2rem;
   display:flex;flex-direction:column;position:relative}
 .vec-acc__c--mid{border:2px solid #1f3864;box-shadow:0 12px 34px rgba(31,56,100,.12)}
