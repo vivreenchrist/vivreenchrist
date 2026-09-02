@@ -140,6 +140,33 @@ nav {
 
 .nav-cta:hover { background: var(--gold-pale) !important; }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--cream);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ===========================
    HERO
 =========================== */
@@ -1432,7 +1459,43 @@ footer {
 =========================== */
 @media (max-width: 768px) {
   nav { padding: 0 4%; }
-  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    background: rgba(13,13,13,0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184,150,90,0.15);
+    padding: 0.5rem 6% 1.5rem;
+    transform: translateY(-12px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.22s ease, opacity 0.22s ease;
+  }
+  .nav-links.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .nav-links li { width: 100%; }
+  .nav-links a {
+    display: block;
+    padding: 0.95rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(184,150,90,0.1);
+  }
+  .nav-links li:last-child a { border-bottom: none; }
+  .nav-cta { display: inline-block !important; margin-top: 1rem; }
   section { padding: 60px 5%; }
   .hero { padding: 100px 5% 60px; }
   .ressources-single { grid-template-columns: 1fr; }
@@ -1456,7 +1519,10 @@ footer {
   <a href="#" class="nav-logo">
     <span class="nav-logo-text">Noël Tchabi &nbsp;·&nbsp; Vivre en Christ</span>
   </a>
-  <ul class="nav-links">
+  <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#vision">Vision</a></li>
     <li><a href="#ressources">Ressources</a></li>
     <li><a href="academie/">Académie</a></li>
@@ -2317,6 +2383,46 @@ function submitNewsletter(e) {
   document.getElementById('newsletter-confirm').style.display = 'block';
   f.style.display = 'none';
 }
+
+// Menu mobile : le site n'a pas de bouton pour afficher les liens de
+// navigation en dessous de 768px, ils restaient simplement invisibles.
+(function () {
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (!toggle || !links) return;
+
+  function closeMenu() {
+    links.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+  function openMenu() {
+    links.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  toggle.addEventListener('click', function () {
+    var isOpen = links.classList.contains('is-open');
+    if (isOpen) { closeMenu(); } else { openMenu(); }
+  });
+
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!links.classList.contains('is-open')) return;
+    if (links.contains(e.target) || toggle.contains(e.target)) return;
+    closeMenu();
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) closeMenu();
+  });
+})();
 
 </script>
 
