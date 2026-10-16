@@ -463,3 +463,17 @@ table.dim-table td:last-child{ color:var(--gold-deep); font-style:italic; }
   .hero{ padding:3.2rem 1.2rem 2.4rem; }
   .stat-row{ gap:1.6rem; }
 }
+
+/* Bloc « Aller plus loin » : relie chaque leçon à la page Être bâti */
+.aller-plus-loin{
+  max-width:calc(var(--measure) + 3rem); margin:2.5rem auto 1.5rem; padding:1.4rem 1.5rem;
+  background:var(--gold-tint); border-left:3px solid var(--gold); border-radius:var(--radius);
+  font-family:var(--font-ui);
+}
+.aller-plus-loin .apl-label{ display:block; font-size:.75rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-deep); font-weight:700; margin-bottom:.4rem; }
+.aller-plus-loin p{ margin:0 0 1rem; font-family:var(--font-read); color:var(--ink-soft); line-height:1.55; }
+.aller-plus-loin .apl-btn{ display:inline-block; padding:.7rem 1.2rem; background:var(--navy); color:#f4efe0; text-decoration:none; font-weight:600; border-radius:var(--radius); }
+[data-theme="dark"] .aller-plus-loin .apl-btn{ background:var(--gold); color:#1a1408; }
+.aller-plus-loin .apl-btn:hover{ filter:brightness(1.1); }
+@media (max-width:640px){ .aller-plus-loin{ margin-left:1rem; margin-right:1rem; } }
+@media print{ .aller-plus-loin{ display:none; } }
