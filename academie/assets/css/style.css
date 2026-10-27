@@ -480,3 +480,6 @@ table.dim-table td:last-child{ color:var(--gold-deep); font-style:italic; }
 
 /* Sous-titres de dimension (Fondements 2 et 3, « Les textes, en entier ») */
 article.content h3{ font-family:var(--font-ui); font-size:.8rem; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-deep); margin:2rem 0 .4rem; }
+
+/* Réseaux sociaux */
+.social-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.social-links a{font-size:12px;letter-spacing:.06em;padding:6px 14px;border:1px solid rgba(184,150,90,.55);border-radius:999px;text-decoration:none;color:inherit;line-height:1.4}.social-links a:hover{background:rgba(184,150,90,.15)}
