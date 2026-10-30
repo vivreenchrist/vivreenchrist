@@ -613,6 +613,12 @@ section { padding: 90px 8%; }
   top: 0.65rem;
 }
 
+
+.livret-feature{display:grid;grid-template-columns:1fr 1fr;gap:5%;align-items:center;margin-top:4rem}
+.livret-cover{text-align:center}
+.livret-cover img{width:100%;max-width:300px;height:auto;border:1px solid rgba(184,150,90,.5);box-shadow:20px 20px 60px rgba(0,0,0,.18)}
+@media (max-width:768px){.livret-feature{grid-template-columns:1fr;gap:2rem}.livret-feature .ebook-details{order:2}}
+
 .ressources-coming {
   margin-top: 3rem;
   padding: 2rem;
@@ -1694,8 +1700,8 @@ footer {
 =========================== -->
 <section id="ressources">
   <span class="section-label">Collection gratuite</span>
-  <h2 class="section-title">Ressource <em>offerte</em><br>pour votre édification</h2>
-  <p class="section-intro">Un document de formation spirituelle accessible immédiatement, sans frais, pour tout croyant qui désire être bâti.</p>
+  <h2 class="section-title">Ressources <em>offertes</em><br>pour votre édification</h2>
+  <p class="section-intro">Des documents de formation spirituelle accessibles immédiatement, sans frais, pour tout croyant qui désire être bâti.</p>
 
   <div class="ressources-single">
     <div class="ebook-mockup">
@@ -1716,6 +1722,25 @@ footer {
         <li>Que fait le Ministère Vivre en Christ pour vous ?</li>
       </ul>
       <a href="https://vivreenchrist.org/ebook-pourquoi-se-laisser-batir.html" class="btn-primary" target="_blank" rel="noopener">Télécharger gratuitement</a>
+    </div>
+  </div>
+
+
+  <div class="livret-feature">
+    <div class="livret-cover">
+      <img src="livrets/couverture-qui-est-jesus-christ.jpg" alt="Couverture du livret Qui est Jésus-Christ ? Quelle était sa mission dans le monde ?" width="300" height="426" loading="lazy">
+    </div>
+    <div class="ebook-details">
+      <h4>Qui est Jésus-Christ ?<br>Quelle était sa mission dans le monde ?</h4>
+      <p class="ebook-desc">Un livret de 22 pages qui laisse la Bible répondre elle-même, verset après verset, chaque passage cité en entier (Louis Segond 1910). Vous y découvrirez :</p>
+      <ul class="ebook-points">
+        <li>D'où vient Jésus-Christ, et où il était avant de naître à Bethléhem</li>
+        <li>Comment le Fils de Dieu est devenu un homme véritable, sans péché</li>
+        <li>Ce que Jésus a accompli à la croix et par sa résurrection</li>
+        <li>Ce que cela signifie pour vous, aujourd'hui</li>
+      </ul>
+      <a href="https://vivreenchrist.mychariow.com/qui-est-jesus-christ" class="btn-primary" target="_blank" rel="noopener">Recevoir le livret gratuit</a>
+      <p class="ebook-meta" style="margin-top:1rem;color:var(--text-muted);">✅ Gratuit · PDF de 22 pages · Téléchargement immédiat</p>
     </div>
   </div>
 
